@@ -35,6 +35,7 @@
       line-height: 1.65;
     }
 
+
     /* NAVIGATION */
 
     .navbar {
@@ -49,6 +50,7 @@
     .nav-inner {
       max-width: 1200px;
       min-height: 66px;
+
       margin: auto;
       padding: 0 22px;
 
@@ -70,7 +72,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 24px;
     }
 
     .nav-links a {
@@ -101,6 +103,7 @@
       font-size: 24px;
       cursor: pointer;
     }
+
 
     /* HERO */
 
@@ -136,13 +139,13 @@
     }
 
     .hero h1 {
+      margin-bottom: 18px;
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(42px, 8vw, 72px);
 
       text-transform: uppercase;
       letter-spacing: 4px;
-
-      margin-bottom: 18px;
     }
 
     .hero p {
@@ -152,8 +155,6 @@
       color: #9eabb5;
       font-size: 18px;
     }
-
-    /* SERIES FEATURE IMAGE */
 
     .series-image {
       margin-top: 45px;
@@ -174,16 +175,17 @@
         0 28px 65px rgba(0,0,0,0.75);
     }
 
-    /* BUTTON */
-
     .hero-action {
       margin-top: 32px;
     }
 
+
+    /* BUTTONS */
+
     .button {
       display: inline-block;
 
-      padding: 13px 24px;
+      padding: 12px 21px;
 
       color: white;
       background: #12181d;
@@ -193,7 +195,7 @@
       text-decoration: none;
       text-transform: uppercase;
 
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       font-size: 11px;
 
       transition: 0.25s ease;
@@ -204,6 +206,7 @@
       background: #dce9f2;
       border-color: #dce9f2;
     }
+
 
     /* GENERAL */
 
@@ -240,12 +243,13 @@
       font-size: 16px;
     }
 
-    /* SERIES GRID */
+
+    /* READING ORDER */
 
     .series-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 42px 30px;
+      gap: 52px 30px;
 
       margin-top: 50px;
     }
@@ -306,7 +310,12 @@
       font-size: 14px;
     }
 
-    /* ABOUT THE SERIES */
+    .book-action {
+      margin-top: 20px;
+    }
+
+
+    /* ABOUT */
 
     .about-grid {
       display: grid;
@@ -355,7 +364,69 @@
       border-bottom: none;
     }
 
-    /* COLLECTOR SECTION */
+
+    /* HARDCOVER GALLERY */
+
+    .hardcover-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 38px 28px;
+
+      margin-top: 48px;
+    }
+
+    .hardcover-card {
+      text-align: center;
+    }
+
+    .hardcover-cover {
+      width: 100%;
+      max-width: 260px;
+
+      margin: auto auto 18px;
+    }
+
+    .hardcover-cover img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 2 / 3;
+
+      object-fit: cover;
+
+      border: 1px solid #303b43;
+
+      box-shadow:
+        0 16px 34px rgba(0,0,0,0.65);
+    }
+
+    .edition-label {
+      margin-bottom: 5px;
+
+      color: #687987;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 9px;
+    }
+
+    .hardcover-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+    }
+
+    .hardcover-note {
+      max-width: 780px;
+
+      margin-top: 34px;
+
+      color: #87949e;
+      font-size: 14px;
+    }
+
+
+    /* COLLECTOR */
 
     .collector {
       text-align: center;
@@ -370,6 +441,7 @@
       font-size: 16px;
     }
 
+
     /* FOOTER */
 
     footer {
@@ -383,6 +455,7 @@
 
       border-top: 1px solid #20282e;
     }
+
 
     /* MOBILE */
 
@@ -425,11 +498,16 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .hardcover-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .about-grid {
         grid-template-columns: 1fr;
       }
 
     }
+
 
     @media (max-width: 600px) {
 
@@ -447,16 +525,21 @@
 
       .series-grid {
         grid-template-columns: 1fr;
-        gap: 55px;
+        gap: 58px;
       }
 
       .book-card {
-        max-width: 320px;
+        max-width: 330px;
         margin: auto;
       }
 
       .cover {
         max-width: 300px;
+      }
+
+      .hardcover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 18px;
       }
 
     }
@@ -501,6 +584,10 @@
           Snowblind
         </a>
 
+        <a href="/coming-soon/">
+          Coming Soon
+        </a>
+
         <a href="/authors/">
           Authors
         </a>
@@ -509,7 +596,7 @@
           Amazing Arya
         </a>
 
-        <a href="/#readers">
+        <a href="/readers/">
           Readers
         </a>
 
@@ -576,7 +663,7 @@
     <div class="section-inner">
 
       <div class="eyebrow">
-        Reading Order
+        Collector Trade Paperback Reading Order
       </div>
 
       <h2>
@@ -584,9 +671,9 @@
       </h2>
 
       <p class="intro">
-        The Snowblind story unfolds across six collector trade
-        paperback volumes, beginning in the isolation of the
-        mountains and expanding far beyond it.
+        Follow the Snowblind story from its beginning in the
+        mountains through its final evolution. Each title below
+        links directly to its Amazon listing.
       </p>
 
 
@@ -601,8 +688,7 @@
 
             <img
               src="../Screenshot_20260820_111418_Gallery.jpg"
-              alt="Snowblind"
-              loading="lazy"
+              alt="Snowblind collector trade paperback cover"
             >
 
           </div>
@@ -621,6 +707,19 @@
             realize they may not be alone.
           </p>
 
+          <div class="book-action">
+
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0GVZR2H19"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
+
+          </div>
+
         </article>
 
 
@@ -632,7 +731,7 @@
 
             <img
               src="../02-isolation-full-wrap-collector-edition.png"
-              alt="Isolation"
+              alt="Isolation collector trade paperback cover"
               loading="lazy"
             >
 
@@ -652,6 +751,19 @@
             toward what they escaped.
           </p>
 
+          <div class="book-action">
+
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0GWQVNM96"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
+
+          </div>
+
         </article>
 
 
@@ -663,7 +775,7 @@
 
             <img
               src="../03-schism-full-wrap-collector-edition.png"
-              alt="Schism"
+              alt="Schism collector trade paperback cover"
               loading="lazy"
             >
 
@@ -679,9 +791,21 @@
 
           <p>
             The conflict spreads across the country as people,
-            loyalties and ideas begin dividing into opposing
-            paths.
+            loyalties and ideas begin dividing into opposing paths.
           </p>
+
+          <div class="book-action">
+
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0GYRP9768"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
+
+          </div>
 
         </article>
 
@@ -694,7 +818,7 @@
 
             <img
               src="../heresy-photorealistic-modern-truck-cover-v2.png"
-              alt="Heresy"
+              alt="Heresy collector trade paperback cover"
               loading="lazy"
             >
 
@@ -709,15 +833,28 @@
           </h3>
 
           <p>
-            As the world changes, old assumptions collapse
-            and the line between resistance and belief becomes
+            As the world changes, old assumptions collapse and
+            the line between resistance and belief becomes
             increasingly difficult to see.
           </p>
+
+          <div class="book-action">
+
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0H3P17PM2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
+
+          </div>
 
         </article>
 
 
-        <!-- ASCENSION 1 -->
+        <!-- ASCENSION PART ONE -->
 
         <article class="book-card">
 
@@ -725,7 +862,7 @@
 
             <img
               src="../ascension-part-one-council-arrival-cover-v3.png"
-              alt="Ascension Part One"
+              alt="Ascension Part One collector trade paperback cover"
               loading="lazy"
             >
 
@@ -745,10 +882,23 @@
             everything changed.
           </p>
 
+          <div class="book-action">
+
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0H3YWLP8Z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
+
+          </div>
+
         </article>
 
 
-        <!-- ASCENSION 2 -->
+        <!-- ASCENSION PART TWO -->
 
         <article class="book-card">
 
@@ -756,7 +906,7 @@
 
             <img
               src="../ascension-part-two-town-attack-cover-v1.png"
-              alt="Ascension Part Two"
+              alt="Ascension Part Two collector trade paperback cover"
               loading="lazy"
             >
 
@@ -774,6 +924,19 @@
             The conflict reaches its conclusion as survival,
             transformation and the future of humanity collide.
           </p>
+
+          <div class="book-action">
+
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0H3ZN22TJ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
+
+          </div>
 
         </article>
 
@@ -814,8 +977,11 @@
 
           <p>
             From there, the story continually widens. What first
-            appears isolated becomes connected. What seems
-            impossible becomes increasingly difficult to dismiss.
+            appears isolated becomes connected. What seems impossible
+            becomes increasingly difficult to dismiss.
+          </p>
+
+          <p>
             And the question gradually changes from how people
             survive to what survival may turn them into.
           </p>
@@ -869,9 +1035,197 @@
   </section>
 
 
-  <!-- COLLECTOR EDITIONS -->
+  <!-- HARDCOVER ART -->
 
-  <section class="collector">
+  <section>
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Alternate Editions
+      </div>
+
+      <h2>
+        Hardcover Editions
+      </h2>
+
+      <p class="intro">
+        The Snowblind books have also appeared with a separate
+        hardcover visual identity. These covers offer another
+        interpretation of the places, conflicts and imagery
+        of the series.
+      </p>
+
+
+      <div class="hardcover-grid">
+
+
+        <!-- SNOWBLIND HB -->
+
+        <article class="hardcover-card">
+
+          <div class="hardcover-cover">
+
+            <img
+              src="../IMG_20260409_124820.jpg"
+              alt="Snowblind hardcover cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="edition-label">
+            Hardcover Artwork
+          </div>
+
+          <h3>
+            Snowblind
+          </h3>
+
+        </article>
+
+
+        <!-- ISOLATION HB -->
+
+        <article class="hardcover-card">
+
+          <div class="hardcover-cover">
+
+            <img
+              src="../ChatGPT%20Image%20Apr%202,%202026,%2007_27_33%20PM.png"
+              alt="Isolation hardcover cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="edition-label">
+            Hardcover Artwork
+          </div>
+
+          <h3>
+            Isolation
+          </h3>
+
+        </article>
+
+
+        <!-- SCHISM HB -->
+
+        <article class="hardcover-card">
+
+          <div class="hardcover-cover">
+
+            <img
+              src="../Urban%20divides%20in%20glowing%20chaos.png"
+              alt="Schism hardcover cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="edition-label">
+            Hardcover Artwork
+          </div>
+
+          <h3>
+            Schism
+          </h3>
+
+        </article>
+
+
+        <!-- HERESY HB -->
+
+        <article class="hardcover-card">
+
+          <div class="hardcover-cover">
+
+            <img
+              src="../ChatGPT%20Image%20May%2014,%202026,%2009_29_16%20PM.png"
+              alt="Heresy hardcover cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="edition-label">
+            Hardcover Artwork
+          </div>
+
+          <h3>
+            Heresy
+          </h3>
+
+        </article>
+
+
+        <!-- ASCENSION GENERIC HB -->
+
+        <article class="hardcover-card">
+
+          <div class="hardcover-cover">
+
+            <img
+              src="../ChatGPT%20Image%20May%2022,%202026,%2007_59_53%20PM.png"
+              alt="Ascension hardcover cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="edition-label">
+            Hardcover Artwork
+          </div>
+
+          <h3>
+            Ascension
+          </h3>
+
+        </article>
+
+
+        <!-- ASCENSION PART TWO HB -->
+
+        <article class="hardcover-card">
+
+          <div class="hardcover-cover">
+
+            <img
+              src="../ChatGPT%20Image%20Jun%201,%202026,%2006_09_10%20PM.png"
+              alt="Ascension Part Two hardcover cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="edition-label">
+            Hardcover Artwork
+          </div>
+
+          <h3>
+            Ascension: Part Two
+          </h3>
+
+        </article>
+
+
+      </div>
+
+
+      <p class="hardcover-note">
+        The hardcover artwork is shown separately so the unified
+        collector trade-paperback reading order remains easy to follow.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- COLLECTOR -->
+
+  <section class="collector alternate">
 
     <div class="section-inner">
 
