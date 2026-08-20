@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="Connect with Sinister Books Press. Ask author Eric Erter a question or learn about appearances and book signings."
+    content="Connect with Sinister Books Press. Ask the authors a question or submit an appearance and signing request."
   >
 
   <title>Readers | Sinister Books Press</title>
@@ -24,10 +24,6 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       background: #080808;
       color: #f4f4f4;
@@ -35,14 +31,12 @@
       line-height: 1.7;
     }
 
-
     /* NAVIGATION */
 
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(0,0,0,0.98);
       border-bottom: 1px solid #292929;
     }
@@ -50,7 +44,6 @@
     .nav-inner {
       max-width: 1200px;
       min-height: 66px;
-
       margin: auto;
       padding: 0 22px;
 
@@ -62,7 +55,6 @@
     .brand {
       color: white;
       text-decoration: none;
-
       font-family: Georgia, "Times New Roman", serif;
       font-weight: bold;
       font-size: 16px;
@@ -78,7 +70,6 @@
     .nav-links a {
       color: #bbb;
       text-decoration: none;
-
       text-transform: uppercase;
       letter-spacing: 1.4px;
       font-size: 12px;
@@ -91,19 +82,14 @@
 
     .menu-button {
       display: none;
-
       width: 46px;
       height: 42px;
-
       color: white;
       background: transparent;
-
       border: 1px solid #444;
-
       font-size: 24px;
       cursor: pointer;
     }
-
 
     /* PAGE HEADER */
 
@@ -128,9 +114,7 @@
 
     .eyebrow {
       margin-bottom: 10px;
-
       color: #777;
-
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 11px;
@@ -138,21 +122,17 @@
 
     h1 {
       margin-bottom: 20px;
-
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(44px, 8vw, 72px);
-
       text-transform: uppercase;
       letter-spacing: 4px;
     }
 
     .page-header p {
       max-width: 760px;
-
       color: #aaa;
       font-size: 18px;
     }
-
 
     /* GENERAL */
 
@@ -165,199 +145,196 @@
       margin: auto;
     }
 
+    .alternate {
+      background: #101010;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
     h2 {
       margin-bottom: 18px;
-
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(32px, 6vw, 48px);
-
       text-transform: uppercase;
       letter-spacing: 3px;
     }
 
     .intro {
       max-width: 760px;
-
       color: #999;
       font-size: 16px;
     }
 
+    /* FORM PANELS */
 
-    /* CONNECT CARDS */
-
-    .connect-grid {
+    .form-layout {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-
+      grid-template-columns: 0.85fr 1.4fr;
+      gap: 45px;
+      align-items: start;
       margin-top: 45px;
     }
 
-    .connect-card {
-      min-height: 420px;
-
-      padding: 38px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #121212,
-          #090909
-        );
-
-      border: 1px solid #303030;
-
-      display: flex;
-      flex-direction: column;
+    .form-description {
+      padding: 30px;
+      background: #0b0b0b;
+      border: 1px solid #292929;
     }
 
-    .card-label {
-      margin-bottom: 12px;
-
-      color: #777;
-
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-size: 10px;
-    }
-
-    .connect-card h3 {
-      margin-bottom: 18px;
-
+    .form-description h3 {
+      margin-bottom: 15px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
+      font-size: 27px;
     }
 
-    .connect-card p {
+    .form-description p {
       margin-bottom: 17px;
-
       color: #aaa;
       font-size: 15px;
     }
 
-    .coming-note {
-      margin-top: auto;
-      padding-top: 25px;
+    .form-description ul {
+      padding-left: 20px;
+      color: #999;
+      font-size: 14px;
     }
 
-    .status-box {
-      padding: 15px 18px;
+    .form-description li {
+      margin-bottom: 9px;
+    }
+
+    /* FORM */
+
+    .form-box {
+      padding: 34px;
+      background: #0b0b0b;
+      border: 1px solid #303030;
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: #d0d0d0;
+      font-size: 13px;
+      letter-spacing: 0.4px;
+    }
+
+    .required {
+      color: #999;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 13px 14px;
+
+      color: white;
+      background: #131313;
 
       border: 1px solid #444;
-      background: #0b0b0b;
+      border-radius: 3px;
 
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #aaa;
+    }
+
+    select {
+      appearance: auto;
+    }
+
+    textarea {
+      min-height: 165px;
+      resize: vertical;
+    }
+
+    .checkbox-wrap {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+
+      padding: 16px;
+
+      background: #111;
+      border: 1px solid #333;
+    }
+
+    .checkbox-wrap input {
+      width: auto;
+      margin-top: 5px;
+    }
+
+    .checkbox-wrap label {
+      margin: 0;
       color: #aaa;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .form-note {
+      margin-top: 8px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    .submit-button {
+      width: 100%;
+      margin-top: 5px;
+      padding: 14px 22px;
+
+      color: #000;
+      background: #fff;
+
+      border: 1px solid #fff;
 
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.7px;
       font-size: 11px;
+      font-weight: bold;
 
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    .submit-button:hover {
+      color: #fff;
+      background: #181818;
+    }
+
+    /* PRIVACY NOTE */
+
+    .privacy-note {
+      max-width: 850px;
+      margin: 45px auto 0;
+
+      padding: 22px;
+
+      color: #888;
+      background: #0a0a0a;
+
+      border: 1px solid #292929;
+
+      font-size: 13px;
       text-align: center;
     }
-
-
-    /* ASK THE AUTHOR EXPLANATION */
-
-    .alternate {
-      background: #101010;
-
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-    }
-
-    .qa-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-
-      align-items: start;
-
-      margin-top: 40px;
-    }
-
-    .qa-copy p {
-      margin-bottom: 18px;
-
-      color: #aaa;
-      font-size: 16px;
-    }
-
-    .question-examples {
-      padding: 30px;
-
-      background: #090909;
-      border: 1px solid #292929;
-    }
-
-    .question-examples h3 {
-      margin-bottom: 18px;
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-    }
-
-    .example {
-      padding: 14px 0;
-
-      color: #999;
-
-      border-bottom: 1px solid #242424;
-
-      font-size: 14px;
-    }
-
-    .example:last-child {
-      border-bottom: none;
-    }
-
-
-    /* APPEARANCES */
-
-    .appearance-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-
-      align-items: start;
-
-      margin-top: 40px;
-    }
-
-    .appearance-copy p {
-      margin-bottom: 18px;
-
-      color: #aaa;
-      font-size: 16px;
-    }
-
-    .request-box {
-      padding: 30px;
-
-      background: #0b0b0b;
-      border: 1px solid #292929;
-    }
-
-    .request-box h3 {
-      margin-bottom: 18px;
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-    }
-
-    .request-item {
-      padding: 12px 0;
-
-      color: #999;
-
-      border-bottom: 1px solid #242424;
-
-      font-size: 14px;
-    }
-
-    .request-item:last-child {
-      border-bottom: none;
-    }
-
 
     /* CLOSING */
 
@@ -389,21 +366,16 @@
       font-size: 16px;
     }
 
-
     /* FOOTER */
 
     footer {
       padding: 46px 20px;
-
       color: #666;
-
       text-align: center;
       font-size: 13px;
       letter-spacing: 1px;
-
       border-top: 1px solid #222;
     }
-
 
     /* MOBILE */
 
@@ -426,7 +398,6 @@
         gap: 0;
 
         background: #050505;
-
         border-bottom: 1px solid #333;
       }
 
@@ -436,26 +407,15 @@
 
       .nav-links a {
         width: 100%;
-
         padding: 17px 24px;
-
         border-top: 1px solid #222;
       }
 
-      .connect-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .qa-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .appearance-grid {
+      .form-layout {
         grid-template-columns: 1fr;
       }
 
     }
-
 
     @media (max-width: 650px) {
 
@@ -471,9 +431,14 @@
         padding: 60px 22px;
       }
 
-      .connect-card {
-        min-height: 0;
-        padding: 28px;
+      .form-box,
+      .form-description {
+        padding: 24px;
+      }
+
+      .field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
       }
 
     }
@@ -556,9 +521,8 @@
       </h1>
 
       <p>
-        Books may begin with the writer, but they belong to readers
-        once they are out in the world. This is where the conversation
-        continues.
+        Ask about the stories, characters and writing process,
+        or get in touch about an appearance, signing or event.
       </p>
 
     </div>
@@ -566,108 +530,9 @@
   </header>
 
 
-  <!-- MAIN OPTIONS -->
+  <!-- ASK THE AUTHORS -->
 
   <section>
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        Connect
-      </div>
-
-      <h2>
-        Get in Touch
-      </h2>
-
-      <p class="intro">
-        Ask about a story, character or future project—or inquire
-        about an appearance, signing or event.
-      </p>
-
-
-      <div class="connect-grid">
-
-
-        <!-- ASK THE AUTHOR -->
-
-        <article class="connect-card">
-
-          <div class="card-label">
-            Reader Questions
-          </div>
-
-          <h3>
-            Ask the Author
-          </h3>
-
-          <p>
-            Have a question about SNOWBLIND, a character,
-            the writing process, an upcoming book, or something
-            you noticed while reading?
-          </p>
-
-          <p>
-            Reader questions will be collected here, with selected
-            questions and answers published on the site so other
-            readers can join the conversation.
-          </p>
-
-          <div class="coming-note">
-
-            <div class="status-box">
-              Question submissions opening soon
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- APPEARANCES -->
-
-        <article class="connect-card">
-
-          <div class="card-label">
-            Events
-          </div>
-
-          <h3>
-            Appearances & Signings
-          </h3>
-
-          <p>
-            Interested in arranging a book signing, author appearance,
-            bookstore event, library visit, convention appearance
-            or other event?
-          </p>
-
-          <p>
-            Appearance requests will be handled through a dedicated
-            inquiry form here on the Sinister Books Press website.
-          </p>
-
-          <div class="coming-note">
-
-            <div class="status-box">
-              Appearance requests opening soon
-            </div>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Q&A -->
-
-  <section class="alternate">
 
     <div class="section-inner">
 
@@ -676,65 +541,229 @@
       </div>
 
       <h2>
-        Ask About the Stories
+        Ask the Authors
       </h2>
 
+      <p class="intro">
+        Have a question about a book, character, story decision,
+        future project or the writing process? Send it here.
+      </p>
 
-      <div class="qa-grid">
+
+      <div class="form-layout">
 
 
-        <div class="qa-copy">
+        <!-- DESCRIPTION -->
+
+        <div class="form-description">
+
+          <h3>
+            Join the Conversation
+          </h3>
 
           <p>
-            The goal of Ask the Author is not simply to provide
-            private answers. Selected questions can become part
-            of an ongoing public Q&A, allowing readers to explore
-            the stories together.
+            Questions can be about any Sinister Books title,
+            Amazing Arya's Adventures, writing, publishing,
+            characters or projects currently in development.
           </p>
 
           <p>
-            Questions can be about individual books, characters,
-            influences, writing decisions, the publishing process
-            or projects currently in development.
+            Selected questions may eventually become part of
+            the public Reader Q&A on this site—but only when
+            permission is given.
           </p>
 
-          <p>
-            Spoiler-sensitive answers can be clearly marked so
-            readers can decide whether they want to continue.
-          </p>
+          <ul>
+            <li>Book and character questions</li>
+            <li>Behind-the-scenes writing decisions</li>
+            <li>Connections between stories</li>
+            <li>Upcoming projects</li>
+            <li>Writing and publishing</li>
+          </ul>
 
         </div>
 
 
-        <div class="question-examples">
+        <!-- LIVE FORM -->
 
-          <h3>
-            What Can I Ask?
-          </h3>
+        <div class="form-box">
 
-          <div class="example">
-            Questions about characters or story events
-          </div>
+          <form
+            action="https://formspree.io/f/xaewokd"
+            method="POST"
+          >
 
-          <div class="example">
-            Behind-the-scenes writing decisions
-          </div>
 
-          <div class="example">
-            Connections between books
-          </div>
+            <input
+              type="hidden"
+              name="form_type"
+              value="Ask the Authors"
+            >
 
-          <div class="example">
-            Upcoming projects and ideas
-          </div>
 
-          <div class="example">
-            Writing and publishing questions
-          </div>
+            <div class="field-row">
 
-          <div class="example">
-            Anything you've always wondered after finishing a book
-          </div>
+
+              <div class="field">
+
+                <label for="reader-name">
+                  Name <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="reader-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="reader-email">
+                  Email <span class="required">*</span>
+                </label>
+
+                <input
+                  type="email"
+                  id="reader-email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="reader-book">
+                Book or Project
+              </label>
+
+              <select
+                id="reader-book"
+                name="book_or_project"
+              >
+
+                <option value="">
+                  Select one
+                </option>
+
+                <option value="Snowblind">
+                  Snowblind
+                </option>
+
+                <option value="Isolation">
+                  Isolation
+                </option>
+
+                <option value="Schism">
+                  Schism
+                </option>
+
+                <option value="Heresy">
+                  Heresy
+                </option>
+
+                <option value="Ascension">
+                  Ascension
+                </option>
+
+                <option value="Animal Hours">
+                  Animal Hours
+                </option>
+
+                <option value="Before the Streetlights">
+                  Before the Streetlights
+                </option>
+
+                <option value="Goodnight, House">
+                  Goodnight, House
+                </option>
+
+                <option value="Old Money">
+                  Old Money
+                </option>
+
+                <option value="The Tides That Bind">
+                  The Tides That Bind
+                </option>
+
+                <option value="Amazing Arya's Adventures">
+                  Amazing Arya's Adventures
+                </option>
+
+                <option value="Writing or Publishing">
+                  Writing / Publishing
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="reader-question">
+                Your Question <span class="required">*</span>
+              </label>
+
+              <textarea
+                id="reader-question"
+                name="question"
+                required
+              ></textarea>
+
+            </div>
+
+
+            <div class="field">
+
+              <div class="checkbox-wrap">
+
+                <input
+                  type="checkbox"
+                  id="publish-permission"
+                  name="permission_to_publish"
+                  value="Yes"
+                >
+
+                <label for="publish-permission">
+                  I give Sinister Books Press permission to publish
+                  my question and the author's response on this
+                  website. My email address will not be published.
+                </label>
+
+              </div>
+
+              <div class="form-note">
+                Leave this unchecked if you want your question
+                treated as private.
+              </div>
+
+            </div>
+
+
+            <button
+              class="submit-button"
+              type="submit"
+            >
+              Send Question
+            </button>
+
+
+          </form>
 
         </div>
 
@@ -748,7 +777,7 @@
 
   <!-- APPEARANCES -->
 
-  <section>
+  <section class="alternate">
 
     <div class="section-inner">
 
@@ -760,61 +789,270 @@
         Appearance Requests
       </h2>
 
-
-      <div class="appearance-grid">
-
-
-        <div class="appearance-copy">
-
-          <p>
-            Sinister Books Press welcomes inquiries from bookstores,
-            libraries, conventions, schools, book clubs and other
-            organizations interested in author appearances or
-            signing events.
-          </p>
-
-          <p>
-            The future request form will collect the basic event
-            information needed to determine availability before
-            additional arrangements are discussed.
-          </p>
-
-        </div>
+      <p class="intro">
+        Bookstores, libraries, conventions, schools, book clubs
+        and other organizations can submit appearance or signing
+        inquiries here.
+      </p>
 
 
-        <div class="request-box">
+      <div class="form-layout">
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="form-description">
 
           <h3>
-            Event Information
+            Plan an Event
           </h3>
 
-          <div class="request-item">
-            Organization or venue
-          </div>
+          <p>
+            Use this form for book signings, author appearances,
+            bookstore or library events, conventions, speaking
+            opportunities and other requests.
+          </p>
 
-          <div class="request-item">
-            Event type
-          </div>
+          <p>
+            Providing as much information as possible will make
+            it easier to evaluate the request and respond.
+          </p>
 
-          <div class="request-item">
-            City and location
-          </div>
-
-          <div class="request-item">
-            Preferred date or date range
-          </div>
-
-          <div class="request-item">
-            Expected attendance
-          </div>
-
-          <div class="request-item">
-            Contact information
-          </div>
+          <ul>
+            <li>Bookstore signings</li>
+            <li>Library appearances</li>
+            <li>Conventions</li>
+            <li>Book clubs</li>
+            <li>Schools and educational events</li>
+            <li>Speaking engagements</li>
+          </ul>
 
         </div>
 
 
+        <!-- LIVE FORM -->
+
+        <div class="form-box">
+
+          <form
+            action="https://formspree.io/f/mppabdnv"
+            method="POST"
+          >
+
+
+            <input
+              type="hidden"
+              name="form_type"
+              value="Appearance and Signing Request"
+            >
+
+
+            <div class="field-row">
+
+
+              <div class="field">
+
+                <label for="event-name">
+                  Your Name <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="event-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="event-email">
+                  Email <span class="required">*</span>
+                </label>
+
+                <input
+                  type="email"
+                  id="event-email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="organization">
+                Organization or Venue <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="organization"
+                name="organization_or_venue"
+                required
+              >
+
+            </div>
+
+
+            <div class="field-row">
+
+
+              <div class="field">
+
+                <label for="event-city">
+                  City / Location <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="event-city"
+                  name="city_or_location"
+                  required
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="event-type">
+                  Event Type <span class="required">*</span>
+                </label>
+
+                <select
+                  id="event-type"
+                  name="event_type"
+                  required
+                >
+
+                  <option value="">
+                    Select one
+                  </option>
+
+                  <option value="Book Signing">
+                    Book Signing
+                  </option>
+
+                  <option value="Bookstore Event">
+                    Bookstore Event
+                  </option>
+
+                  <option value="Library Event">
+                    Library Event
+                  </option>
+
+                  <option value="Convention">
+                    Convention
+                  </option>
+
+                  <option value="Book Club">
+                    Book Club
+                  </option>
+
+                  <option value="School or Educational Event">
+                    School / Educational Event
+                  </option>
+
+                  <option value="Speaking Engagement">
+                    Speaking Engagement
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+
+            </div>
+
+
+            <div class="field-row">
+
+
+              <div class="field">
+
+                <label for="event-date">
+                  Preferred Date or Date Range
+                </label>
+
+                <input
+                  type="text"
+                  id="event-date"
+                  name="preferred_date_or_range"
+                  placeholder="Example: October 10–12"
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="attendance">
+                  Estimated Attendance
+                </label>
+
+                <input
+                  type="text"
+                  id="attendance"
+                  name="estimated_attendance"
+                  placeholder="Example: 50–75"
+                >
+
+              </div>
+
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="event-details">
+                Event Details <span class="required">*</span>
+              </label>
+
+              <textarea
+                id="event-details"
+                name="event_details"
+                placeholder="Tell us about the event, requested appearance, schedule, or anything else we should know."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              class="submit-button"
+              type="submit"
+            >
+              Submit Appearance Request
+            </button>
+
+
+          </form>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="privacy-note">
+        Contact information submitted through these forms is intended
+        only for responding to reader questions and event inquiries.
+        Email addresses will not be displayed publicly as part of
+        Reader Q&A.
       </div>
 
     </div>
@@ -837,8 +1075,8 @@
       </h2>
 
       <p>
-        Reader questions, event information and new ways to connect
-        will continue to be added here.
+        Questions from readers help keep the stories alive long
+        after the book is closed.
       </p>
 
     </div>
@@ -867,4 +1105,4 @@
 
 </body>
 
-</html>
+                  </html>
