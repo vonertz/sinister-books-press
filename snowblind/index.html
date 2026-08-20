@@ -150,6 +150,7 @@
       max-width: 900px;
       height: auto;
       margin: auto;
+
       border: 1px solid #2a343d;
 
       box-shadow:
@@ -165,13 +166,18 @@
     .button {
       display: inline-block;
       padding: 12px 21px;
+
       color: white;
       background: #12181d;
+
       border: 1px solid #617484;
+
       text-decoration: none;
       text-transform: uppercase;
+
       letter-spacing: 1.4px;
       font-size: 11px;
+
       transition: 0.25s ease;
     }
 
@@ -212,6 +218,59 @@
       font-size: 16px;
     }
 
+    /* TRAILER */
+
+    .trailer-section {
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #111820 0%,
+          #080b0e 65%,
+          #050607 100%
+        );
+
+      border-bottom: 1px solid #202930;
+    }
+
+    .trailer-intro {
+      max-width: 680px;
+      margin: 0 auto 35px;
+      color: #95a2ac;
+      font-size: 16px;
+    }
+
+    .trailer-wrap {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .trailer-wrap video {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9 / 16;
+
+      background: #000;
+
+      border: 1px solid #36434d;
+
+      box-shadow:
+        0 24px 60px rgba(0,0,0,0.8);
+    }
+
+    .trailer-caption {
+      margin-top: 18px;
+
+      color: #697985;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+
     /* READING ORDER */
 
     .series-grid {
@@ -236,6 +295,7 @@
       width: 100%;
       aspect-ratio: 2 / 3;
       object-fit: cover;
+
       border: 1px solid #32404a;
 
       box-shadow:
@@ -250,7 +310,9 @@
 
     .volume {
       margin-bottom: 6px;
+
       color: #6f8291;
+
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 10px;
@@ -265,6 +327,7 @@
     .book-card p {
       max-width: 320px;
       margin: auto;
+
       color: #909da7;
       font-size: 14px;
     }
@@ -297,7 +360,9 @@
 
     .themes-title {
       margin-bottom: 20px;
+
       color: #7890a1;
+
       text-transform: uppercase;
       letter-spacing: 2.5px;
       font-size: 11px;
@@ -338,6 +403,7 @@
       width: 100%;
       aspect-ratio: 2 / 3;
       object-fit: cover;
+
       border: 1px solid #303b43;
 
       box-shadow:
@@ -346,7 +412,9 @@
 
     .edition-label {
       margin-bottom: 5px;
+
       color: #687987;
+
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 9px;
@@ -360,6 +428,7 @@
     .hardcover-note {
       max-width: 780px;
       margin-top: 34px;
+
       color: #87949e;
       font-size: 14px;
     }
@@ -373,6 +442,7 @@
     .collector p {
       max-width: 720px;
       margin: 0 auto 28px;
+
       color: #9ba7b0;
       font-size: 16px;
     }
@@ -381,10 +451,13 @@
 
     footer {
       padding: 46px 20px;
+
       color: #66727a;
+
       text-align: center;
       font-size: 13px;
       letter-spacing: 1px;
+
       border-top: 1px solid #20282e;
     }
 
@@ -398,13 +471,18 @@
 
       .nav-links {
         display: none;
+
         position: absolute;
         top: 66px;
         left: 0;
+
         width: 100%;
+
         flex-direction: column;
         gap: 0;
+
         background: #050505;
+
         border-bottom: 1px solid #333;
       }
 
@@ -429,6 +507,7 @@
       .about-grid {
         grid-template-columns: 1fr;
       }
+
     }
 
     @media (max-width: 600px) {
@@ -443,6 +522,10 @@
 
       section {
         padding: 60px 22px;
+      }
+
+      .trailer-wrap {
+        max-width: 360px;
       }
 
       .series-grid {
@@ -463,6 +546,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 18px;
       }
+
     }
 
   </style>
@@ -557,6 +641,55 @@
     </div>
 
   </header>
+
+
+  <!-- TRAILER -->
+
+  <section class="trailer-section">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Official Book Trailer
+      </div>
+
+      <h2>
+        Watch the Trailer
+      </h2>
+
+      <p class="trailer-intro">
+        Enter the frozen isolation where the Snowblind story begins.
+      </p>
+
+
+      <div class="trailer-wrap">
+
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="Official Snowblind book trailer"
+        >
+
+          <source
+            src="../Snowblind_web.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support HTML5 video.
+
+        </video>
+
+      </div>
+
+
+      <div class="trailer-caption">
+        Snowblind — Official Trailer
+      </div>
+
+    </div>
+
+  </section>
 
 
   <!-- READING ORDER -->
@@ -939,7 +1072,7 @@
       <div class="hardcover-grid">
 
 
-        <!-- SNOWBLIND HARDCOVER -->
+        <!-- SNOWBLIND -->
 
         <article class="hardcover-card">
 
@@ -963,7 +1096,7 @@
         </article>
 
 
-        <!-- ISOLATION HARDCOVER -->
+        <!-- ISOLATION -->
 
         <article class="hardcover-card">
 
@@ -987,7 +1120,7 @@
         </article>
 
 
-        <!-- SCHISM HARDCOVER -->
+        <!-- SCHISM -->
 
         <article class="hardcover-card">
 
@@ -1011,7 +1144,7 @@
         </article>
 
 
-        <!-- HERESY HARDCOVER -->
+        <!-- HERESY -->
 
         <article class="hardcover-card">
 
@@ -1035,7 +1168,7 @@
         </article>
 
 
-        <!-- ASCENSION HARDCOVER -->
+        <!-- ASCENSION -->
 
         <article class="hardcover-card">
 
