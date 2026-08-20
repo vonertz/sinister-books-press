@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Official website of Sinister Books Press — horror, suspense, science fiction, literary drama, and Amazing Arya's Adventures."
+  >
 
   <title>Sinister Books Press</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -24,7 +35,13 @@
       line-height: 1.6;
     }
 
-    /* NAVIGATION */
+    img {
+      max-width: 100%;
+    }
+
+    /* =========================================
+       NAVIGATION
+       ========================================= */
 
     .navbar {
       position: sticky;
@@ -35,114 +52,118 @@
     }
 
     .nav-inner {
-      max-width: 1200px;
+      max-width: 1250px;
+      min-height: 66px;
       margin: auto;
-      min-height: 64px;
+      padding: 0 22px;
+
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 0 22px;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      color: #fff;
+      text-decoration: none;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 16px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 25px;
+      gap: 24px;
     }
 
     .nav-links a {
-      color: #cfcfcf;
+      color: #c9c9c9;
       text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 13px;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #fff;
     }
 
     .menu-button {
       display: none;
-      background: none;
-      border: 1px solid #444;
-      color: white;
-      font-size: 25px;
       width: 46px;
       height: 42px;
+
+      color: white;
+      background: transparent;
+      border: 1px solid #444;
+
+      font-size: 24px;
       cursor: pointer;
     }
 
-    /* HERO */
+
+    /* =========================================
+       HERO
+       ========================================= */
 
     .hero {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+
+      padding: 52px 22px 62px;
+
       text-align: center;
-      padding: 55px 22px 65px;
+
       background:
-        radial-gradient(circle at center, #222 0%, #111 42%, #050505 75%);
+        radial-gradient(
+          circle at center,
+          #242424 0%,
+          #111 45%,
+          #050505 78%
+        );
+
       border-bottom: 1px solid #202020;
     }
 
     .hero-inner {
-      max-width: 760px;
       width: 100%;
+      max-width: 760px;
     }
 
     .hero-logo {
       display: block;
       width: min(100%, 520px);
       height: auto;
+
       margin: auto;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+
+      box-shadow:
+        0 22px 60px rgba(0,0,0,0.5);
     }
 
     .tagline {
       margin-top: 30px;
+
+      color: #dedede;
+
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(19px, 4vw, 27px);
-      letter-spacing: 1px;
-      color: #d7d7d7;
+      font-size: clamp(20px, 4vw, 28px);
       font-style: italic;
+
+      letter-spacing: 1px;
     }
 
-    /* GENERAL */
+
+    /* =========================================
+       GENERAL SECTIONS
+       ========================================= */
 
     section {
       padding: 80px 24px;
-
-      /* Prevent sticky navigation from covering headings */
-      scroll-margin-top: 90px;
-    }
-
-    .section-inner {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section-label {
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      margin-bottom: 8px;
-    }
-
-    h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: clamp(32px, 6vw, 48px);
-      margin-bottom: 20px;
-    }
-
-    .intro {
-      max-width: 760px;
-      color: #aaa;
-      font-size: 17px;
+      scroll-margin-top: 88px;
     }
 
     .alternate {
@@ -151,16 +172,48 @@
       border-bottom: 1px solid #202020;
     }
 
-    /* FEATURED BOOKS */
-
-    .featured {
-      padding-top: 72px;
+    .section-inner {
+      max-width: 1150px;
+      margin: auto;
     }
+
+    .section-label {
+      margin-bottom: 8px;
+
+      color: #777;
+
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 6vw, 48px);
+
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      max-width: 760px;
+
+      color: #aaa;
+      font-size: 17px;
+    }
+
+
+    /* =========================================
+       FEATURED BOOKS
+       ========================================= */
 
     .book-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 34px;
+
       margin-top: 45px;
     }
 
@@ -171,8 +224,10 @@
     .cover-wrap {
       width: 100%;
       max-width: 290px;
+
       margin: 0 auto 24px;
-      transition: transform 0.3s ease;
+
+      transition: 0.3s ease;
     }
 
     .cover-wrap:hover {
@@ -181,135 +236,472 @@
 
     .cover-wrap img {
       display: block;
+
       width: 100%;
-      height: auto;
       aspect-ratio: 2 / 3;
+
       object-fit: cover;
+
       box-shadow:
-        0 18px 35px rgba(0,0,0,0.65),
+        0 18px 38px rgba(0,0,0,0.7),
         0 0 0 1px #333;
     }
 
     .book-type {
-      color: #777;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
       margin-bottom: 7px;
+
+      color: #777;
+
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
     }
 
     .book-card h3 {
+      margin-bottom: 10px;
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 24px;
-      margin-bottom: 10px;
     }
 
     .book-card p {
-      max-width: 300px;
+      max-width: 310px;
       margin: auto;
+
       color: #999;
       font-size: 14px;
     }
 
-    /* BOOK BUTTONS */
-
     .book-actions {
       margin-top: 22px;
+
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
-    .amazon-button {
+    .button {
       display: inline-block;
-      padding: 12px 23px;
-      border: 1px solid #777;
+
+      padding: 12px 22px;
+
       color: #fff;
       background: #151515;
+
+      border: 1px solid #666;
+
       text-decoration: none;
       text-transform: uppercase;
+
       letter-spacing: 1.5px;
       font-size: 12px;
+
       transition: 0.25s ease;
     }
 
-    .amazon-button:hover {
-      background: #fff;
+    .button:hover {
       color: #000;
+      background: #fff;
       border-color: #fff;
     }
 
     .coming-badge {
       display: inline-block;
-      padding: 12px 23px;
-      border: 1px solid #444;
+
+      padding: 12px 22px;
+
       color: #aaa;
+
+      border: 1px solid #444;
+
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+    }
+
+
+    /* =========================================
+       SNOWBLIND SERIES
+       ========================================= */
+
+    .series-feature {
+      margin-top: 42px;
+    }
+
+    .series-feature img {
+      display: block;
+
+      width: 100%;
+      max-width: 950px;
+
+      height: auto;
+
+      margin: auto;
+
+      border: 1px solid #252525;
+
+      box-shadow:
+        0 24px 60px rgba(0,0,0,0.65);
+    }
+
+    .series-copy {
+      max-width: 800px;
+
+      margin: 38px auto 0;
+
+      text-align: center;
+    }
+
+    .series-copy p {
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .series-copy .button {
+      margin-top: 24px;
+    }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+
+      margin-top: 52px;
+    }
+
+    .series-book {
+      text-align: center;
+    }
+
+    .series-book img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 2 / 3;
+
+      object-fit: cover;
+
+      border: 1px solid #333;
+
+      box-shadow:
+        0 12px 28px rgba(0,0,0,0.6);
+
+      transition: 0.25s ease;
+    }
+
+    .series-book img:hover {
+      transform: translateY(-5px);
+    }
+
+    .series-number {
+      margin-top: 14px;
+
+      color: #666;
+
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .series-book h3 {
+      margin-top: 4px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+    }
+
+
+    /* =========================================
+       MORE BOOKS / PROJECTS
+       ========================================= */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+
+      margin-top: 42px;
+    }
+
+    .project-card {
+      padding: 24px;
+
+      background: #0b0b0b;
+      border: 1px solid #292929;
+    }
+
+    .project-card img {
+      display: block;
+
+      width: 100%;
+      max-width: 270px;
+
+      aspect-ratio: 2 / 3;
+
+      object-fit: cover;
+
+      margin: 0 auto 24px;
+
+      box-shadow:
+        0 16px 32px rgba(0,0,0,0.55);
+    }
+
+    .project-card h3 {
+      margin-bottom: 8px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+    }
+
+    .project-status {
+      margin-bottom: 10px;
+
+      color: #777;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+
+    .project-card p {
+      color: #999;
+      font-size: 14px;
+    }
+
+
+    /* =========================================
+       AUTHORS
+       ========================================= */
+
+    .authors-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+
+      margin-top: 42px;
+    }
+
+    .author-card {
+      overflow: hidden;
+
+      background: #090909;
+      border: 1px solid #292929;
+    }
+
+    .author-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 280px;
+
+      padding: 20px;
+
+      background: #050505;
+      border-bottom: 1px solid #252525;
+    }
+
+    .author-photo img {
+      display: block;
+
+      max-width: 100%;
+      max-height: 440px;
+
+      width: auto;
+      height: auto;
+
+      object-fit: contain;
+    }
+
+    .author-body {
+      padding: 30px;
+    }
+
+    .author-role {
+      margin-bottom: 6px;
+
+      color: #777;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+    }
+
+    .author-body h3 {
+      margin-bottom: 18px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+    }
+
+    .author-body p {
+      margin-bottom: 16px;
+
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    details {
+      margin-top: 18px;
+
+      border-top: 1px solid #252525;
+      padding-top: 16px;
+    }
+
+    summary {
+      color: #ddd;
+
+      cursor: pointer;
+
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-size: 12px;
     }
 
-    /* SITE CARDS */
+    details p:first-of-type {
+      margin-top: 18px;
+    }
 
-    .site-grid {
+
+    /* =========================================
+       AMAZING ARYA
+       ========================================= */
+
+    .arya-shell {
+      margin-top: 42px;
+
+      padding: 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #161616,
+          #0a0a0a
+        );
+
+      border: 1px solid #303030;
+    }
+
+    .arya-logo-panel {
+      max-width: 720px;
+
+      margin: 0 auto 34px;
+
+      padding: 18px;
+
+      background: #fff;
+    }
+
+    .arya-logo-panel img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+    }
+
+    .arya-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 38px;
+
+      align-items: center;
+    }
+
+    .arya-cover img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      box-shadow:
+        0 18px 40px rgba(0,0,0,0.6);
+    }
+
+    .arya-copy h3 {
+      margin-bottom: 14px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+    }
+
+    .arya-copy p {
+      margin-bottom: 16px;
+
+      color: #aaa;
+      font-size: 16px;
+    }
+
+
+    /* =========================================
+       READER / EVENTS CARDS
+       ========================================= */
+
+    .info-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 35px;
+      gap: 22px;
+
+      margin-top: 34px;
     }
 
-    .site-card {
-      display: block;
-      color: white;
-      text-decoration: none;
-      border: 1px solid #292929;
+    .info-card {
+      padding: 30px;
+
       background: #090909;
-      padding: 28px;
+      border: 1px solid #292929;
     }
 
-    .site-card h3 {
+    .info-card h3 {
+      margin-bottom: 10px;
+
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-      margin-bottom: 8px;
+      font-size: 24px;
     }
 
-    .site-card p {
+    .info-card p {
       color: #999;
       font-size: 15px;
     }
 
-    /* FOOTER */
+
+    /* =========================================
+       FOOTER
+       ========================================= */
 
     footer {
-      border-top: 1px solid #222;
-      padding: 45px 20px;
-      text-align: center;
+      padding: 48px 20px;
+
       color: #666;
+
+      text-align: center;
       font-size: 13px;
       letter-spacing: 1px;
+
+      border-top: 1px solid #222;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 800px) {
+    /* =========================================
+       MOBILE
+       ========================================= */
 
-      .nav-inner {
-        justify-content: flex-end;
-      }
-
-      .menu-button {
-        display: block;
-      }
+    @media (max-width: 900px) {
 
       .nav-links {
         display: none;
+
         position: absolute;
-        top: 64px;
+        top: 66px;
         left: 0;
+
         width: 100%;
+
         flex-direction: column;
         gap: 0;
+
         background: #050505;
+
         border-bottom: 1px solid #333;
       }
 
@@ -319,13 +711,40 @@
 
       .nav-links a {
         width: 100%;
+
         padding: 17px 24px;
-        border-top: 1px solid #222;
+
         text-align: left;
+
+        border-top: 1px solid #222;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .series-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .arya-grid {
+        grid-template-columns: 260px 1fr;
+      }
+    }
+
+
+    @media (max-width: 700px) {
+
+      .nav-brand {
+        font-size: 13px;
       }
 
       .hero {
-        padding: 38px 20px 50px;
+        padding: 38px 20px 48px;
       }
 
       section {
@@ -334,45 +753,112 @@
 
       .book-grid {
         grid-template-columns: 1fr;
-        gap: 55px;
+        gap: 58px;
       }
 
       .cover-wrap {
         max-width: 300px;
       }
 
-      .site-grid {
+      .series-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .authors-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .arya-shell {
+        padding: 20px;
+      }
+
+      .arya-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .arya-cover {
+        max-width: 330px;
+        margin: auto;
+      }
+
+      .arya-copy {
+        text-align: center;
+      }
+
+      .info-grid {
         grid-template-columns: 1fr;
       }
     }
 
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- ======================================
+       NAVIGATION
+       ====================================== -->
+
   <nav class="navbar">
+
     <div class="nav-inner">
 
-      <button class="menu-button" onclick="toggleMenu()" aria-label="Menu">
+      <a class="nav-brand" href="#">
+        SINISTER BOOKS
+      </a>
+
+      <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+      >
         ☰
       </button>
 
       <div class="nav-links" id="navLinks">
-        <a href="#books" onclick="closeMenu()">Books</a>
-        <a href="#coming-soon" onclick="closeMenu()">Coming Soon</a>
-        <a href="#development" onclick="closeMenu()">In Development</a>
-        <a href="#authors" onclick="closeMenu()">Authors</a>
-        <a href="#arya" onclick="closeMenu()">Amazing Arya</a>
-        <a href="#questions" onclick="closeMenu()">Q&A</a>
-        <a href="#appearances" onclick="closeMenu()">Appearances</a>
+
+        <a href="#books" onclick="closeMenu()">
+          Books
+        </a>
+
+        <a href="#snowblind" onclick="closeMenu()">
+          Snowblind
+        </a>
+
+        <a href="#coming" onclick="closeMenu()">
+          Coming Soon
+        </a>
+
+        <a href="#authors" onclick="closeMenu()">
+          Authors
+        </a>
+
+        <a href="#arya" onclick="closeMenu()">
+          Amazing Arya
+        </a>
+
+        <a href="#readers" onclick="closeMenu()">
+          Readers
+        </a>
+
       </div>
 
     </div>
+
   </nav>
 
 
+
+  <!-- ======================================
+       HERO
+       ====================================== -->
+
   <header class="hero">
+
     <div class="hero-inner">
 
       <img
@@ -386,37 +872,57 @@
       </div>
 
     </div>
+
   </header>
 
 
-  <section class="featured" id="books">
+
+  <!-- ======================================
+       FEATURED BOOKS
+       ====================================== -->
+
+  <section id="books">
+
     <div class="section-inner">
 
-      <div class="section-label">Sinister Books Press</div>
-      <h2>Featured Books</h2>
+      <div class="section-label">
+        Sinister Books Press
+      </div>
+
+      <h2>
+        Featured Books
+      </h2>
 
       <p class="intro">
-        Horror, thrillers, suspense and stories about ordinary people
-        caught in extraordinary circumstances.
+        Horror, suspense, science fiction, thrillers and
+        character-driven stories about ordinary people caught
+        in extraordinary circumstances.
       </p>
 
 
       <div class="book-grid">
+
 
         <!-- SNOWBLIND -->
 
         <article class="book-card">
 
           <div class="cover-wrap">
+
             <img
-              src="5689d0f5-f2e1-4b30-9cda-c61b75edfa01.png"
+              src="Screenshot_20260820_111418_Gallery.jpg"
               alt="Snowblind book cover"
             >
+
           </div>
 
-          <div class="book-type">The Snowblind Series</div>
+          <div class="book-type">
+            The Snowblind Series
+          </div>
 
-          <h3>SNOWBLIND</h3>
+          <h3>
+            SNOWBLIND
+          </h3>
 
           <p>
             The beginning of a survival-horror series in which
@@ -424,17 +930,20 @@
           </p>
 
           <div class="book-actions">
+
             <a
-              class="amazon-button"
+              class="button"
               href="https://www.amazon.com/dp/B0GVZR2H19"
               target="_blank"
               rel="noopener noreferrer"
             >
               Buy on Amazon
             </a>
+
           </div>
 
         </article>
+
 
 
         <!-- ANIMAL HOURS -->
@@ -442,15 +951,21 @@
         <article class="book-card">
 
           <div class="cover-wrap">
+
             <img
               src="ChatGPT%20Image%20May%2021,%202026,%2001_18_32%20PM.png"
               alt="Animal Hours book cover"
             >
+
           </div>
 
-          <div class="book-type">Thriller</div>
+          <div class="book-type">
+            Thriller
+          </div>
 
-          <h3>ANIMAL HOURS</h3>
+          <h3>
+            ANIMAL HOURS
+          </h3>
 
           <p>
             A brilliant homicide detective's two lives collide
@@ -458,12 +973,15 @@
           </p>
 
           <div class="book-actions">
+
             <span class="coming-badge">
               Coming September 1
             </span>
+
           </div>
 
         </article>
+
 
 
         <!-- BEFORE THE STREETLIGHTS -->
@@ -471,15 +989,21 @@
         <article class="book-card">
 
           <div class="cover-wrap">
+
             <img
               src="5be5f4f6-4b3d-4faf-a401-2afe35c4f656.png"
               alt="Before the Streetlights book cover"
             >
+
           </div>
 
-          <div class="book-type">Coming-of-Age</div>
+          <div class="book-type">
+            Coming-of-Age
+          </div>
 
-          <h3>BEFORE THE STREETLIGHTS</h3>
+          <h3>
+            BEFORE THE STREETLIGHTS
+          </h3>
 
           <p>
             A story of childhood, friendship, freedom and the
@@ -487,157 +1011,697 @@
           </p>
 
           <div class="book-actions">
+
             <a
-              class="amazon-button"
+              class="button"
               href="https://www.amazon.com/dp/B0H533NYC6"
               target="_blank"
               rel="noopener noreferrer"
             >
               Buy on Amazon
             </a>
+
           </div>
 
         </article>
 
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="alternate" id="coming-soon">
-    <div class="section-inner">
-
-      <div class="section-label">What's Next</div>
-
-      <h2>Coming Soon</h2>
-
-      <p class="intro">
-        New releases from Sinister Books Press.
-        Covers, release dates and previews will appear here.
-      </p>
-
-    </div>
-  </section>
-
-
-  <section id="development">
-    <div class="section-inner">
-
-      <div class="section-label">Behind the Curtain</div>
-
-      <h2>In Development</h2>
-
-      <p class="intro">
-        Stories currently being written, developed and prepared
-        for future publication.
-      </p>
-
-    </div>
-  </section>
-
-
-  <section class="alternate" id="authors">
-    <div class="section-inner">
-
-      <div class="section-label">The Writers</div>
-
-      <h2>Authors</h2>
-
-      <div class="site-grid">
-
-        <div class="site-card">
-          <h3>Eric Erter</h3>
-          <p>
-            Author of the Snowblind series, Animal Hours,
-            Before the Streetlights and other works.
-          </p>
-        </div>
-
-        <div class="site-card">
-          <h3>Eric & Arya Erter</h3>
-          <p>
-            Creators of the Amazing Arya's Adventures
-            children's book series.
-          </p>
-        </div>
 
       </div>
 
     </div>
+
   </section>
 
+
+
+  <!-- ======================================
+       SNOWBLIND SERIES
+       ====================================== -->
+
+  <section
+    id="snowblind"
+    class="alternate"
+  >
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        Six Volumes
+      </div>
+
+      <h2>
+        The Snowblind Series
+      </h2>
+
+      <p class="intro">
+        What begins as a fight for survival in the mountains
+        grows into something far larger — a story of isolation,
+        division, belief and transformation.
+      </p>
+
+
+      <div class="series-feature">
+
+        <img
+          src="ec1e2223-5aea-4fb8-8018-610af82b28a4.png"
+          alt="The complete Snowblind Series collector trade paperback editions"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div class="series-copy">
+
+        <p>
+          The complete six-volume collector trade paperback
+          collection is available now.
+        </p>
+
+        <a
+          class="button"
+          href="https://www.amazon.com/dp/B0GVZR2H19"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start the Series on Amazon
+        </a>
+
+      </div>
+
+
+      <div class="series-grid">
+
+
+        <div class="series-book">
+
+          <img
+            src="Screenshot_20260820_111418_Gallery.jpg"
+            alt="Snowblind"
+            loading="lazy"
+          >
+
+          <div class="series-number">
+            Volume 1
+          </div>
+
+          <h3>
+            Snowblind
+          </h3>
+
+        </div>
+
+
+        <div class="series-book">
+
+          <img
+            src="02-isolation-full-wrap-collector-edition.png"
+            alt="Isolation"
+            loading="lazy"
+          >
+
+          <div class="series-number">
+            Volume 2
+          </div>
+
+          <h3>
+            Isolation
+          </h3>
+
+        </div>
+
+
+        <div class="series-book">
+
+          <img
+            src="03-schism-full-wrap-collector-edition.png"
+            alt="Schism"
+            loading="lazy"
+          >
+
+          <div class="series-number">
+            Volume 3
+          </div>
+
+          <h3>
+            Schism
+          </h3>
+
+        </div>
+
+
+        <div class="series-book">
+
+          <img
+            src="ChatGPT%20Image%20May%2014,%202026,%2009_29_16%20PM.png"
+            alt="Heresy"
+            loading="lazy"
+          >
+
+          <div class="series-number">
+            Volume 4
+          </div>
+
+          <h3>
+            Heresy
+          </h3>
+
+        </div>
+
+
+        <div class="series-book">
+
+          <img
+            src="ascension-part-one-council-arrival-cover-v3.png"
+            alt="Ascension Part One"
+            loading="lazy"
+          >
+
+          <div class="series-number">
+            Volume 5.1
+          </div>
+
+          <h3>
+            Ascension: Part One
+          </h3>
+
+        </div>
+
+
+        <div class="series-book">
+
+          <img
+            src="ascension-part-two-town-attack-cover-v1.png"
+            alt="Ascension Part Two"
+            loading="lazy"
+          >
+
+          <div class="series-number">
+            Volume 5.2
+          </div>
+
+          <h3>
+            Ascension: Part Two
+          </h3>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ======================================
+       MORE BOOKS / COMING SOON
+       ====================================== -->
+
+  <section id="coming">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        More from Sinister Books
+      </div>
+
+      <h2>
+        Books & Projects
+      </h2>
+
+      <p class="intro">
+        Published works, upcoming releases and stories currently
+        taking shape.
+      </p>
+
+
+      <div class="project-grid">
+
+
+        <!-- OLD MONEY -->
+
+        <article class="project-card">
+
+          <img
+            src="ChatGPT%20Image%20Aug%2013,%202026,%2008_50_34%20AM.png"
+            alt="Old Money book cover"
+            loading="lazy"
+          >
+
+          <div class="project-status">
+            Novel
+          </div>
+
+          <h3>
+            OLD MONEY
+          </h3>
+
+          <p>
+            A standalone novel from Sinister Books Press.
+          </p>
+
+        </article>
+
+
+
+        <!-- TIDES -->
+
+        <article class="project-card">
+
+          <img
+            src="ChatGPT%20Image%20Jul%2014,%202026,%2008_31_21%20PM.png"
+            alt="The Tides That Bind book cover"
+            loading="lazy"
+          >
+
+          <div class="project-status">
+            In Development
+          </div>
+
+          <h3>
+            THE TIDES THAT BIND
+          </h3>
+
+          <p>
+            A deeply personal story of grief, memory and the
+            places we return to when we cannot let go.
+          </p>
+
+        </article>
+
+
+
+        <!-- GOODNIGHT HOUSE -->
+
+        <article class="project-card">
+
+          <div
+            style="
+              min-height:405px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              margin-bottom:24px;
+              padding:30px;
+              border:1px solid #252525;
+              background:#070707;
+              text-align:center;
+            "
+          >
+
+            <div>
+
+              <div
+                style="
+                  font-family:Georgia,serif;
+                  font-size:28px;
+                  letter-spacing:2px;
+                "
+              >
+                GOODNIGHT,<br>HOUSE
+              </div>
+
+              <div
+                style="
+                  margin-top:16px;
+                  color:#666;
+                  text-transform:uppercase;
+                  letter-spacing:2px;
+                  font-size:10px;
+                "
+              >
+                Cover coming soon
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="project-status">
+            In Development
+          </div>
+
+          <h3>
+            GOODNIGHT, HOUSE
+          </h3>
+
+          <p>
+            A warm, strange and bittersweet story about a home
+            that watches a family grow around it.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ======================================
+       AUTHORS
+       ====================================== -->
+
+  <section
+    id="authors"
+    class="alternate"
+  >
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        Meet the Writers
+      </div>
+
+      <h2>
+        Authors
+      </h2>
+
+
+      <div class="authors-grid">
+
+
+        <!-- ERIC -->
+
+        <article class="author-card">
+
+          <div class="author-photo">
+
+            <img
+              src="slimmer_portrait_download.png"
+              alt="Eric Erter"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="author-body">
+
+            <div class="author-role">
+              Author / Founder
+            </div>
+
+            <h3>
+              Eric Erter
+            </h3>
+
+            <p>
+              Eric Erter writes across horror, suspense,
+              science fiction, and literary drama, united by
+              characters who feel genuine. He is drawn to the
+              quiet moments between the action—the conversations
+              and private fears that reveal who people are.
+            </p>
+
+
+            <details>
+
+              <summary>
+                Read Full Bio
+              </summary>
+
+              <p>
+                Erter began writing in high school, where his
+                poems and short stories were published, and later
+                studied creative writing in college. His background
+                includes comics, screenwriting, and film criticism.
+                For the past twenty years, he has worked as a
+                utility lineman.
+              </p>
+
+              <p>
+                His work includes the six-volume SNOWBLIND SERIES,
+                BEFORE THE STREETLIGHTS, ANIMAL HOURS,
+                THE TIDES THAT BIND, OLD MONEY, and GOODNIGHT,
+                HOUSE. His life as a husband and father of three
+                strongly influences his writing.
+              </p>
+
+              <p>
+                Influenced by Stephen King, Neil Gaiman,
+                Michael Connelly, films, comics, and story-driven
+                games, Erter founded SINISTER BOOKS for stories
+                that disturb without relying on gore. He lives
+                with his family in Arlington, Texas.
+              </p>
+
+            </details>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ERIC & ARYA -->
+
+        <article class="author-card">
+
+          <div class="author-photo">
+
+            <img
+              src="20260418_163658.jpg"
+              alt="Eric and Arya Erter"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="author-body">
+
+            <div class="author-role">
+              Father-Daughter Writing Team
+            </div>
+
+            <h3>
+              Eric & Arya Erter
+            </h3>
+
+            <p>
+              Eric and Arya Erter are a father-and-daughter
+              writing team who bring the fictional Arya to life
+              through adventures inspired by both real experiences
+              and imagination.
+            </p>
+
+            <p>
+              Together, they created Amazing Arya's Adventures
+              to explore the world through curiosity, humor,
+              discovery, and a little bit of magic.
+            </p>
+
+            <p>
+              When she isn't helping dream up Arya's next
+              adventure, Arya loves reading, writing, and art.
+              She also enjoys ice hockey, figure skating,
+              taekwondo, gymnastics, and gaming—especially
+              Roblox and Minecraft.
+            </p>
+
+            <p>
+              Her favorite movie is Coraline, which may explain
+              why she appreciates stories with a little adventure,
+              imagination, and just the right amount of strange.
+            </p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ======================================
+       AMAZING ARYA
+       ====================================== -->
 
   <section id="arya">
+
     <div class="section-inner">
 
-      <div class="section-label">For Young Readers</div>
+      <div class="section-label">
+        For Young Readers
+      </div>
 
-      <h2>Amazing Arya's Adventures</h2>
+      <h2>
+        Amazing Arya's Adventures
+      </h2>
 
       <p class="intro">
-        Explore the world — and beyond — with Arya through
-        adventures built around imagination, discovery and learning.
+        Real experiences and big imagination come together in
+        adventures built around exploration, curiosity and learning.
       </p>
 
+
+      <div class="arya-shell">
+
+
+        <div class="arya-logo-panel">
+
+          <img
+            src="ChatGPT%20Image%20May%2024,%202026,%2008_21_13%20PM.png"
+            alt="Amazing Arya's Adventures logo"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="arya-grid">
+
+
+          <div class="arya-cover">
+
+            <img
+              src="Screenshot_20260526_195933_Amazon%20Shopping.jpg"
+              alt="Amazing Arya's Hockey Adventure"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="arya-copy">
+
+            <div class="section-label">
+              Amazing Arya's Adventures
+            </div>
+
+            <h3>
+              Amazing Arya's Hockey Adventure
+            </h3>
+
+            <p>
+              Join Arya as everyday experiences become opportunities
+              for discovery, learning and adventure.
+            </p>
+
+            <p>
+              The Amazing Arya series takes young readers from
+              hockey rinks and distant countries to outer space,
+              history and wherever Arya's imagination leads next.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
     </div>
+
   </section>
 
 
-  <section class="alternate" id="questions">
+
+  <!-- ======================================
+       READERS / APPEARANCES
+       ====================================== -->
+
+  <section
+    id="readers"
+    class="alternate"
+  >
+
     <div class="section-inner">
 
-      <div class="section-label">Readers</div>
+      <div class="section-label">
+        Connect
+      </div>
 
-      <h2>Ask the Author</h2>
+      <h2>
+        Readers
+      </h2>
 
-      <p class="intro">
-        Have a question about a book, character, story or what's
-        coming next? Reader questions and answers will appear here.
-      </p>
+
+      <div class="info-grid">
+
+
+        <div class="info-card">
+
+          <h3>
+            Ask the Author
+          </h3>
+
+          <p>
+            Have a question about a book, character, story,
+            or what's coming next? A reader Q&A section is
+            coming to Sinister Books.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <h3>
+            Appearances & Signings
+          </h3>
+
+          <p>
+            Upcoming appearances, book signings and information
+            about appearance requests will be posted here.
+          </p>
+
+        </div>
+
+
+      </div>
 
     </div>
+
   </section>
 
 
-  <section id="appearances">
-    <div class="section-inner">
 
-      <div class="section-label">Events</div>
-
-      <h2>Appearances & Signings</h2>
-
-      <p class="intro">
-        Future book signings, appearances and information for
-        appearance requests will be posted here.
-      </p>
-
-    </div>
-  </section>
-
+  <!-- ======================================
+       FOOTER
+       ====================================== -->
 
   <footer>
     © 2026 Sinister Books Press
   </footer>
 
 
+
   <script>
 
     function toggleMenu() {
+
       document
         .getElementById("navLinks")
         .classList
         .toggle("open");
+
     }
 
+
     function closeMenu() {
+
       document
         .getElementById("navLinks")
         .classList
         .remove("open");
+
     }
 
   </script>
 
+
 </body>
-</html>
+
+  </html>
