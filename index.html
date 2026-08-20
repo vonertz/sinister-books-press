@@ -30,7 +30,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.97);
+      background: rgba(0,0,0,0.97);
       border-bottom: 1px solid #252525;
     }
 
@@ -57,11 +57,10 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-size: 13px;
-      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: #ffffff;
+      color: white;
     }
 
     .menu-button {
@@ -114,6 +113,9 @@
 
     section {
       padding: 80px 24px;
+
+      /* Prevent sticky navigation from covering headings */
+      scroll-margin-top: 90px;
     }
 
     .section-inner {
@@ -167,7 +169,6 @@
     }
 
     .cover-wrap {
-      position: relative;
       width: 100%;
       max-width: 290px;
       margin: 0 auto 24px;
@@ -210,6 +211,44 @@
       font-size: 14px;
     }
 
+    /* BOOK BUTTONS */
+
+    .book-actions {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .amazon-button {
+      display: inline-block;
+      padding: 12px 23px;
+      border: 1px solid #777;
+      color: #fff;
+      background: #151515;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      transition: 0.25s ease;
+    }
+
+    .amazon-button:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    .coming-badge {
+      display: inline-block;
+      padding: 12px 23px;
+      border: 1px solid #444;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+    }
+
     /* SITE CARDS */
 
     .site-grid {
@@ -226,12 +265,6 @@
       border: 1px solid #292929;
       background: #090909;
       padding: 28px;
-      transition: 0.25s ease;
-    }
-
-    .site-card:hover {
-      border-color: #777;
-      background: #121212;
     }
 
     .site-card h3 {
@@ -289,15 +322,10 @@
         padding: 17px 24px;
         border-top: 1px solid #222;
         text-align: left;
-        font-size: 13px;
       }
 
       .hero {
         padding: 38px 20px 50px;
-      }
-
-      .hero-logo {
-        width: min(100%, 440px);
       }
 
       section {
@@ -317,6 +345,7 @@
         grid-template-columns: 1fr;
       }
     }
+
   </style>
 </head>
 
@@ -394,6 +423,17 @@
             the cold is only the first thing trying to kill you.
           </p>
 
+          <div class="book-actions">
+            <a
+              class="amazon-button"
+              href="https://www.amazon.com/dp/B0GVZR2H19"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buy on Amazon
+            </a>
+          </div>
+
         </article>
 
 
@@ -417,6 +457,12 @@
             when a killer begins hunting inside his own world.
           </p>
 
+          <div class="book-actions">
+            <span class="coming-badge">
+              Coming September 1
+            </span>
+          </div>
+
         </article>
 
 
@@ -439,6 +485,17 @@
             A story of childhood, friendship, freedom and the
             summer that changed everything.
           </p>
+
+          <div class="book-actions">
+            <a
+              class="amazon-button"
+              href="https://www.amazon.com/dp/B0H533NYC6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buy on Amazon
+            </a>
+          </div>
 
         </article>
 
@@ -490,26 +547,19 @@
       <div class="site-grid">
 
         <div class="site-card">
-
           <h3>Eric Erter</h3>
-
           <p>
             Author of the Snowblind series, Animal Hours,
             Before the Streetlights and other works.
           </p>
-
         </div>
 
-
         <div class="site-card">
-
           <h3>Eric & Arya Erter</h3>
-
           <p>
             Creators of the Amazing Arya's Adventures
             children's book series.
           </p>
-
         </div>
 
       </div>
