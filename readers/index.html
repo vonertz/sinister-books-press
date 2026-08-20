@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Connect with Sinister Books Press. Ask author Eric Erter a question or learn about appearances and book signings."
+  >
+
+  <title>Readers | Sinister Books Press</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(0,0,0,0.98);
+      border-bottom: 1px solid #292929;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      min-height: 66px;
+
+      margin: auto;
+      padding: 0 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: #bbb;
+      text-decoration: none;
+
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: white;
+    }
+
+    .menu-button {
+      display: none;
+
+      width: 46px;
+      height: 42px;
+
+      color: white;
+      background: transparent;
+
+      border: 1px solid #444;
+
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+      padding: 78px 24px 72px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #242424 0%,
+          #101010 48%,
+          #050505 84%
+        );
+
+      border-bottom: 1px solid #242424;
+    }
+
+    .page-header-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+
+      color: #777;
+
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(44px, 8vw, 72px);
+
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    .page-header p {
+      max-width: 760px;
+
+      color: #aaa;
+      font-size: 18px;
+    }
+
+
+    /* GENERAL */
+
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 6vw, 48px);
+
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .intro {
+      max-width: 760px;
+
+      color: #999;
+      font-size: 16px;
+    }
+
+
+    /* CONNECT CARDS */
+
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+
+      margin-top: 45px;
+    }
+
+    .connect-card {
+      min-height: 420px;
+
+      padding: 38px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #121212,
+          #090909
+        );
+
+      border: 1px solid #303030;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-label {
+      margin-bottom: 12px;
+
+      color: #777;
+
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 10px;
+    }
+
+    .connect-card h3 {
+      margin-bottom: 18px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 32px;
+    }
+
+    .connect-card p {
+      margin-bottom: 17px;
+
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    .coming-note {
+      margin-top: auto;
+      padding-top: 25px;
+    }
+
+    .status-box {
+      padding: 15px 18px;
+
+      border: 1px solid #444;
+      background: #0b0b0b;
+
+      color: #aaa;
+
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11px;
+
+      text-align: center;
+    }
+
+
+    /* ASK THE AUTHOR EXPLANATION */
+
+    .alternate {
+      background: #101010;
+
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .qa-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+
+      align-items: start;
+
+      margin-top: 40px;
+    }
+
+    .qa-copy p {
+      margin-bottom: 18px;
+
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .question-examples {
+      padding: 30px;
+
+      background: #090909;
+      border: 1px solid #292929;
+    }
+
+    .question-examples h3 {
+      margin-bottom: 18px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+    }
+
+    .example {
+      padding: 14px 0;
+
+      color: #999;
+
+      border-bottom: 1px solid #242424;
+
+      font-size: 14px;
+    }
+
+    .example:last-child {
+      border-bottom: none;
+    }
+
+
+    /* APPEARANCES */
+
+    .appearance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+
+      align-items: start;
+
+      margin-top: 40px;
+    }
+
+    .appearance-copy p {
+      margin-bottom: 18px;
+
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .request-box {
+      padding: 30px;
+
+      background: #0b0b0b;
+      border: 1px solid #292929;
+    }
+
+    .request-box h3 {
+      margin-bottom: 18px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+    }
+
+    .request-item {
+      padding: 12px 0;
+
+      color: #999;
+
+      border-bottom: 1px solid #242424;
+
+      font-size: 14px;
+    }
+
+    .request-item:last-child {
+      border-bottom: none;
+    }
+
+
+    /* CLOSING */
+
+    .closing {
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #171717,
+          #080808 70%
+        );
+
+      border-top: 1px solid #222;
+    }
+
+    .closing-inner {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .closing h2 {
+      text-transform: none;
+      letter-spacing: 1px;
+    }
+
+    .closing p {
+      color: #999;
+      font-size: 16px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 46px 20px;
+
+      color: #666;
+
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 1px;
+
+      border-top: 1px solid #222;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 66px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
+        background: #050505;
+
+        border-bottom: 1px solid #333;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+
+        padding: 17px 24px;
+
+        border-top: 1px solid #222;
+      }
+
+      .connect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qa-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .appearance-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .page-header {
+        padding: 55px 22px 52px;
+      }
+
+      section {
+        padding: 60px 22px;
+      }
+
+      .connect-card {
+        min-height: 0;
+        padding: 28px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav class="navbar">
+
+    <div class="nav-inner">
+
+      <a class="brand" href="/">
+        SINISTER BOOKS
+      </a>
+
+      <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/books/">
+          Books
+        </a>
+
+        <a href="/snowblind/">
+          Snowblind
+        </a>
+
+        <a href="/coming-soon/">
+          Coming Soon
+        </a>
+
+        <a href="/authors/">
+          Authors
+        </a>
+
+        <a href="/amazing-arya/">
+          Amazing Arya
+        </a>
+
+        <a href="/readers/" class="active">
+          Readers
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HEADER -->
+
+  <header class="page-header">
+
+    <div class="page-header-inner">
+
+      <div class="eyebrow">
+        Sinister Books Press
+      </div>
+
+      <h1>
+        Readers
+      </h1>
+
+      <p>
+        Books may begin with the writer, but they belong to readers
+        once they are out in the world. This is where the conversation
+        continues.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- MAIN OPTIONS -->
+
+  <section>
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Connect
+      </div>
+
+      <h2>
+        Get in Touch
+      </h2>
+
+      <p class="intro">
+        Ask about a story, character or future project—or inquire
+        about an appearance, signing or event.
+      </p>
+
+
+      <div class="connect-grid">
+
+
+        <!-- ASK THE AUTHOR -->
+
+        <article class="connect-card">
+
+          <div class="card-label">
+            Reader Questions
+          </div>
+
+          <h3>
+            Ask the Author
+          </h3>
+
+          <p>
+            Have a question about SNOWBLIND, a character,
+            the writing process, an upcoming book, or something
+            you noticed while reading?
+          </p>
+
+          <p>
+            Reader questions will be collected here, with selected
+            questions and answers published on the site so other
+            readers can join the conversation.
+          </p>
+
+          <div class="coming-note">
+
+            <div class="status-box">
+              Question submissions opening soon
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- APPEARANCES -->
+
+        <article class="connect-card">
+
+          <div class="card-label">
+            Events
+          </div>
+
+          <h3>
+            Appearances & Signings
+          </h3>
+
+          <p>
+            Interested in arranging a book signing, author appearance,
+            bookstore event, library visit, convention appearance
+            or other event?
+          </p>
+
+          <p>
+            Appearance requests will be handled through a dedicated
+            inquiry form here on the Sinister Books Press website.
+          </p>
+
+          <div class="coming-note">
+
+            <div class="status-box">
+              Appearance requests opening soon
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Q&A -->
+
+  <section class="alternate">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Reader Q&A
+      </div>
+
+      <h2>
+        Ask About the Stories
+      </h2>
+
+
+      <div class="qa-grid">
+
+
+        <div class="qa-copy">
+
+          <p>
+            The goal of Ask the Author is not simply to provide
+            private answers. Selected questions can become part
+            of an ongoing public Q&A, allowing readers to explore
+            the stories together.
+          </p>
+
+          <p>
+            Questions can be about individual books, characters,
+            influences, writing decisions, the publishing process
+            or projects currently in development.
+          </p>
+
+          <p>
+            Spoiler-sensitive answers can be clearly marked so
+            readers can decide whether they want to continue.
+          </p>
+
+        </div>
+
+
+        <div class="question-examples">
+
+          <h3>
+            What Can I Ask?
+          </h3>
+
+          <div class="example">
+            Questions about characters or story events
+          </div>
+
+          <div class="example">
+            Behind-the-scenes writing decisions
+          </div>
+
+          <div class="example">
+            Connections between books
+          </div>
+
+          <div class="example">
+            Upcoming projects and ideas
+          </div>
+
+          <div class="example">
+            Writing and publishing questions
+          </div>
+
+          <div class="example">
+            Anything you've always wondered after finishing a book
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- APPEARANCES -->
+
+  <section>
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Events & Signings
+      </div>
+
+      <h2>
+        Appearance Requests
+      </h2>
+
+
+      <div class="appearance-grid">
+
+
+        <div class="appearance-copy">
+
+          <p>
+            Sinister Books Press welcomes inquiries from bookstores,
+            libraries, conventions, schools, book clubs and other
+            organizations interested in author appearances or
+            signing events.
+          </p>
+
+          <p>
+            The future request form will collect the basic event
+            information needed to determine availability before
+            additional arrangements are discussed.
+          </p>
+
+        </div>
+
+
+        <div class="request-box">
+
+          <h3>
+            Event Information
+          </h3>
+
+          <div class="request-item">
+            Organization or venue
+          </div>
+
+          <div class="request-item">
+            Event type
+          </div>
+
+          <div class="request-item">
+            City and location
+          </div>
+
+          <div class="request-item">
+            Preferred date or date range
+          </div>
+
+          <div class="request-item">
+            Expected attendance
+          </div>
+
+          <div class="request-item">
+            Contact information
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLOSING -->
+
+  <section class="closing">
+
+    <div class="closing-inner">
+
+      <div class="eyebrow">
+        Sinister Books Press
+      </div>
+
+      <h2>
+        The Conversation Doesn't End on the Last Page.
+      </h2>
+
+      <p>
+        Reader questions, event information and new ways to connect
+        will continue to be added here.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Sinister Books Press
+  </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+
+      document
+        .getElementById("navLinks")
+        .classList
+        .toggle("open");
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
