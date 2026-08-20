@@ -1,10 +1,302 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sinister Books Press</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.96);
+      border-bottom: 1px solid #292929;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #d8d8d8;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      background:
+        radial-gradient(circle at center, #242424 0%, #0d0d0d 48%, #000 100%);
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 850px;
+    }
+
+    .logo-box {
+      background: white;
+      max-width: 650px;
+      margin: 0 auto 32px auto;
+      padding: 12px;
+      box-shadow: 0 0 50px rgba(255,255,255,0.08);
+    }
+
+    .logo-box img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 7vw, 60px);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 80px 22px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    section p {
+      color: #bcbcbc;
+      max-width: 750px;
+      font-size: 17px;
+    }
+
+    .dark-section {
+      background: #111;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .card {
+      min-height: 180px;
+      border: 1px solid #333;
+      background: #0a0a0a;
+      padding: 28px;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      border-color: #777;
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #999;
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      color: #777;
+      border-top: 1px solid #222;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        text-align: left;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0 8px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Sinister Books Press</h1>
-  <p>Official website coming soon.</p>
+
+  <nav>
+    <a href="#books">Books</a>
+    <a href="#coming-soon">Coming Soon</a>
+    <a href="#development">In Development</a>
+    <a href="#authors">Authors</a>
+    <a href="#arya">Amazing Arya</a>
+    <a href="#questions">Q&A</a>
+    <a href="#appearances">Appearances</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <div class="logo-box">
+        <img src="FB_IMG_1776374972363.jpg" alt="Sinister Books">
+      </div>
+
+      <h1>Sinister Books</h1>
+      <p>Official Website</p>
+
+    </div>
+  </header>
+
+  <section id="books">
+    <div class="section-inner">
+      <h2>Books</h2>
+      <p>
+        Explore the novels, series, thrillers, horror stories and other
+        titles from Sinister Books.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Available Now</h3>
+          <p>Published titles and series will appear here.</p>
+        </div>
+
+        <div class="card">
+          <h3>Series</h3>
+          <p>Explore complete series and interconnected stories.</p>
+        </div>
+
+        <div class="card">
+          <h3>Stand-Alone Novels</h3>
+          <p>Individual stories outside the continuing series.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coming-soon" class="dark-section">
+    <div class="section-inner">
+      <h2>Coming Soon</h2>
+      <p>
+        The next releases from Sinister Books will be revealed here.
+      </p>
+    </div>
+  </section>
+
+  <section id="development">
+    <div class="section-inner">
+      <h2>In Development</h2>
+      <p>
+        A look at stories, books and projects currently taking shape.
+      </p>
+    </div>
+  </section>
+
+  <section id="authors" class="dark-section">
+    <div class="section-inner">
+      <h2>Authors</h2>
+      <p>
+        Meet the writers behind Sinister Books and learn more about
+        their stories.
+      </p>
+    </div>
+  </section>
+
+  <section id="arya">
+    <div class="section-inner">
+      <h2>Amazing Arya's Adventures</h2>
+      <p>
+        A special home for the Amazing Arya's Adventures children's
+        book series.
+      </p>
+    </div>
+  </section>
+
+  <section id="questions" class="dark-section">
+    <div class="section-inner">
+      <h2>Ask the Author</h2>
+      <p>
+        Reader questions, answers and conversations will live here.
+      </p>
+    </div>
+  </section>
+
+  <section id="appearances">
+    <div class="section-inner">
+      <h2>Appearances & Signings</h2>
+      <p>
+        Information about appearances, book signings and appearance
+        requests will be available here.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Sinister Books Press
+  </footer>
+
 </body>
 </html>
