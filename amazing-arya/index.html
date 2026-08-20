@@ -71,7 +71,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 24px;
     }
 
     .nav-links a {
@@ -130,7 +130,6 @@
       max-width: 720px;
 
       margin: auto;
-
       padding: 20px;
 
       background: white;
@@ -157,7 +156,6 @@
       font-size: clamp(38px, 7vw, 62px);
 
       color: #20273a;
-
       letter-spacing: 2px;
     }
 
@@ -167,7 +165,6 @@
       margin: 18px auto 0;
 
       color: #687184;
-
       font-size: clamp(17px, 3vw, 21px);
     }
 
@@ -206,6 +203,34 @@
 
       color: #697286;
       font-size: 17px;
+    }
+
+    /* BUTTON */
+
+    .button {
+      display: inline-block;
+
+      padding: 13px 23px;
+
+      color: white;
+      background: #29314a;
+
+      border: 1px solid #29314a;
+      border-radius: 8px;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      letter-spacing: 1.4px;
+      font-size: 11px;
+      font-weight: bold;
+
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      background: #ffffff;
+      color: #29314a;
     }
 
     /* FEATURED BOOK */
@@ -264,7 +289,6 @@
       display: inline-block;
 
       margin-bottom: 15px;
-
       padding: 7px 12px;
 
       color: #4d5875;
@@ -277,7 +301,24 @@
       text-transform: uppercase;
     }
 
-    /* SERIES IDEA */
+    .available-label {
+      display: block;
+
+      margin: 5px 0 18px;
+
+      color: #65708b;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .book-actions {
+      margin-top: 25px;
+    }
+
+    /* SERIES */
 
     .series {
       background:
@@ -334,7 +375,7 @@
       color: #29314a;
     }
 
-    /* WHAT ARYA EXPLORES */
+    /* LEARNING */
 
     .explore-grid {
       display: grid;
@@ -488,7 +529,6 @@
       .explore-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
     }
 
     @media (max-width: 700px) {
@@ -527,7 +567,6 @@
         max-width: 500px;
         margin: auto;
       }
-
     }
 
     @media (max-width: 500px) {
@@ -539,7 +578,6 @@
       .explore-grid {
         grid-template-columns: 1fr;
       }
-
     }
 
   </style>
@@ -578,8 +616,12 @@
           Books
         </a>
 
-        <a href="/#snowblind">
+        <a href="/snowblind/">
           Snowblind
+        </a>
+
+        <a href="/coming-soon/">
+          Coming Soon
         </a>
 
         <a href="/authors/">
@@ -590,7 +632,7 @@
           Amazing Arya
         </a>
 
-        <a href="/#readers">
+        <a href="/readers/">
           Readers
         </a>
 
@@ -668,6 +710,10 @@
             Amazing Arya's Adventures
           </div>
 
+          <span class="available-label">
+            Available Now
+          </span>
+
           <h3>
             Amazing Arya's Hockey Adventure
           </h3>
@@ -683,6 +729,19 @@
             questions, explore new things and discover just how
             much there is to learn from the world around them.
           </p>
+
+          <div class="book-actions">
+
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0H2Z29Q5M"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buy on Amazon
+            </a>
+
+          </div>
 
         </div>
 
@@ -734,7 +793,7 @@
         <div class="adventure-card">
 
           <div class="adventure-number">
-            Adventure
+            Available Now
           </div>
 
           <h3>
@@ -777,7 +836,7 @@
   </section>
 
 
-  <!-- WHAT THE BOOKS EXPLORE -->
+  <!-- LEARNING -->
 
   <section>
 
@@ -967,4 +1026,4 @@
 
 </body>
 
-  </html>
+</html>
