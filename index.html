@@ -30,7 +30,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(0,0,0,0.97);
+      background: rgba(0, 0, 0, 0.97);
       border-bottom: 1px solid #252525;
     }
 
@@ -61,7 +61,7 @@
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #ffffff;
     }
 
     .menu-button {
@@ -78,7 +78,6 @@
     /* HERO */
 
     .hero {
-      min-height: 68vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -111,7 +110,7 @@
       font-style: italic;
     }
 
-    /* GENERAL SECTIONS */
+    /* GENERAL */
 
     section {
       padding: 80px 24px;
@@ -139,7 +138,7 @@
     }
 
     .intro {
-      max-width: 720px;
+      max-width: 760px;
       color: #aaa;
       font-size: 17px;
     }
@@ -150,55 +149,68 @@
       border-bottom: 1px solid #202020;
     }
 
-    /* FEATURED */
+    /* FEATURED BOOKS */
 
     .featured {
-      padding-top: 70px;
+      padding-top: 72px;
     }
 
     .book-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 38px;
+      gap: 30px;
+      margin-top: 45px;
     }
 
     .book-card {
-      border: 1px solid #292929;
-      background: linear-gradient(145deg, #151515, #090909);
-      padding: 32px 25px;
-      min-height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      transition: 0.25s ease;
+      text-align: center;
     }
 
-    .book-card:hover {
-      transform: translateY(-5px);
-      border-color: #666;
+    .cover-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 290px;
+      margin: 0 auto 24px;
+      transition: transform 0.3s ease;
     }
 
-    .book-card .small {
+    .cover-wrap:hover {
+      transform: translateY(-7px);
+    }
+
+    .cover-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      box-shadow:
+        0 18px 35px rgba(0,0,0,0.65),
+        0 0 0 1px #333;
+    }
+
+    .book-type {
       color: #777;
-      text-transform: uppercase;
-      letter-spacing: 2px;
       font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
       margin-bottom: 7px;
     }
 
     .book-card h3 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-      margin-bottom: 8px;
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
     .book-card p {
+      max-width: 300px;
+      margin: auto;
       color: #999;
       font-size: 14px;
     }
 
-    /* LINKS / SECTION CARDS */
+    /* SITE CARDS */
 
     .site-grid {
       display: grid;
@@ -281,16 +293,11 @@
       }
 
       .hero {
-        min-height: auto;
         padding: 38px 20px 50px;
       }
 
       .hero-logo {
         width: min(100%, 440px);
-      }
-
-      .tagline {
-        margin-top: 24px;
       }
 
       section {
@@ -299,10 +306,11 @@
 
       .book-grid {
         grid-template-columns: 1fr;
+        gap: 55px;
       }
 
-      .book-card {
-        min-height: 190px;
+      .cover-wrap {
+        max-width: 300px;
       }
 
       .site-grid {
@@ -359,37 +367,80 @@
       <h2>Featured Books</h2>
 
       <p class="intro">
-        Horror, thrillers, suspense, speculative fiction and stories
-        about the people caught in extraordinary circumstances.
+        Horror, thrillers, suspense and stories about ordinary people
+        caught in extraordinary circumstances.
       </p>
+
 
       <div class="book-grid">
 
-        <div class="book-card">
-          <div class="small">Series</div>
-          <h3>The Snowblind Series</h3>
-          <p>
-            Survival was only the beginning.
-          </p>
-        </div>
+        <!-- SNOWBLIND -->
 
-        <div class="book-card">
-          <div class="small">Novel</div>
-          <h3>Animal Hours</h3>
-          <p>
-            A homicide detective. A hidden life. Something hunting
-            from within.
-          </p>
-        </div>
+        <article class="book-card">
 
-        <div class="book-card">
-          <div class="small">Novel</div>
-          <h3>Before the Streetlights</h3>
+          <div class="cover-wrap">
+            <img
+              src="5689d0f5-f2e1-4b30-9cda-c61b75edfa01.png"
+              alt="Snowblind book cover"
+            >
+          </div>
+
+          <div class="book-type">The Snowblind Series</div>
+
+          <h3>SNOWBLIND</h3>
+
           <p>
-            A story of childhood, friendship, freedom and the summer
-            that changed everything.
+            The beginning of a survival-horror series in which
+            the cold is only the first thing trying to kill you.
           </p>
-        </div>
+
+        </article>
+
+
+        <!-- ANIMAL HOURS -->
+
+        <article class="book-card">
+
+          <div class="cover-wrap">
+            <img
+              src="ChatGPT%20Image%20May%2021,%202026,%2001_18_32%20PM.png"
+              alt="Animal Hours book cover"
+            >
+          </div>
+
+          <div class="book-type">Thriller</div>
+
+          <h3>ANIMAL HOURS</h3>
+
+          <p>
+            A brilliant homicide detective's two lives collide
+            when a killer begins hunting inside his own world.
+          </p>
+
+        </article>
+
+
+        <!-- BEFORE THE STREETLIGHTS -->
+
+        <article class="book-card">
+
+          <div class="cover-wrap">
+            <img
+              src="5be5f4f6-4b3d-4faf-a401-2afe35c4f656.png"
+              alt="Before the Streetlights book cover"
+            >
+          </div>
+
+          <div class="book-type">Coming-of-Age</div>
+
+          <h3>BEFORE THE STREETLIGHTS</h3>
+
+          <p>
+            A story of childhood, friendship, freedom and the
+            summer that changed everything.
+          </p>
+
+        </article>
 
       </div>
 
@@ -401,6 +452,7 @@
     <div class="section-inner">
 
       <div class="section-label">What's Next</div>
+
       <h2>Coming Soon</h2>
 
       <p class="intro">
@@ -416,6 +468,7 @@
     <div class="section-inner">
 
       <div class="section-label">Behind the Curtain</div>
+
       <h2>In Development</h2>
 
       <p class="intro">
@@ -431,24 +484,32 @@
     <div class="section-inner">
 
       <div class="section-label">The Writers</div>
+
       <h2>Authors</h2>
 
       <div class="site-grid">
 
         <div class="site-card">
+
           <h3>Eric Erter</h3>
+
           <p>
             Author of the Snowblind series, Animal Hours,
             Before the Streetlights and other works.
           </p>
+
         </div>
 
+
         <div class="site-card">
+
           <h3>Eric & Arya Erter</h3>
+
           <p>
             Creators of the Amazing Arya's Adventures
             children's book series.
           </p>
+
         </div>
 
       </div>
@@ -461,6 +522,7 @@
     <div class="section-inner">
 
       <div class="section-label">For Young Readers</div>
+
       <h2>Amazing Arya's Adventures</h2>
 
       <p class="intro">
@@ -476,6 +538,7 @@
     <div class="section-inner">
 
       <div class="section-label">Readers</div>
+
       <h2>Ask the Author</h2>
 
       <p class="intro">
@@ -491,6 +554,7 @@
     <div class="section-inner">
 
       <div class="section-label">Events</div>
+
       <h2>Appearances & Signings</h2>
 
       <p class="intro">
@@ -508,13 +572,21 @@
 
 
   <script>
+
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("open");
+      document
+        .getElementById("navLinks")
+        .classList
+        .toggle("open");
     }
 
     function closeMenu() {
-      document.getElementById("navLinks").classList.remove("open");
+      document
+        .getElementById("navLinks")
+        .classList
+        .remove("open");
     }
+
   </script>
 
 </body>
