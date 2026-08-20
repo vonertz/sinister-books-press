@@ -24,76 +24,97 @@
       line-height: 1.6;
     }
 
-    nav {
+    /* NAVIGATION */
+
+    .navbar {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(0, 0, 0, 0.96);
-      border-bottom: 1px solid #292929;
-      padding: 14px 20px;
-      text-align: center;
+      z-index: 1000;
+      background: rgba(0,0,0,0.97);
+      border-bottom: 1px solid #252525;
     }
 
-    nav a {
-      color: #d8d8d8;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    .hero {
-      min-height: 85vh;
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0 22px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #cfcfcf;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .menu-button {
+      display: none;
+      background: none;
+      border: 1px solid #444;
+      color: white;
+      font-size: 25px;
+      width: 46px;
+      height: 42px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 68vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 50px 20px;
+      padding: 55px 22px 65px;
       background:
-        radial-gradient(circle at center, #242424 0%, #0d0d0d 48%, #000 100%);
+        radial-gradient(circle at center, #222 0%, #111 42%, #050505 75%);
+      border-bottom: 1px solid #202020;
     }
 
-    .hero-content {
+    .hero-inner {
+      max-width: 760px;
       width: 100%;
-      max-width: 850px;
     }
 
-    .logo-box {
-      background: white;
-      max-width: 650px;
-      margin: 0 auto 32px auto;
-      padding: 12px;
-      box-shadow: 0 0 50px rgba(255,255,255,0.08);
-    }
-
-    .logo-box img {
+    .hero-logo {
       display: block;
-      width: 100%;
+      width: min(100%, 520px);
       height: auto;
+      margin: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
     }
 
-    .hero h1 {
+    .tagline {
+      margin-top: 30px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 7vw, 60px);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      font-size: clamp(19px, 4vw, 27px);
+      letter-spacing: 1px;
+      color: #d7d7d7;
+      font-style: italic;
     }
 
-    .hero p {
-      color: #aaa;
-      font-size: 18px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 80px 22px;
+      padding: 80px 24px;
     }
 
     .section-inner {
@@ -101,85 +122,191 @@
       margin: auto;
     }
 
-    section h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 34px;
+    .section-label {
+      color: #777;
       text-transform: uppercase;
       letter-spacing: 3px;
-      margin-bottom: 18px;
+      font-size: 12px;
+      margin-bottom: 8px;
     }
 
-    section p {
-      color: #bcbcbc;
-      max-width: 750px;
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: clamp(32px, 6vw, 48px);
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: #aaa;
       font-size: 17px;
     }
 
-    .dark-section {
-      background: #111;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
+    .alternate {
+      background: #101010;
+      border-top: 1px solid #202020;
+      border-bottom: 1px solid #202020;
     }
 
-    .cards {
+    /* FEATURED */
+
+    .featured {
+      padding-top: 70px;
+    }
+
+    .book-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 38px;
+    }
+
+    .book-card {
+      border: 1px solid #292929;
+      background: linear-gradient(145deg, #151515, #090909);
+      padding: 32px 25px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: 0.25s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-5px);
+      border-color: #666;
+    }
+
+    .book-card .small {
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      margin-bottom: 7px;
+    }
+
+    .book-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .book-card p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    /* LINKS / SECTION CARDS */
+
+    .site-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
       margin-top: 35px;
     }
 
-    .card {
-      min-height: 180px;
-      border: 1px solid #333;
-      background: #0a0a0a;
+    .site-card {
+      display: block;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #292929;
+      background: #090909;
       padding: 28px;
       transition: 0.25s ease;
     }
 
-    .card:hover {
+    .site-card:hover {
       border-color: #777;
-      transform: translateY(-3px);
+      background: #121212;
     }
 
-    .card h3 {
+    .site-card h3 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 23px;
+      margin-bottom: 8px;
     }
 
-    .card p {
-      font-size: 15px;
+    .site-card p {
       color: #999;
+      font-size: 15px;
     }
+
+    /* FOOTER */
 
     footer {
-      text-align: center;
-      padding: 45px 20px;
-      color: #777;
       border-top: 1px solid #222;
+      padding: 45px 20px;
+      text-align: center;
+      color: #666;
       font-size: 13px;
       letter-spacing: 1px;
     }
 
-    @media (max-width: 700px) {
-      nav {
-        overflow-x: auto;
-        white-space: nowrap;
-        text-align: left;
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-inner {
+        justify-content: flex-end;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 0 8px;
-        font-size: 12px;
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: #050505;
+        border-bottom: 1px solid #333;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 17px 24px;
+        border-top: 1px solid #222;
+        text-align: left;
+        font-size: 13px;
       }
 
       .hero {
-        min-height: 75vh;
+        min-height: auto;
+        padding: 38px 20px 50px;
+      }
+
+      .hero-logo {
+        width: min(100%, 440px);
+      }
+
+      .tagline {
+        margin-top: 24px;
       }
 
       section {
-        padding: 60px 20px;
+        padding: 62px 22px;
+      }
+
+      .book-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .book-card {
+        min-height: 190px;
+      }
+
+      .site-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -187,116 +314,208 @@
 
 <body>
 
-  <nav>
-    <a href="#books">Books</a>
-    <a href="#coming-soon">Coming Soon</a>
-    <a href="#development">In Development</a>
-    <a href="#authors">Authors</a>
-    <a href="#arya">Amazing Arya</a>
-    <a href="#questions">Q&A</a>
-    <a href="#appearances">Appearances</a>
-  </nav>
+  <nav class="navbar">
+    <div class="nav-inner">
 
-  <header class="hero">
-    <div class="hero-content">
+      <button class="menu-button" onclick="toggleMenu()" aria-label="Menu">
+        ☰
+      </button>
 
-      <div class="logo-box">
-        <img src="FB_IMG_1776374972363.jpg" alt="Sinister Books">
+      <div class="nav-links" id="navLinks">
+        <a href="#books" onclick="closeMenu()">Books</a>
+        <a href="#coming-soon" onclick="closeMenu()">Coming Soon</a>
+        <a href="#development" onclick="closeMenu()">In Development</a>
+        <a href="#authors" onclick="closeMenu()">Authors</a>
+        <a href="#arya" onclick="closeMenu()">Amazing Arya</a>
+        <a href="#questions" onclick="closeMenu()">Q&A</a>
+        <a href="#appearances" onclick="closeMenu()">Appearances</a>
       </div>
 
-      <h1>Sinister Books</h1>
-      <p>Official Website</p>
+    </div>
+  </nav>
+
+
+  <header class="hero">
+    <div class="hero-inner">
+
+      <img
+        class="hero-logo"
+        src="FB_IMG_1776374972363.jpg"
+        alt="Sinister Books"
+      >
+
+      <div class="tagline">
+        Stories that stay with you after the lights go out.
+      </div>
 
     </div>
   </header>
 
-  <section id="books">
+
+  <section class="featured" id="books">
     <div class="section-inner">
-      <h2>Books</h2>
-      <p>
-        Explore the novels, series, thrillers, horror stories and other
-        titles from Sinister Books.
+
+      <div class="section-label">Sinister Books Press</div>
+      <h2>Featured Books</h2>
+
+      <p class="intro">
+        Horror, thrillers, suspense, speculative fiction and stories
+        about the people caught in extraordinary circumstances.
       </p>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Available Now</h3>
-          <p>Published titles and series will appear here.</p>
+      <div class="book-grid">
+
+        <div class="book-card">
+          <div class="small">Series</div>
+          <h3>The Snowblind Series</h3>
+          <p>
+            Survival was only the beginning.
+          </p>
         </div>
 
-        <div class="card">
-          <h3>Series</h3>
-          <p>Explore complete series and interconnected stories.</p>
+        <div class="book-card">
+          <div class="small">Novel</div>
+          <h3>Animal Hours</h3>
+          <p>
+            A homicide detective. A hidden life. Something hunting
+            from within.
+          </p>
         </div>
 
-        <div class="card">
-          <h3>Stand-Alone Novels</h3>
-          <p>Individual stories outside the continuing series.</p>
+        <div class="book-card">
+          <div class="small">Novel</div>
+          <h3>Before the Streetlights</h3>
+          <p>
+            A story of childhood, friendship, freedom and the summer
+            that changed everything.
+          </p>
         </div>
+
       </div>
+
     </div>
   </section>
 
-  <section id="coming-soon" class="dark-section">
+
+  <section class="alternate" id="coming-soon">
     <div class="section-inner">
+
+      <div class="section-label">What's Next</div>
       <h2>Coming Soon</h2>
-      <p>
-        The next releases from Sinister Books will be revealed here.
+
+      <p class="intro">
+        New releases from Sinister Books Press.
+        Covers, release dates and previews will appear here.
       </p>
+
     </div>
   </section>
+
 
   <section id="development">
     <div class="section-inner">
+
+      <div class="section-label">Behind the Curtain</div>
       <h2>In Development</h2>
-      <p>
-        A look at stories, books and projects currently taking shape.
+
+      <p class="intro">
+        Stories currently being written, developed and prepared
+        for future publication.
       </p>
+
     </div>
   </section>
 
-  <section id="authors" class="dark-section">
+
+  <section class="alternate" id="authors">
     <div class="section-inner">
+
+      <div class="section-label">The Writers</div>
       <h2>Authors</h2>
-      <p>
-        Meet the writers behind Sinister Books and learn more about
-        their stories.
-      </p>
+
+      <div class="site-grid">
+
+        <div class="site-card">
+          <h3>Eric Erter</h3>
+          <p>
+            Author of the Snowblind series, Animal Hours,
+            Before the Streetlights and other works.
+          </p>
+        </div>
+
+        <div class="site-card">
+          <h3>Eric & Arya Erter</h3>
+          <p>
+            Creators of the Amazing Arya's Adventures
+            children's book series.
+          </p>
+        </div>
+
+      </div>
+
     </div>
   </section>
+
 
   <section id="arya">
     <div class="section-inner">
+
+      <div class="section-label">For Young Readers</div>
       <h2>Amazing Arya's Adventures</h2>
-      <p>
-        A special home for the Amazing Arya's Adventures children's
-        book series.
+
+      <p class="intro">
+        Explore the world — and beyond — with Arya through
+        adventures built around imagination, discovery and learning.
       </p>
+
     </div>
   </section>
 
-  <section id="questions" class="dark-section">
+
+  <section class="alternate" id="questions">
     <div class="section-inner">
+
+      <div class="section-label">Readers</div>
       <h2>Ask the Author</h2>
-      <p>
-        Reader questions, answers and conversations will live here.
+
+      <p class="intro">
+        Have a question about a book, character, story or what's
+        coming next? Reader questions and answers will appear here.
       </p>
+
     </div>
   </section>
+
 
   <section id="appearances">
     <div class="section-inner">
+
+      <div class="section-label">Events</div>
       <h2>Appearances & Signings</h2>
-      <p>
-        Information about appearances, book signings and appearance
-        requests will be available here.
+
+      <p class="intro">
+        Future book signings, appearances and information for
+        appearance requests will be posted here.
       </p>
+
     </div>
   </section>
+
 
   <footer>
     © 2026 Sinister Books Press
   </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    function closeMenu() {
+      document.getElementById("navLinks").classList.remove("open");
+    }
+  </script>
 
 </body>
 </html>
