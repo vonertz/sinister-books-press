@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Amazing Arya's Adventures by Eric & Arya Erter — children's stories inspired by real experiences, imagination, exploration and discovery."
+  >
+
+  <title>Amazing Arya's Adventures | Sinister Books Press</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #1b2230;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(0,0,0,0.98);
+      border-bottom: 1px solid #292929;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      min-height: 66px;
+
+      margin: auto;
+      padding: 0 22px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #bbb;
+      text-decoration: none;
+
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: white;
+    }
+
+    .menu-button {
+      display: none;
+
+      width: 46px;
+      height: 42px;
+
+      color: white;
+      background: transparent;
+
+      border: 1px solid #444;
+
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 60px 24px 70px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at top,
+          #e8f6ff 0%,
+          #f7f4ff 45%,
+          #ffffff 100%
+        );
+
+      border-bottom: 1px solid #d8dce5;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .logo-panel {
+      max-width: 720px;
+
+      margin: auto;
+
+      padding: 20px;
+
+      background: white;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 18px 55px rgba(30, 50, 80, 0.14);
+    }
+
+    .logo-panel img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      margin-top: 35px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 7vw, 62px);
+
+      color: #20273a;
+
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      max-width: 720px;
+
+      margin: 18px auto 0;
+
+      color: #687184;
+
+      font-size: clamp(17px, 3vw, 21px);
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 75px 24px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 8px;
+
+      color: #79809a;
+
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 6vw, 48px);
+
+      color: #20273a;
+    }
+
+    .intro {
+      max-width: 760px;
+
+      color: #697286;
+      font-size: 17px;
+    }
+
+    /* FEATURED BOOK */
+
+    .featured {
+      background: white;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 380px) 1fr;
+      gap: 55px;
+
+      align-items: center;
+
+      margin-top: 42px;
+    }
+
+    .book-cover {
+      padding: 16px;
+
+      background: #ffffff;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 22px 50px rgba(39, 51, 77, 0.18);
+    }
+
+    .book-cover img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-radius: 10px;
+    }
+
+    .book-copy h3 {
+      margin-bottom: 16px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 5vw, 42px);
+
+      color: #20273a;
+    }
+
+    .book-copy p {
+      margin-bottom: 18px;
+
+      color: #697286;
+      font-size: 16px;
+    }
+
+    .book-label {
+      display: inline-block;
+
+      margin-bottom: 15px;
+
+      padding: 7px 12px;
+
+      color: #4d5875;
+      background: #eef1fa;
+
+      border-radius: 20px;
+
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    /* SERIES IDEA */
+
+    .series {
+      background:
+        linear-gradient(
+          135deg,
+          #eef7ff,
+          #f7f1ff
+        );
+
+      border-top: 1px solid #dce0ea;
+      border-bottom: 1px solid #dce0ea;
+    }
+
+    .adventure-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      margin-top: 40px;
+    }
+
+    .adventure-card {
+      min-height: 210px;
+
+      padding: 26px;
+
+      background: rgba(255,255,255,0.8);
+
+      border: 1px solid #d5dae6;
+      border-radius: 16px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      box-shadow:
+        0 10px 25px rgba(50, 60, 90, 0.08);
+    }
+
+    .adventure-number {
+      color: #8c94aa;
+
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+    .adventure-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+
+      color: #29314a;
+    }
+
+    /* WHAT ARYA EXPLORES */
+
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+
+      margin-top: 38px;
+    }
+
+    .explore-card {
+      padding: 28px 20px;
+
+      text-align: center;
+
+      border-radius: 16px;
+
+      background: white;
+      border: 1px solid #dce0ea;
+
+      box-shadow:
+        0 8px 22px rgba(40, 55, 90, 0.07);
+    }
+
+    .explore-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .explore-card h3 {
+      margin-bottom: 7px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+
+      color: #29314a;
+    }
+
+    .explore-card p {
+      color: #778096;
+      font-size: 14px;
+    }
+
+    /* CREATORS */
+
+    .creators {
+      background: #20273a;
+      color: white;
+    }
+
+    .creators .eyebrow {
+      color: #9ca8c8;
+    }
+
+    .creators h2 {
+      color: white;
+    }
+
+    .creator-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 430px) 1fr;
+      gap: 50px;
+
+      align-items: center;
+
+      margin-top: 40px;
+    }
+
+    .creator-photo img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .creator-copy h3 {
+      margin-bottom: 18px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+    }
+
+    .creator-copy p {
+      margin-bottom: 17px;
+
+      color: #c7cede;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 46px 20px;
+
+      background: #080808;
+
+      border-top: 1px solid #222;
+
+      color: #666;
+
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 66px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
+        background: #050505;
+
+        border-bottom: 1px solid #333;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+
+        padding: 17px 24px;
+
+        border-top: 1px solid #222;
+      }
+
+      .adventure-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .explore-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 700px) {
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 38px 20px 50px;
+      }
+
+      section {
+        padding: 60px 22px;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .book-cover {
+        max-width: 340px;
+        margin: auto;
+      }
+
+      .book-copy {
+        text-align: center;
+      }
+
+      .creator-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creator-photo {
+        max-width: 500px;
+        margin: auto;
+      }
+
+    }
+
+    @media (max-width: 500px) {
+
+      .adventure-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .explore-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav class="navbar">
+
+    <div class="nav-inner">
+
+      <a class="brand" href="/">
+        SINISTER BOOKS
+      </a>
+
+      <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/books/">
+          Books
+        </a>
+
+        <a href="/#snowblind">
+          Snowblind
+        </a>
+
+        <a href="/authors/">
+          Authors
+        </a>
+
+        <a href="/amazing-arya/" class="active">
+          Amazing Arya
+        </a>
+
+        <a href="/#readers">
+          Readers
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-inner">
+
+      <div class="logo-panel">
+
+        <img
+          src="../ChatGPT%20Image%20May%2024,%202026,%2008_21_13%20PM.png"
+          alt="Amazing Arya's Adventures"
+        >
+
+      </div>
+
+      <h1>
+        Amazing Arya's Adventures
+      </h1>
+
+      <p class="tagline">
+        Real experiences. Big imagination. A whole world to explore.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- FEATURED BOOK -->
+
+  <section class="featured">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Featured Adventure
+      </div>
+
+      <h2>
+        Amazing Arya's Hockey Adventure
+      </h2>
+
+      <p class="intro">
+        The Amazing Arya books turn curiosity, everyday experiences,
+        travel and imagination into adventures for young readers.
+      </p>
+
+
+      <div class="featured-grid">
+
+
+        <div class="book-cover">
+
+          <img
+            src="../Screenshot_20260526_195933_Amazon%20Shopping.jpg"
+            alt="Amazing Arya's Hockey Adventure"
+          >
+
+        </div>
+
+
+        <div class="book-copy">
+
+          <div class="book-label">
+            Amazing Arya's Adventures
+          </div>
+
+          <h3>
+            Amazing Arya's Hockey Adventure
+          </h3>
+
+          <p>
+            Join Arya as she discovers the excitement of hockey,
+            learns about the game and turns a trip to the rink
+            into an adventure all her own.
+          </p>
+
+          <p>
+            Each Amazing Arya story encourages children to ask
+            questions, explore new things and discover just how
+            much there is to learn from the world around them.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- THE SERIES -->
+
+  <section class="series">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        The Adventures
+      </div>
+
+      <h2>
+        Where Will Arya Go Next?
+      </h2>
+
+      <p class="intro">
+        Some adventures are inspired by places Arya has really
+        experienced. Others begin with a simple question:
+        what if?
+      </p>
+
+
+      <div class="adventure-grid">
+
+
+        <div class="adventure-card">
+
+          <div class="adventure-number">
+            Adventure
+          </div>
+
+          <h3>
+            Princess Arya's Magic Forest
+          </h3>
+
+        </div>
+
+
+        <div class="adventure-card">
+
+          <div class="adventure-number">
+            Adventure
+          </div>
+
+          <h3>
+            Amazing Arya's Hockey Adventure
+          </h3>
+
+        </div>
+
+
+        <div class="adventure-card">
+
+          <div class="adventure-number">
+            Adventure
+          </div>
+
+          <h3>
+            Amazing Arya's Trip to Thailand
+          </h3>
+
+        </div>
+
+
+        <div class="adventure-card">
+
+          <div class="adventure-number">
+            Adventure
+          </div>
+
+          <h3>
+            Amazing Arya's Mars Adventure
+          </h3>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT THE BOOKS EXPLORE -->
+
+  <section>
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Learn Through Adventure
+      </div>
+
+      <h2>
+        Curiosity Leads the Way
+      </h2>
+
+      <p class="intro">
+        Amazing Arya's Adventures gives young readers a way to
+        explore places, ideas and experiences through stories.
+      </p>
+
+
+      <div class="explore-grid">
+
+
+        <div class="explore-card">
+
+          <div class="explore-icon">
+            🌎
+          </div>
+
+          <h3>
+            Travel
+          </h3>
+
+          <p>
+            Discover new places, cultures and experiences.
+          </p>
+
+        </div>
+
+
+        <div class="explore-card">
+
+          <div class="explore-icon">
+            🚀
+          </div>
+
+          <h3>
+            Science
+          </h3>
+
+          <p>
+            Ask questions about space, nature and how things work.
+          </p>
+
+        </div>
+
+
+        <div class="explore-card">
+
+          <div class="explore-icon">
+            📚
+          </div>
+
+          <h3>
+            History
+          </h3>
+
+          <p>
+            See how people and ideas helped shape the world.
+          </p>
+
+        </div>
+
+
+        <div class="explore-card">
+
+          <div class="explore-icon">
+            ✨
+          </div>
+
+          <h3>
+            Imagination
+          </h3>
+
+          <p>
+            Because sometimes the best adventure begins with make-believe.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CREATORS -->
+
+  <section class="creators">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Meet the Creators
+      </div>
+
+      <h2>
+        Eric & Arya Erter
+      </h2>
+
+
+      <div class="creator-grid">
+
+
+        <div class="creator-photo">
+
+          <img
+            src="../20260418_163658.jpg"
+            alt="Eric and Arya Erter"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="creator-copy">
+
+          <h3>
+            A Father-Daughter Writing Team
+          </h3>
+
+          <p>
+            Eric and Arya Erter are a father-and-daughter writing
+            team who bring the fictional Arya to life through
+            adventures inspired by both real experiences and
+            imagination.
+          </p>
+
+          <p>
+            Together, they created Amazing Arya's Adventures to
+            explore the world through curiosity, humor, discovery,
+            and a little bit of magic.
+          </p>
+
+          <p>
+            When she isn't helping dream up Arya's next adventure,
+            Arya loves reading, writing, and art. She also enjoys
+            ice hockey, figure skating, taekwondo, gymnastics,
+            and gaming—especially Roblox and Minecraft.
+          </p>
+
+          <p>
+            Her favorite movie is Coraline, which may explain why
+            she appreciates stories with a little adventure,
+            imagination, and just the right amount of strange.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Sinister Books Press
+  </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+
+      document
+        .getElementById("navLinks")
+        .classList
+        .toggle("open");
+
+    }
+
+  </script>
+
+
+</body>
+
+  </html>
