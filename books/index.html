@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="Books from Sinister Books Press, including the Snowblind Series, standalone novels, and Amazing Arya's Adventures."
+    content="Books from Sinister Books Press, including the Snowblind Series, standalone fiction and Amazing Arya's Adventures."
   >
 
   <title>Books | Sinister Books Press</title>
@@ -26,9 +26,9 @@
 
     body {
       background: #080808;
-      color: #f4f4f4;
+      color: #f1f1f1;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     /* NAVIGATION */
@@ -46,10 +46,9 @@
       min-height: 66px;
       margin: auto;
       padding: 0 22px;
-
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     .brand {
@@ -63,8 +62,8 @@
 
     .nav-links {
       display: flex;
-      gap: 24px;
       align-items: center;
+      gap: 24px;
     }
 
     .nav-links a {
@@ -94,16 +93,14 @@
     /* HEADER */
 
     .page-header {
-      padding: 75px 24px 65px;
-
+      padding: 78px 24px 72px;
       background:
         radial-gradient(
           circle at center,
           #242424 0%,
-          #101010 45%,
-          #050505 80%
+          #101010 48%,
+          #050505 84%
         );
-
       border-bottom: 1px solid #242424;
     }
 
@@ -113,19 +110,19 @@
     }
 
     .eyebrow {
+      margin-bottom: 10px;
       color: #777;
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 11px;
-      margin-bottom: 10px;
     }
 
     h1 {
+      margin-bottom: 18px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(44px, 8vw, 72px);
+      font-size: clamp(46px, 8vw, 74px);
       text-transform: uppercase;
       letter-spacing: 4px;
-      margin-bottom: 18px;
     }
 
     .page-header p {
@@ -137,7 +134,12 @@
     /* GENERAL */
 
     section {
-      padding: 75px 24px;
+      padding: 78px 24px;
+    }
+
+    .section-inner {
+      max-width: 1150px;
+      margin: auto;
     }
 
     .alternate {
@@ -146,1179 +148,141 @@
       border-bottom: 1px solid #222;
     }
 
-    .section-inner {
-      max-width: 1150px;
-      margin: auto;
-    }
-
     h2 {
+      margin-bottom: 16px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(32px, 6vw, 48px);
       text-transform: uppercase;
       letter-spacing: 3px;
-      margin-bottom: 15px;
     }
 
-    .section-intro {
-      max-width: 760px;
+    .intro {
+      max-width: 780px;
       color: #999;
       font-size: 16px;
     }
 
-    /* BUTTONS */
+    /* PROMO */
 
-    .button {
-      display: inline-block;
-      padding: 11px 19px;
-      color: white;
-      background: #151515;
-      border: 1px solid #666;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1.3px;
-      font-size: 10px;
-      transition: 0.2s ease;
+    .series-promo {
+      margin-top: 38px;
     }
 
-    .button:hover {
-      background: white;
-      color: black;
-    }
-
-    /* SNOWBLIND */
-
-    .series-banner {
-      margin-top: 40px;
-    }
-
-    .series-banner img {
+    .series-promo img {
       display: block;
       width: 100%;
-      max-width: 900px;
-      height: auto;
+      max-width: 950px;
       margin: auto;
       border: 1px solid #292929;
-
-      box-shadow:
-        0 22px 55px rgba(0,0,0,0.65);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.4);
     }
 
-    .series-intro {
-      max-width: 800px;
-      margin: 35px auto 0;
-      text-align: center;
-      color: #aaa;
-    }
+    /* BOOK GRIDS */
 
-    .series-intro .button {
-      margin-top: 22px;
-    }
-
-    .series-grid {
+    .book-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 48px 28px;
-      margin-top: 50px;
-    }
-
-    .series-book {
-      text-align: center;
-    }
-
-    .series-cover {
-      max-width: 275px;
-      margin: auto auto 20px;
-    }
-
-    .series-cover img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-      border: 1px solid #333;
-
-      box-shadow:
-        0 15px 32px rgba(0,0,0,0.65);
-    }
-
-    .volume {
-      color: #666;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-
-    .series-book h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      margin-bottom: 9px;
-    }
-
-    .series-book p {
-      max-width: 300px;
-      margin: auto;
-      color: #999;
-      font-size: 13px;
-    }
-
-    .series-action {
-      margin-top: 17px;
-    }
-
-    /* STANDALONES */
-
-    .standalone-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 35px;
+      gap: 28px;
       margin-top: 42px;
     }
 
-    .standalone-card {
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 28px;
-      align-items: center;
-
-      padding: 25px;
-
-      background: #0b0b0b;
+    .book-card {
+      overflow: hidden;
+      background: #0d0d0d;
       border: 1px solid #292929;
+      display: flex;
+      flex-direction: column;
     }
 
-    .standalone-card img {
+    .book-image-wrap {
+      padding: 16px;
+      background: #111;
+      border-bottom: 1px solid #242424;
+    }
+
+    .book-card img {
       display: block;
       width: 100%;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
+      height: 390px;
+      object-fit: contain;
+      margin: auto;
+    }
 
-      box-shadow:
-        0 14px 30px rgba(0,0,0,0.55);
+    .book-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .status {
-      color: #777;
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 12px;
+      padding: 5px 9px;
+      background: #1b1b1b;
+      border: 1px solid #343434;
+      color: #aaa;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 10px;
-      margin-bottom: 7px;
+      letter-spacing: 1.5px;
+      font-size: 9px;
+      font-weight: bold;
     }
 
-    .standalone-copy h3 {
+    .status.available {
+      color: #eee;
+      border-color: #555;
+    }
+
+    .status.soon {
+      color: #ccc;
+      border-color: #555;
+    }
+
+    .status.development {
+      color: #999;
+      border-color: #3b3b3b;
+    }
+
+    .book-content h3 {
+      margin-bottom: 12px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 25px;
-      margin-bottom: 10px;
+      line-height: 1.25;
     }
 
-    .standalone-copy p {
+    .book-content p {
+      margin-bottom: 22px;
       color: #999;
       font-size: 14px;
+      flex: 1;
     }
 
-    .actions {
-      margin-top: 18px;
-    }
-
-    /* AMAZING ARYA */
-
-    .arya-section {
-      background:
-        linear-gradient(
-          135deg,
-          #eef7ff,
-          #f7f1ff
-        );
-
-      color: #20273a;
-    }
-
-    .arya-section .eyebrow {
-      color: #79809a;
-    }
-
-    .arya-section h2 {
-      color: #20273a;
-    }
-
-    .arya-section .section-intro {
-      color: #697286;
-    }
-
-    .arya-card {
-      display: grid;
-      grid-template-columns: minmax(240px, 330px) 1fr;
-      gap: 45px;
-
-      align-items: center;
-
-      margin-top: 42px;
-      padding: 30px;
-
-      background: rgba(255,255,255,0.88);
-
-      border: 1px solid #d5dae6;
-      border-radius: 18px;
-
-      box-shadow:
-        0 15px 38px rgba(50,60,90,0.12);
-    }
-
-    .arya-cover img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-
-      box-shadow:
-        0 16px 32px rgba(40,50,80,0.18);
-    }
-
-    .arya-copy h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
-      margin-bottom: 14px;
-    }
-
-    .arya-copy p {
-      color: #697286;
-      font-size: 15px;
-      margin-bottom: 16px;
-    }
-
-    .arya-button {
+    .button {
       display: inline-block;
-      padding: 12px 21px;
-
-      color: white;
-      background: #29314a;
-
-      border: 1px solid #29314a;
-      border-radius: 7px;
-
+      align-self: flex-start;
+      padding: 11px 16px;
+      color: #050505;
+      background: white;
+      border: 1px solid white;
       text-decoration: none;
       text-transform: uppercase;
-
-      letter-spacing: 1.3px;
+      letter-spacing: 1.4px;
       font-size: 10px;
+      font-weight: bold;
     }
 
-    .arya-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-
-      margin-top: 20px;
+    .button:hover {
+      color: white;
+      background: #181818;
     }
 
-    /* UPCOMING */
-
-    .upcoming-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 42px;
+    .secondary-button {
+      color: white;
+      background: transparent;
+      border-color: #555;
     }
 
-    .upcoming-card {
-      text-align: center;
-    }
+    /* SILVER KITE */
 
-    .upcoming-card img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-      margin-bottom: 20px;
-
-      border: 1px solid #333;
-
-      box-shadow:
-        0 16px 34px rgba(0,0,0,0.6);
-    }
-
-    .upcoming-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .upcoming-card p {
-      color: #999;
-      font-size: 13px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 46px 20px;
-      border-top: 1px solid #222;
-      color: #666;
-      text-align: center;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-
-      .menu-button {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 66px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        gap: 0;
-        background: #050505;
-        border-bottom: 1px solid #333;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        width: 100%;
-        padding: 17px 24px;
-        border-top: 1px solid #222;
-      }
-
-      .series-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .standalone-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .arya-card {
-        grid-template-columns: 260px 1fr;
-      }
-
-      .upcoming-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-    }
-
-    @media (max-width: 650px) {
-
-      .brand {
-        font-size: 13px;
-      }
-
-      .page-header {
-        padding: 55px 22px 50px;
-      }
-
-      section {
-        padding: 60px 22px;
-      }
-
-      .series-grid {
-        grid-template-columns: 1fr;
-        gap: 55px;
-      }
-
-      .series-book {
-        max-width: 320px;
-        margin: auto;
-      }
-
-      .standalone-card {
-        grid-template-columns: 1fr;
-      }
-
-      .standalone-card img {
-        max-width: 280px;
-        margin: auto;
-      }
-
-      .standalone-copy {
-        text-align: center;
-      }
-
-      .arya-card {
-        grid-template-columns: 1fr;
-      }
-
-      .arya-cover {
-        max-width: 320px;
-        margin: auto;
-      }
-
-      .arya-copy {
-        text-align: center;
-      }
-
-      .arya-actions {
-        justify-content: center;
-      }
-
-      .upcoming-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .upcoming-card {
-        max-width: 310px;
-        margin: auto;
-      }
-
-    }
-
-  </style>
-
-</head>
-
-
-<body>
-
-
-  <!-- NAVIGATION -->
-
-  <nav class="navbar">
-
-    <div class="nav-inner">
-
-      <a class="brand" href="/">
-        SINISTER BOOKS
-      </a>
-
-      <button
-        class="menu-button"
-        onclick="toggleMenu()"
-        aria-label="Open navigation menu"
-      >
-        ☰
-      </button>
-
-      <div class="nav-links" id="navLinks">
-
-        <a href="/">
-          Home
-        </a>
-
-        <a href="/books/" class="active">
-          Books
-        </a>
-
-        <a href="/snowblind/">
-          Snowblind
-        </a>
-
-        <a href="/coming-soon/">
-          Coming Soon
-        </a>
-
-        <a href="/authors/">
-          Authors
-        </a>
-
-        <a href="/amazing-arya/">
-          Amazing Arya
-        </a>
-
-        <a href="/readers/">
-          Readers
-        </a>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-
-  <!-- HEADER -->
-
-  <header class="page-header">
-
-    <div class="page-header-inner">
-
-      <div class="eyebrow">
-        Sinister Books Press
-      </div>
-
-      <h1>
-        Books
-      </h1>
-
-      <p>
-        Horror, suspense, science fiction, literary drama
-        and adventures for younger readers.
-      </p>
-
-    </div>
-
-  </header>
-
-
-  <!-- SNOWBLIND -->
-
-  <section>
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        Complete Series
-      </div>
-
-      <h2>
-        The Snowblind Series
-      </h2>
-
-      <p class="section-intro">
-        Six volumes following a story that begins with survival
-        in the mountains and grows into something far larger.
-      </p>
-
-
-      <div class="series-banner">
-
-        <img
-          src="../ec1e2223-5aea-4fb8-8018-610af82b28a4.png"
-          alt="The complete Snowblind Series"
-        >
-
-      </div>
-
-
-      <div class="series-intro">
-
-        <p>
-          Explore the full reading order, collector editions
-          and alternate hardcover artwork on the dedicated
-          Snowblind page.
-        </p>
-
-        <a
-          class="button"
-          href="/snowblind/"
-        >
-          Explore the Snowblind Series
-        </a>
-
-      </div>
-
-
-      <div class="series-grid">
-
-
-        <!-- SNOWBLIND -->
-
-        <article class="series-book">
-
-          <div class="series-cover">
-
-            <img
-              src="../Screenshot_20260820_111418_Gallery.jpg"
-              alt="Snowblind"
-            >
-
-          </div>
-
-          <div class="volume">
-            Volume 1
-          </div>
-
-          <h3>
-            Snowblind
-          </h3>
-
-          <p>
-            The story begins in the mountains.
-          </p>
-
-          <div class="series-action">
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0GVZR2H19"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Amazon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ISOLATION -->
-
-        <article class="series-book">
-
-          <div class="series-cover">
-
-            <img
-              src="../02-isolation-full-wrap-collector-edition.png"
-              alt="Isolation"
-            >
-
-          </div>
-
-          <div class="volume">
-            Volume 2
-          </div>
-
-          <h3>
-            Isolation
-          </h3>
-
-          <p>
-            Eighteen months later, the questions remain.
-          </p>
-
-          <div class="series-action">
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0GWQVNM96"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Amazon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- SCHISM -->
-
-        <article class="series-book">
-
-          <div class="series-cover">
-
-            <img
-              src="../03-schism-full-wrap-collector-edition.png"
-              alt="Schism"
-            >
-
-          </div>
-
-          <div class="volume">
-            Volume 3
-          </div>
-
-          <h3>
-            Schism
-          </h3>
-
-          <p>
-            The conflict spreads and loyalties divide.
-          </p>
-
-          <div class="series-action">
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0GYRP9768"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Amazon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- HERESY -->
-
-        <article class="series-book">
-
-          <div class="series-cover">
-
-            <img
-              src="../heresy-photorealistic-modern-truck-cover-v2.png"
-              alt="Heresy collector trade paperback cover"
-            >
-
-          </div>
-
-          <div class="volume">
-            Volume 4
-          </div>
-
-          <h3>
-            Heresy
-          </h3>
-
-          <p>
-            Resistance, belief and transformation collide.
-          </p>
-
-          <div class="series-action">
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0H3P17PM2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Amazon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ASCENSION PART ONE -->
-
-        <article class="series-book">
-
-          <div class="series-cover">
-
-            <img
-              src="../ascension-part-one-council-arrival-cover-v3.png"
-              alt="Ascension Part One"
-            >
-
-          </div>
-
-          <div class="volume">
-            Volume 5.1
-          </div>
-
-          <h3>
-            Ascension: Part One
-          </h3>
-
-          <p>
-            The final evolution begins.
-          </p>
-
-          <div class="series-action">
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0H3YWLP8Z"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Amazon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ASCENSION PART TWO -->
-
-        <article class="series-book">
-
-          <div class="series-cover">
-
-            <img
-              src="../ascension-part-two-town-attack-cover-v1.png"
-              alt="Ascension Part Two"
-            >
-
-          </div>
-
-          <div class="volume">
-            Volume 5.2
-          </div>
-
-          <h3>
-            Ascension: Part Two
-          </h3>
-
-          <p>
-            The Snowblind story reaches its conclusion.
-          </p>
-
-          <div class="series-action">
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0H3ZN22TJ"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Amazon
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- STANDALONE STORIES -->
-
-  <section class="alternate">
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        Outside the Series
-      </div>
-
-      <h2>
-        Standalone Stories
-      </h2>
-
-
-      <div class="standalone-grid">
-
-
-        <!-- BEFORE THE STREETLIGHTS -->
-
-        <article class="standalone-card">
-
-          <img
-            src="../5be5f4f6-4b3d-4faf-a401-2afe35c4f656.png"
-            alt="Before the Streetlights"
-          >
-
-          <div class="standalone-copy">
-
-            <div class="status">
-              Available Now
-            </div>
-
-            <h3>
-              Before the Streetlights
-            </h3>
-
-            <p>
-              Childhood, friendship, freedom and the summer
-              that changed everything.
-            </p>
-
-            <div class="actions">
-
-              <a
-                class="button"
-                href="https://www.amazon.com/dp/B0H533NYC6"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buy on Amazon
-              </a>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- ANIMAL HOURS -->
-
-        <article class="standalone-card">
-
-          <img
-            src="../ChatGPT%20Image%20May%2021,%202026,%2001_18_32%20PM.png"
-            alt="Animal Hours"
-          >
-
-          <div class="standalone-copy">
-
-            <div class="status">
-              Coming September 1
-            </div>
-
-            <h3>
-              Animal Hours
-            </h3>
-
-            <p>
-              A brilliant homicide detective's professional
-              and private lives collide when violence enters
-              his own circle.
-            </p>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- AMAZING ARYA -->
-
-  <section class="arya-section">
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        For Young Readers
-      </div>
-
-      <h2>
-        Amazing Arya's Adventures
-      </h2>
-
-      <p class="section-intro">
-        Real experiences, curiosity and imagination come
-        together in adventures created by Eric & Arya Erter.
-      </p>
-
-
-      <article class="arya-card">
-
-
-        <div class="arya-cover">
-
-          <img
-            src="../Screenshot_20260526_195933_Amazon%20Shopping.jpg"
-            alt="Amazing Arya's Hockey Adventure"
-          >
-
-        </div>
-
-
-        <div class="arya-copy">
-
-          <div class="status">
-            Available Now
-          </div>
-
-          <h3>
-            Amazing Arya's Hockey Adventure
-          </h3>
-
-          <p>
-            Join Arya as she discovers the excitement of hockey,
-            learns about the game and turns a trip to the rink
-            into an adventure all her own.
-          </p>
-
-          <div class="arya-actions">
-
-            <a
-              class="arya-button"
-              href="https://www.amazon.com/dp/B0H2Z29Q5M"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Buy on Amazon
-            </a>
-
-            <a
-              class="arya-button"
-              href="/amazing-arya/"
-            >
-              Explore Amazing Arya
-            </a>
-
-          </div>
-
-        </div>
-
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- UPCOMING -->
-
-  <section>
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        On the Horizon
-      </div>
-
-      <h2>
-        Coming Next
-      </h2>
-
-      <p class="section-intro">
-        Upcoming Sinister Books titles are shown in the
-        order readers can expect to see them.
-      </p>
-
-
-      <div class="upcoming-grid">
-
-
-        <!-- GOODNIGHT HOUSE -->
-
-        <article class="upcoming-card">
-
-          <img
-            src="../ChatGPT%20Image%20Aug%2013,%202026,%2008_50_34%20AM.png"
-            alt="Goodnight, House"
-          >
-
-          <div class="status">
-            Coming Soon
-          </div>
-
-          <h3>
-            Goodnight, House
-          </h3>
-
-          <p>
-            A sentient home learns what family means.
-          </p>
-
-        </article>
-
-
-        <!-- OLD MONEY -->
-
-        <article class="upcoming-card">
-
-          <img
-            src="../old-money-print-ad-v2.png"
-            alt="Old Money"
-          >
-
-          <div class="status">
-            Coming Soon
-          </div>
-
-          <h3>
-            Old Money
-          </h3>
-
-          <p>
-            Wealth can be inherited. So can secrets.
-          </p>
-
-        </article>
-
-
-        <!-- TIDES -->
-
-        <article class="upcoming-card">
-
-          <img
-            src="../ChatGPT%20Image%20Jul%2014,%202026,%2008_31_21%20PM.png"
-            alt="The Tides That Bind"
-          >
-
-          <div class="status">
-            In Development
-          </div>
-
-          <h3>
-            The Tides That Bind
-          </h3>
-
-          <p>
-            A grieving father returns to the place where
-            his life changed forever.
-          </p>
-
-        </article>
-
-
-        <!-- MORE -->
-
-        <article class="upcoming-card">
-
-          <div
-            style="
-              aspect-ratio:2/3;
-              display:flex;
-              align-items:center;
-              justify-content:center;
-              margin-bottom:20px;
-              padding:24px;
-              border:1px solid #333;
-              background:#0b0b0b;
-            "
-          >
-
-            <div>
-
-              <div class="status">
-                More Stories
-              </div>
-
-              <h3 style="font-size:28px;">
-                What's Next?
-              </h3>
-
-            </div>
-
-          </div>
-
-          <div class="status">
-            Sinister Books Press
-          </div>
-
-          <h3>
-            Coming Soon
-          </h3>
-
-          <p>
-            Follow future books, projects and cover reveals.
-          </p>
-
-          <div class="actions">
-
-            <a
-              class="button"
-              href="/coming-soon/"
-            >
-              Explore
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <footer>
-    © 2026 Sinister Books Press
-  </footer>
-
-
-  <script>
-
-    function toggleMenu() {
-
-      document
-        .getElementById("navLinks")
-        .classList
-        .toggle("open");
-
-    }
-
-  </script>
-
-
-</body>
-
-</html>
+    .development
