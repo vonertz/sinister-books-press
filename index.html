@@ -24,15 +24,11 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       background: #080808;
-      color: #f4f4f4;
+      color: #f3f3f3;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     /* NAVIGATION */
@@ -41,7 +37,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(0,0,0,0.98);
       border-bottom: 1px solid #292929;
     }
@@ -49,10 +44,8 @@
     .nav-inner {
       max-width: 1200px;
       min-height: 66px;
-
       margin: auto;
       padding: 0 22px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -61,7 +54,6 @@
     .brand {
       color: white;
       text-decoration: none;
-
       font-family: Georgia, "Times New Roman", serif;
       font-weight: bold;
       font-size: 16px;
@@ -77,138 +69,76 @@
     .nav-links a {
       color: #bbb;
       text-decoration: none;
-
       text-transform: uppercase;
       letter-spacing: 1.4px;
       font-size: 12px;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links .active {
       color: white;
     }
 
     .menu-button {
       display: none;
-
       width: 46px;
       height: 42px;
-
       color: white;
       background: transparent;
-
       border: 1px solid #444;
-
       font-size: 24px;
       cursor: pointer;
     }
 
-
     /* HERO */
 
     .hero {
-      min-height: 72vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 55px 22px 70px;
-
-      text-align: center;
+      padding: 82px 24px 78px;
 
       background:
         radial-gradient(
           circle at center,
-          #242424 0%,
-          #111 45%,
-          #040404 82%
+          #252525 0%,
+          #101010 48%,
+          #050505 84%
         );
 
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #242424;
+      text-align: center;
     }
 
     .hero-inner {
-      width: 100%;
-      max-width: 820px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .hero-logo {
       display: block;
-
-      width: min(100%, 520px);
-      height: auto;
-
-      margin: auto;
-
-      box-shadow:
-        0 22px 60px rgba(0,0,0,0.55);
+      width: min(520px, 92%);
+      margin: 0 auto 32px;
     }
 
-    .tagline {
-      margin: 30px auto 0;
-
-      color: #ddd;
-
+    .hero h1 {
+      margin-bottom: 15px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(20px, 4vw, 29px);
-      font-style: italic;
-
-      letter-spacing: 1px;
-    }
-
-    .hero-actions {
-      margin-top: 34px;
-
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      gap: 12px;
-    }
-
-
-    /* BUTTONS */
-
-    .button {
-      display: inline-block;
-
-      padding: 13px 23px;
-
-      color: white;
-      background: #151515;
-
-      border: 1px solid #666;
-
-      text-decoration: none;
+      font-size: clamp(42px, 8vw, 72px);
       text-transform: uppercase;
-
-      letter-spacing: 1.5px;
-      font-size: 11px;
-
-      transition: 0.25s ease;
+      letter-spacing: 5px;
     }
 
-    .button:hover {
-      color: black;
-      background: white;
-      border-color: white;
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #aaa;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(19px, 3vw, 26px);
+      font-style: italic;
     }
-
-    .button.primary {
-      background: white;
-      color: black;
-      border-color: white;
-    }
-
-    .button.primary:hover {
-      background: #ccc;
-    }
-
 
     /* GENERAL */
 
     section {
-      padding: 75px 24px;
+      padding: 78px 24px;
     }
 
     .section-inner {
@@ -216,228 +146,176 @@
       margin: auto;
     }
 
+    .alternate {
+      background: #101010;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
     .eyebrow {
-      margin-bottom: 8px;
-
+      margin-bottom: 9px;
       color: #777;
-
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 11px;
     }
 
     h2 {
-      margin-bottom: 18px;
-
+      margin-bottom: 16px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(32px, 6vw, 48px);
-
       text-transform: uppercase;
       letter-spacing: 3px;
     }
 
     .intro {
       max-width: 760px;
-
       color: #999;
       font-size: 16px;
     }
 
+    /* FEATURED */
 
-    /* FEATURED BOOKS */
-
-    .featured-grid {
+    .featured-layout {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 32px;
-
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 50px;
+      align-items: center;
       margin-top: 42px;
     }
 
-    .book {
-      text-align: center;
-    }
-
-    .book img {
+    .featured-cover img {
       display: block;
-
       width: 100%;
-      max-width: 285px;
-
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-
-      margin: auto auto 22px;
-
-      border: 1px solid #333;
-
-      box-shadow:
-        0 18px 38px rgba(0,0,0,0.65);
-
-      transition: 0.25s ease;
-    }
-
-    .book img:hover {
-      transform: translateY(-6px);
-    }
-
-    .book-label {
-      margin-bottom: 6px;
-
-      color: #777;
-
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 10px;
-    }
-
-    .book h3 {
-      margin-bottom: 8px;
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-    }
-
-    .book p {
-      max-width: 300px;
+      max-width: 430px;
       margin: auto;
-
-      color: #999;
-      font-size: 14px;
+      box-shadow: 0 20px 55px rgba(0,0,0,0.45);
     }
 
-    .book-action {
-      margin-top: 18px;
+    .status {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      color: #ddd;
+      background: #171717;
+      border: 1px solid #555;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-size: 10px;
+      font-weight: bold;
     }
 
+    .featured-copy h3 {
+      margin-bottom: 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 6vw, 56px);
+      line-height: 1.15;
+    }
+
+    .featured-copy p {
+      margin-bottom: 24px;
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      color: #050505;
+      background: white;
+      border: 1px solid white;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      color: white;
+      background: #181818;
+    }
+
+    .secondary-button {
+      color: white;
+      background: transparent;
+      border-color: #555;
+    }
 
     /* EXPLORE */
-
-    .explore {
-      background: #101010;
-
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-    }
 
     .explore-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-
-      gap: 20px;
-
+      gap: 24px;
       margin-top: 40px;
     }
 
     .explore-card {
-      display: flex;
-      flex-direction: column;
-
-      min-height: 220px;
-
-      padding: 28px;
-
-      color: white;
-      background: #090909;
-
-      border: 1px solid #2d2d2d;
-
+      padding: 30px 26px;
+      background: #0d0d0d;
+      border: 1px solid #2b2b2b;
       text-decoration: none;
-
-      transition: 0.25s ease;
+      transition: 0.2s ease;
     }
 
     .explore-card:hover {
-      border-color: #777;
-      transform: translateY(-4px);
-    }
-
-    .explore-card .small {
-      margin-bottom: 9px;
-
-      color: #707070;
-
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 10px;
+      transform: translateY(-3px);
+      border-color: #555;
     }
 
     .explore-card h3 {
       margin-bottom: 10px;
-
+      color: white;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
+      font-size: 24px;
     }
 
     .explore-card p {
-      color: #999;
+      color: #929292;
       font-size: 14px;
     }
 
-    .explore-card .arrow {
-      margin-top: auto;
-      padding-top: 24px;
+    /* NEXT */
 
-      color: #aaa;
-      font-size: 20px;
-    }
-
-
-    /* WHAT'S NEXT */
-
-    .next-grid {
+    .next-layout {
       display: grid;
-      grid-template-columns: minmax(230px, 330px) 1fr;
-
+      grid-template-columns: 0.72fr 1.28fr;
       gap: 45px;
-
       align-items: center;
-
       margin-top: 40px;
     }
 
     .next-cover img {
       display: block;
-
       width: 100%;
-      height: auto;
-
-      border: 1px solid #333;
-
-      box-shadow:
-        0 18px 42px rgba(0,0,0,0.65);
+      max-width: 370px;
+      margin: auto;
+      box-shadow: 0 16px 45px rgba(0,0,0,0.4);
     }
 
     .next-copy h3 {
       margin-bottom: 15px;
-
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(30px, 5vw, 42px);
+      font-size: clamp(32px, 5vw, 46px);
     }
 
     .next-copy p {
-      margin-bottom: 17px;
-
+      margin-bottom: 24px;
       color: #aaa;
       font-size: 16px;
     }
 
-
     /* FOOTER */
 
     footer {
-      padding: 48px 20px;
-
+      padding: 46px 20px;
       color: #666;
-
       text-align: center;
       font-size: 13px;
       letter-spacing: 1px;
-
       border-top: 1px solid #222;
     }
-
 
     /* MOBILE */
 
@@ -449,18 +327,13 @@
 
       .nav-links {
         display: none;
-
         position: absolute;
         top: 66px;
         left: 0;
-
         width: 100%;
-
         flex-direction: column;
         gap: 0;
-
         background: #050505;
-
         border-bottom: 1px solid #333;
       }
 
@@ -470,10 +343,13 @@
 
       .nav-links a {
         width: 100%;
-
         padding: 17px 24px;
-
         border-top: 1px solid #222;
+      }
+
+      .featured-layout,
+      .next-layout {
+        grid-template-columns: 1fr;
       }
 
       .explore-grid {
@@ -482,51 +358,22 @@
 
     }
 
-
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
 
       .brand {
         font-size: 13px;
       }
 
       .hero {
-        min-height: auto;
-
-        padding: 38px 20px 50px;
+        padding: 56px 20px 58px;
       }
 
       section {
-        padding: 60px 22px;
-      }
-
-      .featured-grid {
-        grid-template-columns: 1fr;
-
-        gap: 55px;
-      }
-
-      .book {
-        max-width: 320px;
-        margin: auto;
+        padding: 60px 20px;
       }
 
       .explore-grid {
         grid-template-columns: 1fr;
-      }
-
-      .next-grid {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-      }
-
-      .next-cover {
-        max-width: 320px;
-        margin: auto;
-      }
-
-      .next-copy {
-        text-align: center;
       }
 
     }
@@ -559,7 +406,7 @@
 
       <div class="nav-links" id="navLinks">
 
-        <a href="/">
+        <a href="/" class="active">
           Home
         </a>
 
@@ -603,169 +450,80 @@
       <img
         class="hero-logo"
         src="FB_IMG_1776374972363.jpg"
-        alt="Sinister Books"
+        alt="Sinister Books Press"
       >
 
-      <div class="tagline">
+      <h1>
+        Sinister Books
+      </h1>
+
+      <p>
         Stories that stay with you after the lights go out.
-      </div>
-
-      <div class="hero-actions">
-
-        <a
-          class="button primary"
-          href="/books/"
-        >
-          Explore the Books
-        </a>
-
-        <a
-          class="button"
-          href="/coming-soon/"
-        >
-          What's Next
-        </a>
-
-      </div>
+      </p>
 
     </div>
 
   </header>
 
 
-  <!-- FEATURED -->
+  <!-- FEATURED RELEASE -->
 
   <section>
 
     <div class="section-inner">
 
       <div class="eyebrow">
-        Featured
+        Featured Release
       </div>
 
       <h2>
-        Stories to Discover
+        Available Now
       </h2>
 
-      <p class="intro">
-        From survival horror and psychological suspense to
-        coming-of-age stories and thrillers.
-      </p>
+
+      <div class="featured-layout">
+
+        <div class="featured-cover">
+
+          <img
+            src="ChatGPT Image May 21, 2026, 01_18_32 PM.png"
+            alt="Animal Hours cover"
+          >
+
+        </div>
 
 
-      <div class="featured-grid">
+        <div class="featured-copy">
 
+          <span class="status">
+            Available Now
+          </span>
 
-        <!-- SNOWBLIND -->
+          <h3>
+            Animal Hours
+          </h3>
 
-        <article class="book">
+          <p>
+            Portland homicide detective Aaron Cole is hunting killers
+            while something inside him is slowly taking control.
+          </p>
 
-          <a href="/snowblind/">
+          <p>
+            A dark psychological thriller about identity, control,
+            and what remains when the boundaries between predator
+            and prey begin to disappear.
+          </p>
 
-            <img
-              src="Screenshot_20260820_111418_Gallery.jpg"
-              alt="Snowblind"
-            >
-
+          <a
+            class="button"
+            href="https://www.amazon.com/dp/B0H52JKMS9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy on Amazon
           </a>
 
-          <div class="book-label">
-            Complete Series
-          </div>
-
-          <h3>
-            SNOWBLIND
-          </h3>
-
-          <p>
-            The beginning of a six-volume story of survival,
-            identity, belief and transformation.
-          </p>
-
-          <div class="book-action">
-
-            <a
-              class="button"
-              href="/snowblind/"
-            >
-              Explore the Series
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ANIMAL HOURS -->
-
-        <article class="book">
-
-          <img
-            src="ChatGPT%20Image%20May%2021,%202026,%2001_18_32%20PM.png"
-            alt="Animal Hours"
-          >
-
-          <div class="book-label">
-            September 1
-          </div>
-
-          <h3>
-            ANIMAL HOURS
-          </h3>
-
-          <p>
-            A brilliant homicide detective's two lives collide
-            when violence enters his own world.
-          </p>
-
-          <div class="book-action">
-
-            <span class="button">
-              Coming September 1
-            </span>
-
-          </div>
-
-        </article>
-
-
-        <!-- STREETLIGHTS -->
-
-        <article class="book">
-
-          <img
-            src="5be5f4f6-4b3d-4faf-a401-2afe35c4f656.png"
-            alt="Before the Streetlights"
-          >
-
-          <div class="book-label">
-            Available Now
-          </div>
-
-          <h3>
-            BEFORE THE STREETLIGHTS
-          </h3>
-
-          <p>
-            Childhood, friendship, freedom and the summer
-            that changed everything.
-          </p>
-
-          <div class="book-action">
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0H533NYC6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Buy on Amazon
-            </a>
-
-          </div>
-
-        </article>
-
+        </div>
 
       </div>
 
@@ -774,23 +532,24 @@
   </section>
 
 
-  <!-- EXPLORE SITE -->
+  <!-- EXPLORE -->
 
-  <section class="explore">
+  <section class="alternate">
 
     <div class="section-inner">
 
       <div class="eyebrow">
-        Explore Sinister Books
+        Explore Sinister Books Press
       </div>
 
       <h2>
-        More Than One Story
+        More Than One Kind of Story
       </h2>
 
       <p class="intro">
-        Explore the books, meet the writers and see what is
-        taking shape behind the scenes.
+        Explore the complete catalog, the Snowblind Series,
+        upcoming releases, author information, children's adventures,
+        and ways for readers to get involved.
       </p>
 
 
@@ -802,22 +561,14 @@
           href="/books/"
         >
 
-          <div class="small">
-            Catalog
-          </div>
-
           <h3>
             Books
           </h3>
 
           <p>
-            Browse published novels, upcoming books and
-            works in development.
+            Browse published titles, upcoming releases,
+            and projects currently in development.
           </p>
-
-          <div class="arrow">
-            →
-          </div>
 
         </a>
 
@@ -827,22 +578,14 @@
           href="/snowblind/"
         >
 
-          <div class="small">
-            Six Volumes
-          </div>
-
           <h3>
-            The Snowblind Series
+            Snowblind
           </h3>
 
           <p>
-            Explore the complete series, reading order and
-            collector trade paperback editions.
+            Enter the complete six-volume Snowblind saga
+            and watch the official book trailer.
           </p>
-
-          <div class="arrow">
-            →
-          </div>
 
         </a>
 
@@ -852,22 +595,14 @@
           href="/coming-soon/"
         >
 
-          <div class="small">
-            On the Horizon
-          </div>
-
           <h3>
             Coming Soon
           </h3>
 
           <p>
-            See the stories that are coming next from
-            Sinister Books Press.
+            See what is next from Sinister Books Press
+            and take an early look at works in development.
           </p>
-
-          <div class="arrow">
-            →
-          </div>
 
         </a>
 
@@ -877,22 +612,14 @@
           href="/authors/"
         >
 
-          <div class="small">
-            Meet the Writers
-          </div>
-
           <h3>
             Authors
           </h3>
 
           <p>
-            Meet Eric Erter and the father-daughter writing
-            team Eric & Arya Erter.
+            Meet the writers behind Sinister Books Press
+            and Amazing Arya's Adventures.
           </p>
-
-          <div class="arrow">
-            →
-          </div>
 
         </a>
 
@@ -902,22 +629,14 @@
           href="/amazing-arya/"
         >
 
-          <div class="small">
-            For Young Readers
-          </div>
-
           <h3>
             Amazing Arya
           </h3>
 
           <p>
-            Real experiences, big imagination and a whole
-            world to explore.
+            Adventures for curious young readers,
+            from Thailand to Mars and beyond.
           </p>
-
-          <div class="arrow">
-            →
-          </div>
 
         </a>
 
@@ -927,22 +646,14 @@
           href="/readers/"
         >
 
-          <div class="small">
-            Connect
-          </div>
-
           <h3>
             Readers
           </h3>
 
           <p>
-            Reader Q&A, appearances, book signings and
-            ways to connect.
+            Ask the authors a question or submit
+            an appearance and signing request.
           </p>
-
-          <div class="arrow">
-            →
-          </div>
 
         </a>
 
@@ -954,7 +665,7 @@
   </section>
 
 
-  <!-- NEXT -->
+  <!-- NEXT RELEASE -->
 
   <section>
 
@@ -965,18 +676,17 @@
       </div>
 
       <h2>
-        Goodnight, House
+        Coming Soon
       </h2>
 
 
-      <div class="next-grid">
-
+      <div class="next-layout">
 
         <div class="next-cover">
 
           <img
-            src="ChatGPT%20Image%20Aug%2013,%202026,%2008_50_34%20AM.png"
-            alt="Goodnight, House"
+            src="ChatGPT Image Aug 13, 2026, 08_50_34 AM.png"
+            alt="Goodnight, House cover"
           >
 
         </div>
@@ -984,30 +694,38 @@
 
         <div class="next-copy">
 
+          <span class="status">
+            Coming Soon
+          </span>
+
           <h3>
-            What Does a House Remember?
+            Goodnight, House
           </h3>
 
           <p>
-            A home built to care for a family begins to
-            understand what family actually means.
-          </p>
-
-          <p>
-            Warm, strange and bittersweet, GOODNIGHT, HOUSE
-            follows a sentient home as it watches the people
-            inside it grow, change, leave and return.
+            A family home watches generations grow, change and leave
+            while discovering what it means to remember the people
+            who once filled its rooms.
           </p>
 
           <a
             class="button"
-            href="/coming-soon/"
+            href="https://www.amazon.com/dp/B0HDTF86LG"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            See What's Coming
+            View on Amazon
+          </a>
+
+          <a
+            class="button secondary-button"
+            href="/coming-soon/"
+            style="margin-left:8px;"
+          >
+            See What's Next
           </a>
 
         </div>
-
 
       </div>
 
