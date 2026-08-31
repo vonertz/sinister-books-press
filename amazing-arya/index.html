@@ -31,8 +31,6 @@
       line-height: 1.7;
     }
 
-    /* NAVIGATION */
-
     .navbar {
       position: sticky;
       top: 0;
@@ -46,7 +44,6 @@
       min-height: 66px;
       margin: auto;
       padding: 0 22px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -91,11 +88,8 @@
       cursor: pointer;
     }
 
-    /* HERO */
-
     .hero {
       padding: 70px 24px 76px;
-
       background:
         radial-gradient(circle at top, #ffffff 0%, #eee8ff 44%, #e1d8ff 100%);
     }
@@ -127,8 +121,6 @@
       color: #655875;
       font-size: 18px;
     }
-
-    /* GENERAL */
 
     section {
       padding: 76px 24px;
@@ -167,8 +159,6 @@
       border-bottom: 1px solid #d7ccee;
     }
 
-    /* BOOK GRID */
-
     .book-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -206,12 +196,9 @@
       display: inline-block;
       margin-bottom: 12px;
       padding: 6px 10px;
-
       color: #5e448b;
       background: #eee7fb;
-
       border-radius: 999px;
-
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-size: 10px;
@@ -234,12 +221,9 @@
     .amazon-button {
       display: inline-block;
       padding: 12px 18px;
-
       color: white;
       background: #55358c;
-
       border-radius: 5px;
-
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 1.4px;
@@ -250,8 +234,6 @@
     .amazon-button:hover {
       background: #37205f;
     }
-
-    /* LEARNING */
 
     .theme-grid {
       display: grid;
@@ -281,8 +263,6 @@
       font-size: 14px;
     }
 
-    /* AUTHORS */
-
     .authors-layout {
       display: grid;
       grid-template-columns: 0.8fr 1.2fr;
@@ -303,8 +283,6 @@
       font-size: 16px;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 42px 20px;
       background: #050505;
@@ -314,8 +292,6 @@
       letter-spacing: 1px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 900px) {
 
       .menu-button {
@@ -324,16 +300,12 @@
 
       .nav-links {
         display: none;
-
         position: absolute;
         top: 66px;
         left: 0;
-
         width: 100%;
-
         flex-direction: column;
         gap: 0;
-
         background: #050505;
         border-bottom: 1px solid #333;
       }
@@ -392,9 +364,6 @@
 
 <body>
 
-
-  <!-- NAVIGATION -->
-
   <nav class="navbar">
 
     <div class="nav-inner">
@@ -413,33 +382,13 @@
 
       <div class="nav-links" id="navLinks">
 
-        <a href="/">
-          Home
-        </a>
-
-        <a href="/books/">
-          Books
-        </a>
-
-        <a href="/snowblind/">
-          Snowblind
-        </a>
-
-        <a href="/coming-soon/">
-          Coming Soon
-        </a>
-
-        <a href="/authors/">
-          Authors
-        </a>
-
-        <a href="/amazing-arya/" class="active">
-          Amazing Arya
-        </a>
-
-        <a href="/readers/">
-          Readers
-        </a>
+        <a href="/">Home</a>
+        <a href="/books/">Books</a>
+        <a href="/snowblind/">Snowblind</a>
+        <a href="/coming-soon/">Coming Soon</a>
+        <a href="/authors/">Authors</a>
+        <a href="/amazing-arya/" class="active">Amazing Arya</a>
+        <a href="/readers/">Readers</a>
 
       </div>
 
@@ -447,8 +396,6 @@
 
   </nav>
 
-
-  <!-- HERO -->
 
   <header class="hero">
 
@@ -475,8 +422,6 @@
   </header>
 
 
-  <!-- BOOKS -->
-
   <section>
 
     <div class="section-inner">
@@ -498,8 +443,6 @@
 
       <div class="book-grid">
 
-
-        <!-- HOCKEY -->
 
         <article class="book-card">
 
@@ -542,14 +485,12 @@
         </article>
 
 
-        <!-- THAILAND -->
-
         <article class="book-card">
 
           <div class="book-image-wrap">
 
             <img
-              src="../arya-thailand-cover.png"
+              src="../file_00000000b2dc71fd951a7d7e0437069f.png"
               alt="Amazing Arya's Thailand Adventure cover"
             >
 
@@ -585,14 +526,12 @@
         </article>
 
 
-        <!-- MAGIC FOREST -->
-
         <article class="book-card">
 
           <div class="book-image-wrap">
 
             <img
-              src="../princess-arya-magic-forest-cover.png"
+              src="../file_00000000572c71f5958f1b4a15e6808e.png"
               alt="Princess Arya's Magic Forest cover"
             >
 
@@ -628,14 +567,12 @@
         </article>
 
 
-        <!-- MARS -->
-
         <article class="book-card">
 
           <div class="book-image-wrap">
 
             <img
-              src="../arya-mars-cover.jpg"
+              src="../Screenshot_20260831_123524_Amazon Shopping.jpg"
               alt="Amazing Arya's Mars Adventure cover"
             >
 
@@ -670,15 +607,12 @@
 
         </article>
 
-
       </div>
 
     </div>
 
   </section>
 
-
-  <!-- THEMES -->
 
   <section class="alternate">
 
@@ -703,30 +637,22 @@
 
         <div class="theme-card">
           <strong>Explore</strong>
-          <span>
-            New places, cultures and worlds.
-          </span>
+          <span>New places, cultures and worlds.</span>
         </div>
 
         <div class="theme-card">
           <strong>Discover</strong>
-          <span>
-            Science, nature, history and everyday wonders.
-          </span>
+          <span>Science, nature, history and everyday wonders.</span>
         </div>
 
         <div class="theme-card">
           <strong>Be Brave</strong>
-          <span>
-            Try unfamiliar things and keep going when something is difficult.
-          </span>
+          <span>Try unfamiliar things and keep going when something is difficult.</span>
         </div>
 
         <div class="theme-card">
           <strong>Be Curious</strong>
-          <span>
-            Ask questions and never stop wondering what comes next.
-          </span>
+          <span>Ask questions and never stop wondering what comes next.</span>
         </div>
 
       </div>
@@ -735,8 +661,6 @@
 
   </section>
 
-
-  <!-- AUTHORS -->
 
   <section>
 
@@ -805,7 +729,6 @@
     }
 
   </script>
-
 
 </body>
 
