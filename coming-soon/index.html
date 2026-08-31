@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="Coming soon from Sinister Books Press: Goodnight, House, Old Money, and The Tides That Bind."
+    content="Coming soon from Sinister Books Press: Goodnight, House, Old Money, The Tides That Bind, and projects currently in development."
   >
 
   <title>Coming Soon | Sinister Books Press</title>
@@ -30,8 +30,6 @@
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
-
-    /* NAVIGATION */
 
     .navbar {
       position: sticky;
@@ -90,8 +88,6 @@
       cursor: pointer;
     }
 
-    /* HEADER */
-
     .page-header {
       padding: 78px 24px 72px;
       background:
@@ -131,8 +127,6 @@
       font-size: 18px;
     }
 
-    /* GENERAL */
-
     section {
       padding: 78px 24px;
     }
@@ -142,13 +136,25 @@
       margin: auto;
     }
 
+    .alternate {
+      background: #101010;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 6vw, 48px);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
     .intro {
       max-width: 760px;
       color: #999;
       font-size: 16px;
     }
-
-    /* BOOKS */
 
     .coming-grid {
       display: grid;
@@ -200,6 +206,11 @@
       font-weight: bold;
     }
 
+    .status.development {
+      color: #aaa;
+      border-color: #3d3d3d;
+    }
+
     .book-content h2 {
       margin-bottom: 14px;
       font-family: Georgia, "Times New Roman", serif;
@@ -233,7 +244,46 @@
       background: #181818;
     }
 
-    /* CLOSING */
+    .secondary-button {
+      color: white;
+      background: transparent;
+      border-color: #555;
+    }
+
+    .development-card {
+      max-width: 900px;
+      margin-top: 38px;
+      padding: 38px;
+      background:
+        linear-gradient(
+          145deg,
+          #111 0%,
+          #080808 100%
+        );
+      border: 1px solid #333;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+
+    .development-card h2 {
+      margin: 8px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 5vw, 44px);
+      letter-spacing: 2px;
+    }
+
+    .development-card p {
+      max-width: 800px;
+      margin-bottom: 24px;
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .development-card .question {
+      color: #ddd;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      font-style: italic;
+    }
 
     .closing {
       text-align: center;
@@ -262,8 +312,6 @@
       font-size: 16px;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 46px 20px;
       color: #666;
@@ -272,8 +320,6 @@
       letter-spacing: 1px;
       border-top: 1px solid #222;
     }
-
-    /* MOBILE */
 
     @media (max-width: 950px) {
 
@@ -337,7 +383,8 @@
         max-height: 500px;
       }
 
-      .book-content {
+      .book-content,
+      .development-card {
         padding: 24px;
       }
 
@@ -350,8 +397,6 @@
 
 <body>
 
-
-  <!-- NAVIGATION -->
 
   <nav class="navbar">
 
@@ -371,33 +416,13 @@
 
       <div class="nav-links" id="navLinks">
 
-        <a href="/">
-          Home
-        </a>
-
-        <a href="/books/">
-          Books
-        </a>
-
-        <a href="/snowblind/">
-          Snowblind
-        </a>
-
-        <a href="/coming-soon/" class="active">
-          Coming Soon
-        </a>
-
-        <a href="/authors/">
-          Authors
-        </a>
-
-        <a href="/amazing-arya/">
-          Amazing Arya
-        </a>
-
-        <a href="/readers/">
-          Readers
-        </a>
+        <a href="/">Home</a>
+        <a href="/books/">Books</a>
+        <a href="/snowblind/">Snowblind</a>
+        <a href="/coming-soon/" class="active">Coming Soon</a>
+        <a href="/authors/">Authors</a>
+        <a href="/amazing-arya/">Amazing Arya</a>
+        <a href="/readers/">Readers</a>
 
       </div>
 
@@ -405,8 +430,6 @@
 
   </nav>
 
-
-  <!-- HEADER -->
 
   <header class="page-header">
 
@@ -421,8 +444,8 @@
       </h1>
 
       <p>
-        The next stories from Sinister Books Press.
-        Three very different books are on the horizon.
+        The next stories from Sinister Books Press,
+        followed by an early look at what is currently in development.
       </p>
 
     </div>
@@ -430,7 +453,7 @@
   </header>
 
 
-  <!-- COMING SOON BOOKS -->
+  <!-- COMING SOON -->
 
   <section>
 
@@ -439,6 +462,10 @@
       <div class="eyebrow">
         On the Horizon
       </div>
+
+      <h2 class="section-title">
+        Coming Soon
+      </h2>
 
       <p class="intro">
         From a house that remembers every life lived inside it,
@@ -449,8 +476,6 @@
 
       <div class="coming-grid">
 
-
-        <!-- GOODNIGHT HOUSE -->
 
         <article class="book-card">
 
@@ -493,8 +518,6 @@
         </article>
 
 
-        <!-- OLD MONEY -->
-
         <article class="book-card">
 
           <div class="book-image-wrap">
@@ -534,8 +557,6 @@
 
         </article>
 
-
-        <!-- TIDES -->
 
         <article class="book-card">
 
@@ -585,7 +606,65 @@
   </section>
 
 
-  <!-- CLOSING -->
+  <!-- IN DEVELOPMENT -->
+
+  <section class="alternate">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Further Ahead
+      </div>
+
+      <h2 class="section-title">
+        In Development
+      </h2>
+
+      <p class="intro">
+        A first look at stories currently taking shape at
+        Sinister Books Press.
+      </p>
+
+
+      <div class="development-card">
+
+        <span class="status development">
+          In Development
+        </span>
+
+        <h2>
+          Operation: Silver Kite
+        </h2>
+
+        <p>
+          In 1962, rising tensions between Thailand and neighboring Laos
+          drew increasing attention from the United States. As the American
+          military presence in the region quietly expanded, a routine
+          helicopter mission over remote jungle ended in disaster.
+          Stranded far from friendly forces, the survivors must make
+          their way back through unforgiving terrain while confronting
+          an increasingly difficult question:
+        </p>
+
+        <p class="question">
+          What are you willing to sacrifice in the name of fidelity?
+        </p>
+
+        <a
+          class="button secondary-button"
+          href="https://www.amazon.com/dp/B0HGPDGKJM"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on Amazon
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="closing">
 
