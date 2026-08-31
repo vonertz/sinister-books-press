@@ -24,13 +24,9 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       background: #080808;
-      color: #f4f4f4;
+      color: #f2f2f2;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
@@ -41,7 +37,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(0,0,0,0.98);
       border-bottom: 1px solid #292929;
     }
@@ -49,10 +44,8 @@
     .nav-inner {
       max-width: 1200px;
       min-height: 66px;
-
       margin: auto;
       padding: 0 22px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -61,7 +54,6 @@
     .brand {
       color: white;
       text-decoration: none;
-
       font-family: Georgia, "Times New Roman", serif;
       font-weight: bold;
       font-size: 16px;
@@ -77,7 +69,6 @@
     .nav-links a {
       color: #bbb;
       text-decoration: none;
-
       text-transform: uppercase;
       letter-spacing: 1.4px;
       font-size: 12px;
@@ -90,24 +81,19 @@
 
     .menu-button {
       display: none;
-
       width: 46px;
       height: 42px;
-
       color: white;
       background: transparent;
-
       border: 1px solid #444;
-
       font-size: 24px;
       cursor: pointer;
     }
 
-    /* PAGE HEADER */
+    /* HEADER */
 
     .page-header {
       padding: 78px 24px 72px;
-
       background:
         radial-gradient(
           circle at center,
@@ -115,7 +101,6 @@
           #101010 48%,
           #050505 84%
         );
-
       border-bottom: 1px solid #242424;
     }
 
@@ -126,27 +111,22 @@
 
     .eyebrow {
       margin-bottom: 10px;
-
       color: #777;
-
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 11px;
     }
 
     h1 {
-      margin-bottom: 20px;
-
+      margin-bottom: 18px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(44px, 8vw, 72px);
-
       text-transform: uppercase;
       letter-spacing: 4px;
     }
 
     .page-header p {
       max-width: 760px;
-
       color: #aaa;
       font-size: 18px;
     }
@@ -154,117 +134,115 @@
     /* GENERAL */
 
     section {
-      padding: 80px 24px;
+      padding: 78px 24px;
     }
 
     .section-inner {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
-    }
-
-    h2 {
-      margin-bottom: 18px;
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 6vw, 48px);
-
-      text-transform: uppercase;
-      letter-spacing: 3px;
     }
 
     .intro {
       max-width: 760px;
-
       color: #999;
       font-size: 16px;
     }
 
-    /* UPCOMING BOOKS */
+    /* BOOKS */
 
-    .upcoming-list {
-      margin-top: 48px;
-
-      display: flex;
-      flex-direction: column;
-      gap: 55px;
+    .coming-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 42px;
     }
 
-    .upcoming-card {
-      display: grid;
-      grid-template-columns: minmax(250px, 360px) 1fr;
-      gap: 50px;
-
-      align-items: center;
-
-      padding: 34px;
-
+    .book-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
       background: #0d0d0d;
-
       border: 1px solid #2b2b2b;
     }
 
-    .upcoming-card:nth-child(even) {
+    .book-image-wrap {
+      padding: 18px;
       background: #111;
+      border-bottom: 1px solid #252525;
     }
 
-    .cover img {
+    .book-card img {
       display: block;
-
       width: 100%;
-      height: auto;
+      height: 430px;
+      object-fit: contain;
+      margin: auto;
+    }
 
-      border: 1px solid #333;
-
-      box-shadow:
-        0 20px 48px rgba(0,0,0,0.65);
+    .book-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 27px;
     }
 
     .status {
-      margin-bottom: 10px;
-
-      color: #777;
-
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 12px;
+      padding: 5px 9px;
+      color: #ddd;
+      background: #181818;
+      border: 1px solid #505050;
       text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-size: 11px;
+      letter-spacing: 1.5px;
+      font-size: 9px;
+      font-weight: bold;
     }
 
-    .book-copy h3 {
-      margin-bottom: 16px;
-
+    .book-content h2 {
+      margin-bottom: 14px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(31px, 5vw, 45px);
+      font-size: 29px;
+      line-height: 1.2;
     }
 
-    .book-copy p {
-      margin-bottom: 18px;
-
-      color: #aaa;
-      font-size: 16px;
+    .book-content p {
+      margin-bottom: 24px;
+      color: #999;
+      font-size: 15px;
+      flex: 1;
     }
 
-    .order-marker {
-      margin-top: 28px;
-
-      color: #5e5e5e;
-
+    .button {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 11px 16px;
+      color: #050505;
+      background: white;
+      border: 1px solid white;
+      text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1.4px;
       font-size: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      color: white;
+      background: #181818;
     }
 
     /* CLOSING */
 
     .closing {
       text-align: center;
-
       background:
-        linear-gradient(
-          180deg,
-          #101010,
-          #070707
+        radial-gradient(
+          circle at center,
+          #171717,
+          #080808 70%
         );
-
       border-top: 1px solid #222;
     }
 
@@ -274,8 +252,9 @@
     }
 
     .closing h2 {
-      text-transform: none;
-      letter-spacing: 1px;
+      margin-bottom: 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 6vw, 48px);
     }
 
     .closing p {
@@ -287,17 +266,27 @@
 
     footer {
       padding: 46px 20px;
-
       color: #666;
-
       text-align: center;
       font-size: 13px;
       letter-spacing: 1px;
-
       border-top: 1px solid #222;
     }
 
     /* MOBILE */
+
+    @media (max-width: 950px) {
+
+      .coming-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .book-card {
+        max-width: 620px;
+        margin: auto;
+      }
+
+    }
 
     @media (max-width: 900px) {
 
@@ -307,18 +296,13 @@
 
       .nav-links {
         display: none;
-
         position: absolute;
         top: 66px;
         left: 0;
-
         width: 100%;
-
         flex-direction: column;
         gap: 0;
-
         background: #050505;
-
         border-bottom: 1px solid #333;
       }
 
@@ -328,15 +312,13 @@
 
       .nav-links a {
         width: 100%;
-
         padding: 17px 24px;
-
         border-top: 1px solid #222;
       }
 
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
 
       .brand {
         font-size: 13px;
@@ -347,24 +329,16 @@
       }
 
       section {
-        padding: 60px 22px;
+        padding: 60px 20px;
       }
 
-      .upcoming-card {
-        grid-template-columns: 1fr;
+      .book-card img {
+        height: auto;
+        max-height: 500px;
+      }
 
-        gap: 30px;
-
+      .book-content {
         padding: 24px;
-      }
-
-      .cover {
-        max-width: 330px;
-        margin: auto;
-      }
-
-      .book-copy {
-        text-align: center;
       }
 
     }
@@ -421,7 +395,7 @@
           Amazing Arya
         </a>
 
-        <a href="/#readers">
+        <a href="/readers/">
           Readers
         </a>
 
@@ -447,8 +421,8 @@
       </h1>
 
       <p>
-        New stories are always taking shape. Here is a look at
-        what is coming next from Sinister Books Press.
+        The next stories from Sinister Books Press.
+        Three very different books are on the horizon.
       </p>
 
     </div>
@@ -456,7 +430,7 @@
   </header>
 
 
-  <!-- UPCOMING TITLES -->
+  <!-- COMING SOON BOOKS -->
 
   <section>
 
@@ -466,58 +440,53 @@
         On the Horizon
       </div>
 
-      <h2>
-        What's Next
-      </h2>
-
       <p class="intro">
-        Upcoming books are shown in the order readers can expect
-        to encounter them.
+        From a house that remembers every life lived inside it,
+        to the weight of family legacy, to a grieving father's
+        return to the water that changed everything.
       </p>
 
 
-      <div class="upcoming-list">
+      <div class="coming-grid">
 
 
         <!-- GOODNIGHT HOUSE -->
 
-        <article class="upcoming-card">
+        <article class="book-card">
 
-          <div class="cover">
+          <div class="book-image-wrap">
 
             <img
-              src="../ChatGPT%20Image%20Aug%2013,%202026,%2008_50_34%20AM.png"
-              alt="Goodnight, House"
+              src="../ChatGPT Image Aug 13, 2026, 08_50_34 AM.png"
+              alt="Goodnight, House cover"
             >
 
           </div>
 
+          <div class="book-content">
 
-          <div class="book-copy">
-
-            <div class="status">
+            <span class="status">
               Coming Soon
-            </div>
+            </span>
 
-            <h3>
-              GOODNIGHT, HOUSE
-            </h3>
-
-            <p>
-              A home built to care for a family begins to
-              understand what family actually means.
-            </p>
+            <h2>
+              Goodnight, House
+            </h2>
 
             <p>
-              Warm, strange and bittersweet, GOODNIGHT, HOUSE
-              follows a sentient home as it watches the people
-              inside it grow, change, leave and return over the
-              course of a lifetime.
+              A family home watches generations grow, change and leave
+              while discovering what it means to remember the people
+              who once filled its rooms.
             </p>
 
-            <div class="order-marker">
-              Next from Sinister Books Press
-            </div>
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0HDTF86LG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
 
           </div>
 
@@ -526,42 +495,40 @@
 
         <!-- OLD MONEY -->
 
-        <article class="upcoming-card">
+        <article class="book-card">
 
-          <div class="cover">
+          <div class="book-image-wrap">
 
             <img
               src="../old-money-print-ad-v2.png"
-              alt="Old Money"
-              loading="lazy"
+              alt="Old Money cover"
             >
 
           </div>
 
+          <div class="book-content">
 
-          <div class="book-copy">
-
-            <div class="status">
+            <span class="status">
               Coming Soon
-            </div>
+            </span>
 
-            <h3>
-              OLD MONEY
-            </h3>
-
-            <p>
-              Wealth can be inherited. So can secrets.
-            </p>
+            <h2>
+              Old Money
+            </h2>
 
             <p>
-              OLD MONEY explores family, legacy, privilege and
-              the shadows that survive from one generation to
-              the next.
+              Wealth can preserve a family name for generations.
+              It can preserve its secrets even longer.
             </p>
 
-            <div class="order-marker">
-              Following Goodnight, House
-            </div>
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0H83RJL3N"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
 
           </div>
 
@@ -570,42 +537,41 @@
 
         <!-- TIDES -->
 
-        <article class="upcoming-card">
+        <article class="book-card">
 
-          <div class="cover">
+          <div class="book-image-wrap">
 
             <img
-              src="../ChatGPT%20Image%20Jul%2014,%202026,%2008_31_21%20PM.png"
-              alt="The Tides That Bind"
-              loading="lazy"
+              src="../ChatGPT Image Jul 14, 2026, 08_31_21 PM.png"
+              alt="The Tides That Bind cover"
             >
 
           </div>
 
+          <div class="book-content">
 
-          <div class="book-copy">
+            <span class="status">
+              Coming Soon
+            </span>
 
-            <div class="status">
-              In Development
-            </div>
-
-            <h3>
-              THE TIDES THAT BIND
-            </h3>
-
-            <p>
-              Some places never let us leave completely.
-            </p>
+            <h2>
+              The Tides That Bind
+            </h2>
 
             <p>
-              A grieving father returns to the place where his
-              life changed forever and confronts memory, loss
-              and the pull of the water.
+              A grieving father returns to the Gulf Coast resort
+              where his life changed forever, searching for a way
+              to live with what the water took from him.
             </p>
 
-            <div class="order-marker">
-              In Development
-            </div>
+            <a
+              class="button"
+              href="https://www.amazon.com/dp/B0HF3ZMVNY"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Amazon
+            </a>
 
           </div>
 
@@ -626,16 +592,16 @@
     <div class="closing-inner">
 
       <div class="eyebrow">
-        This Is Only the Beginning
+        More Stories Ahead
       </div>
 
       <h2>
-        More Stories Are Coming.
+        This Is Only the Beginning.
       </h2>
 
       <p>
-        New projects, cover reveals and future releases will
-        continue to appear here as Sinister Books Press grows.
+        New releases and works in development will continue to
+        join the Sinister Books Press catalog.
       </p>
 
     </div>
