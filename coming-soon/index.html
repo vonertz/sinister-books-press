@@ -1,397 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Coming soon from Sinister Books Press: The Tides That Bind, Operation: Silver Kite, Welcome, HOME, and projects currently in development."
-  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Coming Soon | Sinister Books Press</title>
 
-  <style>
+  <meta
+    name="description"
+    content="Upcoming novels and works in development from Sinister Books Press."
+  />
 
+  <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
+      margin: 0;
       background: #080808;
       color: #f2f2f2;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
+      line-height: 1.6;
     }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* NAVIGATION */
 
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(0,0,0,0.98);
-      border-bottom: 1px solid #292929;
+      background: rgba(0, 0, 0, 0.96);
+      border-bottom: 1px solid #252525;
     }
 
     .nav-inner {
       max-width: 1200px;
-      min-height: 66px;
-      margin: auto;
-      padding: 0 22px;
+      margin: 0 auto;
+      padding: 14px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
     .brand {
-      color: white;
-      text-decoration: none;
       font-family: Georgia, "Times New Roman", serif;
-      font-weight: bold;
-      font-size: 16px;
-      letter-spacing: 2px;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
+      gap: 22px;
       align-items: center;
-      gap: 24px;
     }
 
     .nav-links a {
-      color: #bbb;
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-      font-size: 12px;
+      color: #d9d9d9;
+      font-size: 0.9rem;
     }
 
     .nav-links a:hover,
-    .nav-links .active {
-      color: white;
+    .nav-links a.active {
+      color: #ffffff;
     }
 
     .menu-button {
       display: none;
-      width: 46px;
-      height: 42px;
-      color: white;
       background: transparent;
-      border: 1px solid #444;
-      font-size: 24px;
+      border: 1px solid #555;
+      color: white;
+      font-size: 1.45rem;
+      padding: 4px 10px;
+      border-radius: 4px;
       cursor: pointer;
     }
 
-    .page-header {
-      padding: 78px 24px 72px;
+    /* HERO */
+
+    .hero {
+      padding: 86px 20px 70px;
+      text-align: center;
       background:
-        radial-gradient(
-          circle at center,
-          #242424 0%,
-          #101010 48%,
-          #050505 84%
-        );
-      border-bottom: 1px solid #242424;
-    }
-
-    .page-header-inner {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .eyebrow {
-      margin-bottom: 10px;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
-    }
-
-    h1 {
-      margin-bottom: 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(44px, 8vw, 72px);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-    }
-
-    .page-header p {
-      max-width: 760px;
-      color: #aaa;
-      font-size: 18px;
-    }
-
-    section {
-      padding: 78px 24px;
-    }
-
-    .section-inner {
-      max-width: 1120px;
-      margin: auto;
-    }
-
-    .alternate {
-      background: #101010;
-      border-top: 1px solid #222;
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.92)
+        ),
+        url("../FB_IMG_1776374972363.jpg") center/cover no-repeat;
       border-bottom: 1px solid #222;
     }
 
-    .section-title {
-      margin-bottom: 16px;
+    .hero h1 {
+      margin: 0 0 14px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 6vw, 48px);
-      text-transform: uppercase;
-      letter-spacing: 3px;
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
+      letter-spacing: 0.04em;
     }
 
-    .intro {
-      max-width: 760px;
-      color: #999;
-      font-size: 16px;
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #d0d0d0;
+      font-size: 1.05rem;
     }
 
-    .coming-grid {
+    /* MAIN */
+
+    main {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 60px 20px 85px;
+    }
+
+    .section-heading {
+      margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: #aaa;
+      max-width: 720px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #272727;
+      margin: 72px 0;
+    }
+
+    /* BOOK CARDS */
+
+    .coming-list {
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+    }
+
+    .coming-card {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 42px;
-    }
-
-    .book-card {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: minmax(220px, 320px) 1fr;
+      background: #101010;
+      border: 1px solid #262626;
+      border-radius: 10px;
       overflow: hidden;
-      background: #0d0d0d;
-      border: 1px solid #2b2b2b;
     }
 
-    .book-image-wrap {
-      padding: 18px;
-      background: #111;
-      border-bottom: 1px solid #252525;
+    .cover-area {
+      min-height: 440px;
+      background: #050505;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .book-card img {
-      display: block;
+    .cover-area img {
       width: 100%;
-      height: 430px;
-      object-fit: contain;
-      margin: auto;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .book-content {
+    .cover-placeholder {
+      width: 100%;
+      min-height: 440px;
       display: flex;
       flex-direction: column;
-      flex: 1;
-      padding: 27px;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at center,
+          #1b1b1b 0%,
+          #0a0a0a 68%
+        );
+      color: #888;
+    }
+
+    .cover-placeholder .placeholder-title {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #cfcfcf;
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    .cover-placeholder .placeholder-note {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+    }
+
+    .coming-info {
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .status {
-      display: inline-block;
-      align-self: flex-start;
-      margin-bottom: 12px;
-      padding: 5px 9px;
-      color: #ddd;
-      background: #181818;
-      border: 1px solid #505050;
+      margin-bottom: 9px;
+      color: #999;
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 9px;
-      font-weight: bold;
+      letter-spacing: 0.17em;
     }
 
-    .status.development {
-      color: #aaa;
-      border-color: #3d3d3d;
-    }
-
-    .book-content h2 {
-      margin-bottom: 14px;
+    .coming-info h3 {
+      margin: 0 0 16px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 29px;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
       line-height: 1.2;
     }
 
-    .book-content p {
-      margin-bottom: 24px;
-      color: #999;
-      font-size: 15px;
-      flex: 1;
+    .coming-info p {
+      margin: 0 0 18px;
+      color: #c5c5c5;
+      font-size: 1rem;
+      max-width: 680px;
+    }
+
+    .tagline {
+      margin-top: 6px;
+      color: #ededed !important;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 1.08rem !important;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
     }
 
     .button {
       display: inline-block;
-      align-self: flex-start;
-      padding: 11px 16px;
-      color: #050505;
-      background: white;
-      border: 1px solid white;
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-      font-size: 10px;
-      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 4px;
+      border: 1px solid #666;
+      color: #f0f0f0;
+      font-size: 0.88rem;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: #efefef;
+      color: #090909;
+      border-color: #efefef;
     }
 
     .button:hover {
-      color: white;
-      background: #181818;
+      transform: translateY(-1px);
+      opacity: 0.9;
     }
+
+    /* DEVELOPMENT */
 
     .development-card {
-      max-width: 900px;
-      margin-top: 38px;
-      padding: 38px;
-      background:
-        linear-gradient(
-          145deg,
-          #111 0%,
-          #080808 100%
-        );
-      border: 1px solid #333;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+      display: grid;
+      grid-template-columns: minmax(220px, 320px) 1fr;
+      background: #0d0d0d;
+      border: 1px solid #222;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .development-card h2 {
-      margin: 8px 0 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(30px, 5vw, 44px);
-      letter-spacing: 2px;
-    }
-
-    .development-card p {
-      max-width: 800px;
-      margin-bottom: 18px;
-      color: #aaa;
-      font-size: 16px;
-    }
-
-    .development-card .closing-line {
-      color: #ddd;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 19px;
-      font-style: italic;
-    }
-
-    .closing {
-      text-align: center;
-      background:
-        radial-gradient(
-          circle at center,
-          #171717,
-          #080808 70%
-        );
-      border-top: 1px solid #222;
-    }
-
-    .closing-inner {
-      max-width: 760px;
-      margin: auto;
-    }
-
-    .closing h2 {
-      margin-bottom: 16px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 6vw, 48px);
-    }
-
-    .closing p {
-      color: #999;
-      font-size: 16px;
-    }
+    /* FOOTER */
 
     footer {
-      padding: 46px 20px;
-      color: #666;
+      border-top: 1px solid #252525;
+      padding: 30px 20px;
       text-align: center;
-      font-size: 13px;
-      letter-spacing: 1px;
-      border-top: 1px solid #222;
+      color: #777;
+      font-size: 0.85rem;
+      background: #050505;
     }
 
-    @media (max-width: 950px) {
+    /* MOBILE */
 
-      .coming-grid {
+    @media (max-width: 850px) {
+      .coming-card,
+      .development-card {
         grid-template-columns: 1fr;
       }
 
-      .book-card {
-        max-width: 620px;
-        margin: auto;
+      .cover-area {
+        min-height: 0;
       }
 
+      .cover-area img {
+        height: auto;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+
+      .cover-placeholder {
+        min-height: 360px;
+      }
+
+      .coming-info {
+        padding: 30px;
+      }
     }
 
-    @media (max-width: 900px) {
-
+    @media (max-width: 760px) {
       .menu-button {
         display: block;
       }
 
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 66px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        gap: 0;
-        background: #050505;
-        border-bottom: 1px solid #333;
+      .nav-inner {
+        flex-wrap: wrap;
       }
 
-      .nav-links.open {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0 5px;
+        gap: 14px;
+      }
+
+      .nav-links.show {
         display: flex;
       }
 
-      .nav-links a {
-        width: 100%;
-        padding: 17px 24px;
-        border-top: 1px solid #222;
+      .hero {
+        padding-top: 64px;
       }
 
+      .coming-info {
+        padding: 26px 24px 30px;
+      }
     }
-
-    @media (max-width: 650px) {
-
-      .brand {
-        font-size: 13px;
-      }
-
-      .page-header {
-        padding: 55px 22px 52px;
-      }
-
-      section {
-        padding: 60px 20px;
-      }
-
-      .book-card img {
-        height: auto;
-        max-height: 500px;
-      }
-
-      .book-content,
-      .development-card {
-        padding: 24px;
-      }
-
-    }
-
   </style>
 </head>
 
-
 <body>
 
+  <!-- NAVIGATION -->
 
-  <nav class="navbar">
+  <header class="navbar">
 
     <div class="nav-inner">
 
@@ -401,206 +376,257 @@
 
       <button
         class="menu-button"
+        type="button"
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
       >
         ☰
       </button>
 
-      <div class="nav-links" id="navLinks">
+      <nav class="nav-links" id="navLinks">
 
-        <a href="/">Home</a>
-        <a href="/books/">Books</a>
-        <a href="/snowblind/">Snowblind</a>
-        <a href="/coming-soon/" class="active">Coming Soon</a>
-        <a href="/authors/">Authors</a>
-        <a href="/amazing-arya/">Amazing Arya</a>
-        <a href="/readers/">Readers</a>
+        <a href="/">
+          Home
+        </a>
 
-      </div>
+        <a href="/books/">
+          Books
+        </a>
 
-    </div>
+        <a href="/snowblind/">
+          Snowblind
+        </a>
 
-  </nav>
+        <a
+          href="/coming-soon/"
+          class="active"
+        >
+          Coming Soon
+        </a>
 
+        <a href="/authors/">
+          Meet the Authors
+        </a>
 
-  <header class="page-header">
+        <a href="/amazing-arya/">
+          Amazing Arya
+        </a>
 
-    <div class="page-header-inner">
+        <a href="/readers/">
+          Readers
+        </a>
 
-      <div class="eyebrow">
-        Sinister Books Press
-      </div>
-
-      <h1>
-        Coming Soon
-      </h1>
-
-      <p>
-        The next stories from Sinister Books Press,
-        followed by an early look at what is currently in development.
-      </p>
+      </nav>
 
     </div>
 
   </header>
 
 
-  <!-- COMING SOON -->
+  <!-- HERO -->
 
-  <section>
+  <section class="hero">
 
-    <div class="section-inner">
+    <h1>Coming Soon</h1>
 
-      <div class="eyebrow">
-        On the Horizon
+    <p>
+      New stories are always taking shape. Explore upcoming releases from
+      Sinister Books Press and projects currently in development.
+    </p>
+
+  </section>
+
+
+  <main>
+
+    <!-- COMING SOON -->
+
+    <section>
+
+      <div class="section-heading">
+
+        <h2>Coming Soon</h2>
+
+        <p>
+          Upcoming novels currently making their way toward readers.
+        </p>
+
       </div>
 
-      <h2 class="section-title">
-        Coming Soon
-      </h2>
 
-      <p class="intro">
-        Grief, survival, memory, and the difficult choices people make
-        when the world they understand begins to shift beneath them.
-      </p>
+      <div class="coming-list">
 
 
-      <div class="coming-grid">
+        <!-- OPERATION: SILVER KITE -->
 
+        <article class="coming-card">
 
-        <!-- TIDES -->
-
-        <article class="book-card">
-
-          <div class="book-image-wrap">
-
-            <img
-              src="../ChatGPT Image Jul 14, 2026, 08_31_21 PM.png"
-              alt="The Tides That Bind cover"
-            >
-
-          </div>
-
-          <div class="book-content">
-
-            <span class="status">
-              Coming Soon
-            </span>
-
-            <h2>
-              The Tides That Bind
-            </h2>
-
-            <p>
-              A grieving father returns to the Gulf Coast resort
-              where his life changed forever, searching for a way
-              to live with what the water took from him.
-            </p>
-
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0HF3ZMVNY"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- SILVER KITE -->
-
-        <article class="book-card">
-
-          <div class="book-image-wrap">
+          <div class="cover-area">
 
             <img
               src="../ChatGPT Image Aug 26, 2026, 05_01_45 PM.png"
-              alt="Operation: Silver Kite cover"
-            >
+              alt="Operation Silver Kite book cover"
+            />
 
           </div>
 
-          <div class="book-content">
 
-            <span class="status">
+          <div class="coming-info">
+
+            <div class="status">
               Coming Soon
-            </span>
+            </div>
 
-            <h2>
+            <h3>
               Operation: Silver Kite
-            </h2>
+            </h3>
 
             <p>
               In 1962, rising tensions between Thailand and neighboring Laos
-              drew increasing attention from the United States. As the American
-              military presence in the region quietly expanded, a routine
-              helicopter mission over remote jungle ended in disaster.
-              Stranded far from friendly forces, the survivors must make
-              their way back through unforgiving terrain while confronting
-              an increasingly difficult question:
-              <strong>
-                what are you willing to sacrifice in the name of fidelity?
-              </strong>
+              drew increasing attention from the United States. As the
+              American military presence in the region quietly expanded, a
+              routine helicopter mission over remote jungle ended in disaster.
             </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0HGPDGKJM"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <p>
+              Stranded far from friendly forces, the survivors must make their
+              way back through unforgiving terrain while confronting an
+              increasingly difficult question: what are you willing to
+              sacrifice in the name of fidelity?
+            </p>
+
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0HGPDGKJM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
         </article>
 
 
-        <!-- WELCOME HOME -->
 
-        <article class="book-card">
+        <!-- WELCOME, HOME -->
 
-          <div class="book-image-wrap">
+        <article class="coming-card">
+
+          <div class="cover-area">
 
             <img
               src="../Screenshot_20260930_170852_Gallery.jpg"
-              alt="Welcome, HOME cover"
-            >
+              alt="Welcome Home book cover"
+            />
 
           </div>
 
-          <div class="book-content">
 
-            <span class="status">
+          <div class="coming-info">
+
+            <div class="status">
               Coming Soon
-            </span>
+            </div>
 
-            <h2>
+            <h3>
               Welcome, HOME
-            </h2>
+            </h3>
 
             <p>
               Elaine Thompson is a recently retired high school literature
-              teacher whose memories have begun to betray her. Familiar
-              rooms feel subtly wrong, ordinary moments refuse to stay
-              consistent, and the home she has lived in for decades
+              teacher whose memories have begun to betray her.
+            </p>
+
+            <p>
+              Familiar rooms feel subtly wrong, ordinary moments refuse to
+              stay consistent, and the home she has lived in for decades
               suddenly seems to know things she does not.
             </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0HLJG9WYW"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0HLJG9WYW"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- HOME, SECURITY -->
+
+        <article class="coming-card">
+
+          <div class="cover-area">
+
+            <div class="cover-placeholder">
+
+              <div class="placeholder-title">
+                HOME, SECURITY
+              </div>
+
+              <div class="placeholder-note">
+                Cover Coming Soon
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="coming-info">
+
+            <div class="status">
+              Coming Soon
+            </div>
+
+            <h3>
+              HOME, SECURITY
+            </h3>
+
+            <p>
+              A secluded modern home. A quiet lake. A family away for the
+              evening.
+            </p>
+
+            <p>
+              What begins as a routine break-in becomes something far more
+              dangerous when the people inside realize the house was built to
+              keep threats out—and may be just as capable of keeping them in.
+            </p>
+
+            <p class="tagline">
+              Some homes protect the people inside. Others decide who belongs
+              there.
+            </p>
+
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0HMQQC9PF"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
@@ -609,83 +635,78 @@
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- IN DEVELOPMENT -->
 
-  <section class="alternate">
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        Further Ahead
-      </div>
-
-      <h2 class="section-title">
-        In Development
-      </h2>
-
-      <p class="intro">
-        A first look at stories currently taking shape at
-        Sinister Books Press.
-      </p>
+    <div class="divider"></div>
 
 
-      <div class="development-card">
 
-        <span class="status development">
-          In Development
-        </span>
+    <!-- IN DEVELOPMENT -->
 
-        <h2>
-          HOME, SECURITY
-        </h2>
+    <section>
+
+      <div class="section-heading">
+
+        <h2>In Development</h2>
 
         <p>
-          A secluded modern home. A quiet lake.
-          A family away for the evening.
-        </p>
-
-        <p>
-          What begins as a routine break-in becomes something far more
-          dangerous when the people inside realize the house was built
-          to keep threats out—and may be just as capable of keeping them in.
-        </p>
-
-        <p class="closing-line">
-          Some homes protect the people inside. Others decide who belongs there.
+          Stories still being built behind the scenes.
         </p>
 
       </div>
 
-    </div>
 
-  </section>
+      <!-- CRAWLSPACE -->
+
+      <article class="development-card">
+
+        <div class="cover-area">
+
+          <div class="cover-placeholder">
+
+            <div class="placeholder-title">
+              CRAWLSPACE
+            </div>
+
+            <div class="placeholder-note">
+              In Development
+            </div>
+
+          </div>
+
+        </div>
 
 
-  <section class="closing">
+        <div class="coming-info">
 
-    <div class="closing-inner">
+          <div class="status">
+            In Development
+          </div>
 
-      <div class="eyebrow">
-        More Stories Ahead
-      </div>
+          <h3>
+            CRAWLSPACE
+          </h3>
 
-      <h2>
-        This Is Only the Beginning.
-      </h2>
+          <p>
+            A routine fiber installation sends an experienced technician into
+            the dark service space between two floors of an apartment building.
+          </p>
 
-      <p>
-        New releases and works in development will continue to
-        join the Sinister Books Press catalog.
-      </p>
+          <p>
+            What he finds there turns an ordinary workday into a fight to find
+            a way out of a place never meant for people to enter in the first
+            place.
+          </p>
 
-    </div>
+        </div>
 
-  </section>
+      </article>
+
+    </section>
+
+  </main>
 
 
   <footer>
@@ -694,19 +715,12 @@
 
 
   <script>
-
     function toggleMenu() {
-
       document
         .getElementById("navLinks")
-        .classList
-        .toggle("open");
-
+        .classList.toggle("show");
     }
-
   </script>
 
-
 </body>
-
 </html>
