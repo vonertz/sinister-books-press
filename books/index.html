@@ -59,4 +59,1136 @@
     .brand {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.05rem;
-      letter-spacing: 
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #d9d9d9;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+    }
+
+    .menu-button {
+      display: none;
+      background: transparent;
+      border: 1px solid #555;
+      color: white;
+      font-size: 1.45rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 80px 20px 62px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.52),
+          rgba(0, 0, 0, 0.9)
+        ),
+        url("../FB_IMG_1776374972363.jpg") center/cover no-repeat;
+      border-bottom: 1px solid #222;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
+      letter-spacing: 0.04em;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #d0d0d0;
+      font-size: 1.05rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 55px 20px 80px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: #aaa;
+      max-width: 720px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #272727;
+      margin: 65px 0;
+    }
+
+    .series-intro {
+      display: grid;
+      grid-template-columns: minmax(220px, 320px) 1fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 42px;
+      padding: 28px;
+      background: #101010;
+      border: 1px solid #252525;
+      border-radius: 10px;
+    }
+
+    .series-intro img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .series-intro h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+    }
+
+    .series-intro p {
+      color: #c7c7c7;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 34px;
+    }
+
+    .book-card {
+      background: #101010;
+      border: 1px solid #242424;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .book-card-inner {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      min-height: 100%;
+    }
+
+    .book-cover-wrap {
+      background: #050505;
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .book-info {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-label {
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.72rem;
+      color: #888;
+    }
+
+    .book-info h3 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      line-height: 1.2;
+    }
+
+    .book-info p {
+      margin-top: 0;
+      margin-bottom: 18px;
+      color: #c3c3c3;
+      font-size: 0.96rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      border: 1px solid #666;
+      font-size: 0.86rem;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: #efefef;
+      color: #090909;
+      border-color: #efefef;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: 0.9;
+    }
+
+    .trailer-block {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid #292929;
+    }
+
+    .trailer-block h4 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    .trailer-block video {
+      width: 100%;
+      max-height: 420px;
+      background: black;
+      border-radius: 6px;
+    }
+
+    footer {
+      border-top: 1px solid #252525;
+      padding: 30px 20px;
+      text-align: center;
+      color: #777;
+      font-size: 0.85rem;
+      background: #050505;
+    }
+
+    @media (max-width: 900px) {
+      .book-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .series-intro {
+        grid-template-columns: 1fr;
+      }
+
+      .series-intro img {
+        max-width: 360px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-button {
+        display: block;
+      }
+
+      .nav-inner {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0 5px;
+        gap: 14px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .book-card-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .book-cover {
+        height: auto;
+      }
+
+      .book-cover-wrap {
+        display: flex;
+        justify-content: center;
+      }
+
+      .book-cover-wrap img {
+        max-width: 320px;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-inner">
+
+      <a class="brand" href="/">SINISTER BOOKS</a>
+
+      <button
+        class="menu-button"
+        type="button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/books/" class="active">Books</a>
+        <a href="/snowblind/">Snowblind</a>
+        <a href="/coming-soon/">Coming Soon</a>
+        <a href="/authors/">Meet the Authors</a>
+        <a href="/amazing-arya/">Amazing Arya</a>
+        <a href="/readers/">Readers</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <section class="hero">
+
+    <h1>Books</h1>
+
+    <p>
+      Stories of horror, suspense, mystery, memory, family, artificial
+      intelligence, and the strange places people find themselves when the
+      world stops behaving the way it should.
+    </p>
+
+  </section>
+
+
+  <main>
+
+    <!-- SNOWBLIND SERIES -->
+
+    <section>
+
+      <div class="section-heading">
+
+        <h2>The Snowblind Series</h2>
+
+        <p>
+          Six novels following a story that begins in the mountains and grows
+          into something far larger.
+        </p>
+
+      </div>
+
+
+      <div class="series-intro">
+
+        <img
+          src="../ec1e2223-5aea-4fb8-8018-610af82b28a4.png"
+          alt="The Snowblind Series"
+        />
+
+        <div>
+
+          <h3>Enter the Snowblind Saga</h3>
+
+          <p>
+            What begins as a carefree road trip from Minneapolis to Las Vegas
+            for a bachelor party quickly unravels into something far more
+            sinister.
+          </p>
+
+          <p>
+            Follow the complete six-volume story in reading order.
+          </p>
+
+          <div class="button-row">
+
+            <a class="button primary" href="/snowblind/">
+              Explore the Series
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="book-grid">
+
+
+        <!-- SNOWBLIND -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../Screenshot_20260820_111418_Gallery.jpg"
+                alt="Snowblind book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Snowblind Series · Book One
+              </div>
+
+              <h3>Snowblind</h3>
+
+              <p>
+                The beginning of the six-volume saga. A bachelor-party road
+                trip into the mountains becomes a fight to survive something
+                none of them understand.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0GVZR2H19"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+                <a
+                  class="button"
+                  href="/snowblind/"
+                >
+                  Series Page & Trailer
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ISOLATION -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../02-isolation-full-wrap-collector-edition.png"
+                alt="Isolation book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Snowblind Series · Book Two
+              </div>
+
+              <h3>Isolation</h3>
+
+              <p>
+                The second volume of the Snowblind Series pushes the survivors
+                beyond the mountains and deeper into the mystery of what they
+                encountered there.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0GWQVNM96"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Isolation_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- SCHISM -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../03-schism-full-wrap-collector-edition.png"
+                alt="Schism book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Snowblind Series · Book Three
+              </div>
+
+              <h3>Schism</h3>
+
+              <p>
+                As alliances fracture and the consequences of earlier choices
+                begin to spread, survival demands more than simply staying
+                alive.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0GYRP9768"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Schism_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- HERESY -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../heresy-photorealistic-modern-truck-cover-v2.png"
+                alt="Heresy book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Snowblind Series · Book Four
+              </div>
+
+              <h3>Heresy</h3>
+
+              <p>
+                The journey continues as Josh is forced to confront questions
+                of loyalty, faith, responsibility, and what redemption may
+                ultimately cost.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0H3P17PM2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Heresy_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ASCENSION PART ONE -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../ascension-part-one-council-arrival-cover-v3.png"
+                alt="Ascension Part One book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Snowblind Series · Book Five
+              </div>
+
+              <h3>Ascension: Part One</h3>
+
+              <p>
+                The Snowblind story enters its final movement as the survivors
+                face the full implications of everything that began in the
+                mountains.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0H3YWLP8Z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Ascension_Part_1_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ASCENSION PART TWO -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../ascension-part-two-town-attack-cover-v1.png"
+                alt="Ascension Part Two book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Snowblind Series · Book Six
+              </div>
+
+              <h3>Ascension: Part Two</h3>
+
+              <p>
+                The six-volume saga reaches its conclusion as the choices,
+                sacrifices, and questions that shaped the series finally come
+                due.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0H3ZN22TJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Ascension_Part_2_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <div class="divider"></div>
+
+
+
+    <!-- STANDALONE FICTION -->
+
+    <section>
+
+      <div class="section-heading">
+
+        <h2>Standalone Fiction</h2>
+
+        <p>
+          Complete stories spanning suspense, horror, literary drama, mystery,
+          technology, memory, and the supernatural.
+        </p>
+
+      </div>
+
+
+      <div class="book-grid">
+
+
+
+        <!-- BEFORE THE STREETLIGHTS -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../5be5f4f6-4b3d-4faf-a401-2afe35c4f656.png"
+                alt="Before the Streetlights book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Standalone Novel
+              </div>
+
+              <h3>Before the Streetlights</h3>
+
+              <p>
+                A story of childhood friendship, loss, memory, and the moments
+                that remain with us long after summer ends.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0H533NYC6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Before_the_Streetlights_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ANIMAL HOURS -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../ChatGPT Image May 21, 2026, 01_18_32 PM.png"
+                alt="Animal Hours book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Standalone Novel
+              </div>
+
+              <h3>Animal Hours</h3>
+
+              <p>
+                Portland detective Aaron Cole investigates a disappearance
+                that becomes increasingly difficult to explain, drawing him
+                toward something ancient, predatory, and disturbingly close.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0H52JKMS9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Animal_Hours_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- GOODNIGHT HOUSE -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../ChatGPT Image Aug 13, 2026, 08_50_34 AM.png"
+                alt="Goodnight House book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Standalone Novel
+              </div>
+
+              <h3>Goodnight, House</h3>
+
+              <p>
+                A family grows and changes inside a home that is always
+                listening, always learning, and slowly becoming something more
+                than the system it was designed to be.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0HDTF86LG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Goodnight_House_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- OLD MONEY -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../old-money-print-ad-v2.png"
+                alt="Old Money book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Standalone Novel
+              </div>
+
+              <h3>Old Money</h3>
+
+              <p>
+                Wealth can preserve a family name for generations. It can
+                preserve its secrets even longer.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0H83RJL3N"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Old_Money_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- THE TIDES THAT BIND -->
+
+        <article class="book-card">
+
+          <div class="book-card-inner">
+
+            <div class="book-cover-wrap">
+
+              <img
+                class="book-cover"
+                src="../ChatGPT Image Jul 14, 2026, 08_31_21 PM.png"
+                alt="The Tides That Bind book cover"
+              />
+
+            </div>
+
+            <div class="book-info">
+
+              <div class="book-label">
+                Standalone Novel
+              </div>
+
+              <h3>The Tides That Bind</h3>
+
+              <p>
+                Brian Sanders arrives at a Gulf Coast resort carrying a grief
+                he has never learned to live with. Then Room 614 begins
+                offering him things that should not be possible.
+              </p>
+
+              <div class="button-row">
+
+                <a
+                  class="button primary"
+                  href="https://www.amazon.com/dp/B0HF3ZMVNY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Amazon
+                </a>
+
+              </div>
+
+              <div class="trailer-block">
+
+                <h4>Watch the Trailer</h4>
+
+                <video controls playsinline preload="metadata">
+                  <source
+                    src="../Tides_That_Bind_web.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 Sinister Books Press
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
