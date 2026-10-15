@@ -159,6 +159,39 @@
       border-bottom: 1px solid #d7ccee;
     }
 
+    /* TRAILER */
+
+    .trailer-section {
+      background: #eee8fb;
+      border-top: 1px solid #d7ccee;
+      border-bottom: 1px solid #d7ccee;
+      text-align: center;
+    }
+
+    .trailer-wrap {
+      width: min(380px, 100%);
+      margin: 34px auto 0;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(65, 44, 95, 0.18);
+      background: #000;
+    }
+
+    .trailer-wrap video {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #000;
+    }
+
+    .trailer-caption {
+      margin-top: 16px;
+      color: #756982;
+      font-size: 14px;
+    }
+
+    /* BOOKS */
+
     .book-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -356,6 +389,10 @@
         padding: 24px;
       }
 
+      .trailer-wrap {
+        width: min(340px, 100%);
+      }
+
     }
 
   </style>
@@ -399,6 +436,8 @@
   </nav>
 
 
+  <!-- HERO -->
+
   <header class="hero">
 
     <div class="hero-inner">
@@ -423,6 +462,53 @@
 
   </header>
 
+
+  <!-- TRAILER -->
+
+  <section class="trailer-section">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Official Book Trailer
+      </div>
+
+      <h2>
+        Meet Amazing Arya
+      </h2>
+
+      <p class="intro" style="margin:auto;">
+        From the ice rink to Thailand, Mars, history and the kitchen,
+        every adventure begins with curiosity.
+      </p>
+
+      <div class="trailer-wrap">
+
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="Amazing Arya's Adventures official book trailer"
+        >
+          <source
+            src="../Amazing_Arya_web-1.mp4"
+            type="video/mp4"
+          >
+          Your browser does not support HTML5 video.
+        </video>
+
+      </div>
+
+      <div class="trailer-caption">
+        Amazing Arya's Adventures — Official Trailer
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKS -->
 
   <section>
 
@@ -711,6 +797,8 @@
   </section>
 
 
+  <!-- THEMES -->
+
   <section class="alternate">
 
     <div class="section-inner">
@@ -766,6 +854,8 @@
 
   </section>
 
+
+  <!-- AUTHORS -->
 
   <section>
 
