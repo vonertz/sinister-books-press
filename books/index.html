@@ -99,50 +99,59 @@
       cursor: pointer;
     }
 
-    /* PAGE HEADER */
+    /* WHITE MASTHEAD */
 
-    .page-hero {
-      background: #000;
-      border-bottom: 1px solid #222;
+    .page-masthead {
+      background: #ffffff;
+      color: #111111;
+      border-bottom: 1px solid #d7d7d7;
     }
 
-    .page-hero-image {
-      width: 100%;
-      background: #000;
-      display: flex;
-      justify-content: center;
+    .page-masthead-inner {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 26px 24px 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 44px;
       align-items: center;
-      overflow: hidden;
     }
 
-    .page-hero-image img {
-      width: 100%;
+    .masthead-logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .masthead-logo img {
+      width: 260px;
+      max-width: 100%;
       height: auto;
-      max-height: 560px;
       object-fit: contain;
-      object-position: center center;
-      margin: 0 auto;
     }
 
-    .page-hero-content {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 34px 24px 44px;
-      text-align: center;
-    }
-
-    .page-hero-content h1 {
-      margin: 0 0 14px;
+    .masthead-copy h1 {
+      margin: 0 0 10px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      font-size: clamp(2.5rem, 5vw, 4.4rem);
+      line-height: 1;
       letter-spacing: 0.03em;
+      color: #111;
     }
 
-    .page-hero-content p {
-      max-width: 900px;
+    .masthead-copy p {
+      max-width: 760px;
+      margin: 0;
+      color: #444;
+      font-size: clamp(1rem, 1.7vw, 1.15rem);
+      line-height: 1.6;
+    }
+
+    .masthead-rule {
+      height: 1px;
+      background: #cfcfcf;
+      max-width: 1250px;
       margin: 0 auto;
-      color: #cfcfcf;
-      font-size: clamp(1rem, 2vw, 1.2rem);
     }
 
     /* MAIN */
@@ -150,7 +159,7 @@
     main {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 60px 24px 90px;
+      padding: 52px 24px 90px;
     }
 
     .section-heading {
@@ -388,6 +397,15 @@
     }
 
     @media (max-width: 900px) {
+      .page-masthead-inner {
+        grid-template-columns: 220px 1fr;
+        gap: 30px;
+      }
+
+      .masthead-logo img {
+        width: 210px;
+      }
+
       .series-intro {
         grid-template-columns: 1fr;
       }
@@ -422,13 +440,23 @@
         display: flex;
       }
 
-      .page-hero-image img {
-        max-height: none;
-        width: 100%;
+      .page-masthead-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+        padding: 24px 20px 26px;
       }
 
-      .page-hero-content {
-        padding: 28px 20px 38px;
+      .masthead-logo {
+        justify-content: center;
+      }
+
+      .masthead-logo img {
+        width: 210px;
+      }
+
+      .masthead-copy p {
+        margin: 0 auto;
       }
 
       .book-card-inner {
@@ -467,15 +495,10 @@
 
 <body>
 
-  <!-- NAV -->
-
   <header class="navbar">
-
     <div class="nav-inner">
 
-      <a class="brand" href="/">
-        SINISTER BOOKS
-      </a>
+      <a class="brand" href="/">SINISTER BOOKS</a>
 
       <button
         class="menu-button"
@@ -487,66 +510,47 @@
       </button>
 
       <nav class="nav-links" id="navLinks">
-
-        <a href="/">
-          Home
-        </a>
-
-        <a href="/books/" class="active">
-          Books
-        </a>
-
-        <a href="/snowblind/">
-          Snowblind
-        </a>
-
-        <a href="/coming-soon/">
-          Coming Soon
-        </a>
-
-        <a href="/authors/">
-          Meet the Authors
-        </a>
-
-        <a href="/amazing-arya/">
-          Amazing Arya
-        </a>
-
-        <a href="/readers/">
-          Readers
-        </a>
-
+        <a href="/">Home</a>
+        <a href="/books/" class="active">Books</a>
+        <a href="/snowblind/">Snowblind</a>
+        <a href="/coming-soon/">Coming Soon</a>
+        <a href="/authors/">Meet the Authors</a>
+        <a href="/amazing-arya/">Amazing Arya</a>
+        <a href="/readers/">Readers</a>
       </nav>
 
     </div>
-
   </header>
 
 
-  <!-- FULL LOGO + PAGE TITLE BELOW -->
+  <!-- WHITE MASTHEAD -->
 
-  <section class="page-hero">
+  <section class="page-masthead">
 
-    <div class="page-hero-image">
+    <div class="page-masthead-inner">
 
-      <img
-        src="../FB_IMG_1776374972363.jpg"
-        alt="Sinister Books"
-      />
+      <div class="masthead-logo">
+        <img
+          src="../FB_IMG_1776374972363.jpg"
+          alt="Sinister Books"
+        />
+      </div>
+
+      <div class="masthead-copy">
+
+        <h1>BOOKS</h1>
+
+        <p>
+          Stories of horror, suspense, mystery, memory, family, artificial
+          intelligence, and the strange places people find themselves when the
+          world stops behaving the way it should.
+        </p>
+
+      </div>
 
     </div>
 
-    <div class="page-hero-content">
-
-      <h1>Books</h1>
-
-      <p>
-        Stories of horror, suspense, mystery, memory, family, artificial
-        intelligence, and the strange places people find themselves when the
-        world stops behaving the way it should.
-      </p>
-
-    </div>
+    <div class="masthead-rule"></div>
 
   </section>
 
@@ -591,11 +595,9 @@
           </p>
 
           <div class="button-row">
-
             <a class="button primary" href="/snowblind/">
               Explore the Series
             </a>
-
           </div>
 
         </div>
@@ -604,8 +606,6 @@
 
 
       <div class="book-grid">
-
-        <!-- SNOWBLIND -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -633,7 +633,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0GVZR2H19"
@@ -643,13 +642,9 @@
                   View on Amazon
                 </a>
 
-                <a
-                  class="button"
-                  href="/snowblind/"
-                >
+                <a class="button" href="/snowblind/">
                   Series Page &amp; Trailer
                 </a>
-
               </div>
 
             </div>
@@ -657,8 +652,6 @@
           </div>
         </article>
 
-
-        <!-- ISOLATION -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -686,7 +679,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0GWQVNM96"
@@ -703,7 +695,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -711,8 +702,6 @@
           </div>
         </article>
 
-
-        <!-- SCHISM -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -740,7 +729,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0GYRP9768"
@@ -757,7 +745,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -765,8 +752,6 @@
           </div>
         </article>
 
-
-        <!-- HERESY -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -794,7 +779,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H3P17PM2"
@@ -811,7 +795,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -819,8 +802,6 @@
           </div>
         </article>
 
-
-        <!-- ASCENSION ONE -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -848,7 +829,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H3YWLP8Z"
@@ -865,7 +845,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -873,8 +852,6 @@
           </div>
         </article>
 
-
-        <!-- ASCENSION TWO -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -902,7 +879,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H3ZN22TJ"
@@ -919,7 +895,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -937,7 +912,7 @@
 
 
 
-    <!-- STANDALONES -->
+    <!-- STANDALONE FICTION -->
 
     <section>
 
@@ -955,19 +930,15 @@
 
       <div class="book-grid">
 
-        <!-- SILVER KITE -->
-
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
-
               <img
                 class="book-cover"
                 src="../ChatGPT Image Aug 26, 2026, 05_01_45 PM.png"
                 alt="Operation Silver Kite book cover"
               />
-
             </div>
 
             <div class="book-info">
@@ -986,7 +957,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0HGPDGKJM"
@@ -1003,7 +973,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -1012,19 +981,15 @@
         </article>
 
 
-        <!-- TIDES -->
-
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
-
               <img
                 class="book-cover"
                 src="../ChatGPT Image Jul 14, 2026, 08_31_21 PM.png"
                 alt="The Tides That Bind book cover"
               />
-
             </div>
 
             <div class="book-info">
@@ -1042,7 +1007,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0HF3ZMVNY"
@@ -1059,7 +1023,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -1068,19 +1031,15 @@
         </article>
 
 
-        <!-- OLD MONEY -->
-
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
-
               <img
                 class="book-cover"
                 src="../old-money-print-ad-v2.png"
                 alt="Old Money book cover"
               />
-
             </div>
 
             <div class="book-info">
@@ -1097,7 +1056,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H83RJL3N"
@@ -1114,7 +1072,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -1123,19 +1080,15 @@
         </article>
 
 
-        <!-- GOODNIGHT HOUSE -->
-
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
-
               <img
                 class="book-cover"
                 src="../ChatGPT Image Aug 13, 2026, 08_50_34 AM.png"
                 alt="Goodnight House book cover"
               />
-
             </div>
 
             <div class="book-info">
@@ -1153,7 +1106,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0HDTF86LG"
@@ -1170,7 +1122,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -1179,19 +1130,15 @@
         </article>
 
 
-        <!-- ANIMAL HOURS -->
-
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
-
               <img
                 class="book-cover"
                 src="../ChatGPT Image May 21, 2026, 01_18_32 PM.png"
                 alt="Animal Hours book cover"
               />
-
             </div>
 
             <div class="book-info">
@@ -1209,7 +1156,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H52JKMS9"
@@ -1226,7 +1172,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -1235,19 +1180,15 @@
         </article>
 
 
-        <!-- STREETLIGHTS -->
-
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
-
               <img
                 class="book-cover"
                 src="../5be5f4f6-4b3d-4faf-a401-2afe35c4f656.png"
                 alt="Before the Streetlights book cover"
               />
-
             </div>
 
             <div class="book-info">
@@ -1264,7 +1205,6 @@
               </p>
 
               <div class="button-row">
-
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H533NYC6"
@@ -1281,7 +1221,6 @@
                 >
                   Watch Trailer
                 </button>
-
               </div>
 
             </div>
@@ -1295,8 +1234,6 @@
 
   </main>
 
-
-  <!-- TRAILER POPUP -->
 
   <div
     class="trailer-modal"
@@ -1347,9 +1284,7 @@
 
   <script>
     function toggleMenu() {
-      document
-        .getElementById("navLinks")
-        .classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
 
     function openTrailer(source, title) {
@@ -1363,7 +1298,6 @@
 
       modal.classList.add("show");
       modal.setAttribute("aria-hidden", "false");
-
       document.body.classList.add("modal-open");
     }
 
@@ -1377,7 +1311,6 @@
 
       modal.classList.remove("show");
       modal.setAttribute("aria-hidden", "true");
-
       document.body.classList.remove("modal-open");
     }
 
