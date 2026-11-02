@@ -319,16 +319,28 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
+      align-items: start;
     }
 
     .hardcover-item {
       text-align: center;
     }
 
-    .hardcover-item img {
+    .hardcover-image-box {
       width: 100%;
-      border-radius: 6px;
+      height: 420px;
       background: #050505;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hardcover-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .hardcover-item h3 {
@@ -378,6 +390,10 @@
       .series-intro img {
         max-width: 480px;
         margin: 0 auto;
+      }
+
+      .hardcover-image-box {
+        height: 380px;
       }
     }
 
@@ -434,6 +450,10 @@
       .hardcover-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .hardcover-image-box {
+        height: 360px;
+      }
     }
 
     @media (max-width: 500px) {
@@ -441,9 +461,14 @@
         grid-template-columns: 1fr;
       }
 
-      .hardcover-item img {
+      .hardcover-item {
         max-width: 320px;
         margin: 0 auto;
+        width: 100%;
+      }
+
+      .hardcover-image-box {
+        height: 420px;
       }
     }
   </style>
@@ -483,17 +508,17 @@
   </header>
 
 
-  <!-- WHITE MASTHEAD -->
-
   <section class="page-masthead">
 
     <div class="page-masthead-inner">
 
       <div class="masthead-logo">
+
         <img
           src="../FB_IMG_1776374972363.jpg"
           alt="Sinister Books"
         />
+
       </div>
 
       <div class="masthead-copy">
@@ -513,8 +538,6 @@
 
 
   <main>
-
-    <!-- SERIES INTRO -->
 
     <section>
 
@@ -553,8 +576,6 @@
 
 
 
-    <!-- TRAILER -->
-
     <section class="trailer-section">
 
       <div class="section-heading">
@@ -592,8 +613,6 @@
 
 
 
-    <!-- READING ORDER -->
-
     <section>
 
       <div class="section-heading">
@@ -608,8 +627,6 @@
 
 
       <div class="book-grid">
-
-        <!-- SNOWBLIND -->
 
         <article class="book-card">
 
@@ -654,8 +671,6 @@
         </article>
 
 
-        <!-- ISOLATION -->
-
         <article class="book-card">
 
           <div class="book-cover-wrap">
@@ -698,8 +713,6 @@
 
         </article>
 
-
-        <!-- SCHISM -->
 
         <article class="book-card">
 
@@ -744,8 +757,6 @@
         </article>
 
 
-        <!-- HERESY -->
-
         <article class="book-card">
 
           <div class="book-cover-wrap">
@@ -789,8 +800,6 @@
         </article>
 
 
-        <!-- ASCENSION 1 -->
-
         <article class="book-card">
 
           <div class="book-cover-wrap">
@@ -833,8 +842,6 @@
 
         </article>
 
-
-        <!-- ASCENSION 2 -->
 
         <article class="book-card">
 
@@ -888,8 +895,6 @@
 
 
 
-    <!-- HARDCOVER GALLERY -->
-
     <section>
 
       <div class="section-heading">
@@ -907,10 +912,14 @@
 
         <div class="hardcover-item">
 
-          <img
-            src="../IMG_20260409_124820.jpg"
-            alt="Snowblind hardcover"
-          />
+          <div class="hardcover-image-box">
+
+            <img
+              src="../IMG_20260409_124820.jpg"
+              alt="Snowblind hardcover"
+            />
+
+          </div>
 
           <h3>Snowblind</h3>
 
@@ -919,10 +928,14 @@
 
         <div class="hardcover-item">
 
-          <img
-            src="../ChatGPT Image Apr 2, 2026, 07_27_33 PM.png"
-            alt="Isolation hardcover"
-          />
+          <div class="hardcover-image-box">
+
+            <img
+              src="../ChatGPT Image Apr 2, 2026, 07_27_33 PM.png"
+              alt="Isolation hardcover"
+            />
+
+          </div>
 
           <h3>Isolation</h3>
 
@@ -931,10 +944,14 @@
 
         <div class="hardcover-item">
 
-          <img
-            src="../Urban divides in glowing chaos.png"
-            alt="Schism hardcover"
-          />
+          <div class="hardcover-image-box">
+
+            <img
+              src="../Urban divides in glowing chaos.png"
+              alt="Schism hardcover"
+            />
+
+          </div>
 
           <h3>Schism</h3>
 
@@ -943,10 +960,14 @@
 
         <div class="hardcover-item">
 
-          <img
-            src="../ChatGPT Image May 14, 2026, 09_29_16 PM.png"
-            alt="Heresy hardcover"
-          />
+          <div class="hardcover-image-box">
+
+            <img
+              src="../ChatGPT Image May 14, 2026, 09_29_16 PM.png"
+              alt="Heresy hardcover"
+            />
+
+          </div>
 
           <h3>Heresy</h3>
 
@@ -955,10 +976,14 @@
 
         <div class="hardcover-item">
 
-          <img
-            src="../ChatGPT Image May 22, 2026, 07_59_53 PM.png"
-            alt="Ascension hardcover"
-          />
+          <div class="hardcover-image-box">
+
+            <img
+              src="../ChatGPT Image May 22, 2026, 07_59_53 PM.png"
+              alt="Ascension hardcover"
+            />
+
+          </div>
 
           <h3>Ascension</h3>
 
