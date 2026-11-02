@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="The complete six-volume Snowblind Series by Eric Erter."
-  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>The Snowblind Series | Sinister Books Press</title>
 
-  <style>
+  <meta
+    name="description"
+    content="Explore the complete six-volume Snowblind Series by Eric Erter."
+  />
 
+  <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
@@ -29,10 +21,21 @@
     }
 
     body {
-      background: #07090b;
-      color: #f4f4f4;
+      margin: 0;
+      background: #080808;
+      color: #f2f2f2;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      display: block;
     }
 
     /* NAVIGATION */
@@ -41,341 +44,273 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(0,0,0,0.98);
-      border-bottom: 1px solid #292929;
+      background: rgba(0, 0, 0, 0.97);
+      border-bottom: 1px solid #252525;
     }
 
     .nav-inner {
-      max-width: 1200px;
-      min-height: 66px;
-      margin: auto;
-      padding: 0 22px;
-
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 14px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
     }
 
     .brand {
-      color: white;
-      text-decoration: none;
       font-family: Georgia, "Times New Roman", serif;
-      font-weight: bold;
-      font-size: 16px;
-      letter-spacing: 2px;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
+      gap: 22px;
       align-items: center;
-      gap: 24px;
     }
 
     .nav-links a {
-      color: #bbb;
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-      font-size: 12px;
+      color: #d9d9d9;
+      font-size: 0.9rem;
     }
 
     .nav-links a:hover,
-    .nav-links .active {
-      color: white;
+    .nav-links a.active {
+      color: #ffffff;
     }
 
     .menu-button {
       display: none;
-      width: 46px;
-      height: 42px;
-      color: white;
       background: transparent;
-      border: 1px solid #444;
-      font-size: 24px;
+      border: 1px solid #555;
+      color: white;
+      font-size: 1.45rem;
+      padding: 4px 10px;
+      border-radius: 4px;
       cursor: pointer;
     }
 
-    /* HERO */
+    /* WHITE MASTHEAD */
 
-    .hero {
-      padding: 70px 24px 75px;
-
-      background:
-        radial-gradient(
-          circle at center,
-          #17212a 0%,
-          #0b0f13 48%,
-          #030405 85%
-        );
-
-      border-bottom: 1px solid #26303a;
-      text-align: center;
+    .page-masthead {
+      background: #ffffff;
+      color: #111111;
+      border-bottom: 1px solid #d7d7d7;
     }
 
-    .hero-inner {
-      max-width: 1050px;
-      margin: auto;
+    .page-masthead-inner {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 26px 24px 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 44px;
+      align-items: center;
     }
 
-    .eyebrow {
-      margin-bottom: 10px;
-      color: #8499aa;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
+    .masthead-logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
 
-    .hero h1 {
-      margin-bottom: 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(42px, 8vw, 72px);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: auto;
-      color: #9eabb5;
-      font-size: 18px;
-    }
-
-    .series-image {
-      margin-top: 45px;
-    }
-
-    .series-image img {
-      display: block;
-      width: 100%;
-      max-width: 900px;
+    .masthead-logo img {
+      width: 260px;
+      max-width: 100%;
       height: auto;
-      margin: auto;
-
-      border: 1px solid #2a343d;
-
-      box-shadow:
-        0 28px 65px rgba(0,0,0,0.75);
+      object-fit: contain;
     }
 
-    .hero-action {
-      margin-top: 32px;
-    }
-
-    /* BUTTONS */
-
-    .button {
-      display: inline-block;
-      padding: 12px 21px;
-
-      color: white;
-      background: #12181d;
-
-      border: 1px solid #617484;
-
-      text-decoration: none;
-      text-transform: uppercase;
-
-      letter-spacing: 1.4px;
-      font-size: 11px;
-
-      transition: 0.25s ease;
-    }
-
-    .button:hover {
-      color: #081017;
-      background: #dce9f2;
-      border-color: #dce9f2;
-    }
-
-    /* GENERAL */
-
-    section {
-      padding: 80px 24px;
-    }
-
-    .alternate {
-      background: #0d1115;
-      border-top: 1px solid #202930;
-      border-bottom: 1px solid #202930;
-    }
-
-    .section-inner {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    h2 {
-      margin-bottom: 18px;
+    .masthead-copy h1 {
+      margin: 0 0 10px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 6vw, 48px);
-      text-transform: uppercase;
-      letter-spacing: 3px;
+      font-size: clamp(2.35rem, 5vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: 0.03em;
+      color: #111;
     }
 
-    .intro {
-      max-width: 800px;
-      color: #9ba7b0;
-      font-size: 16px;
+    .masthead-copy p {
+      max-width: 760px;
+      margin: 0;
+      color: #444;
+      font-size: clamp(1rem, 1.7vw, 1.15rem);
+      line-height: 1.6;
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 52px 24px 90px;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: #aaa;
+      max-width: 780px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #272727;
+      margin: 72px 0;
+    }
+
+    /* SERIES INTRO */
+
+    .series-intro {
+      display: grid;
+      grid-template-columns: minmax(280px, 420px) 1fr;
+      gap: 42px;
+      align-items: center;
+      background: #101010;
+      border: 1px solid #272727;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .series-intro img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .series-copy h2 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .series-copy p {
+      color: #c7c7c7;
+      margin-top: 0;
+      margin-bottom: 18px;
     }
 
     /* TRAILER */
 
     .trailer-section {
       text-align: center;
-
-      background:
-        radial-gradient(
-          circle at center,
-          #111820 0%,
-          #080b0e 65%,
-          #050607 100%
-        );
-
-      border-bottom: 1px solid #202930;
-    }
-
-    .trailer-intro {
-      max-width: 680px;
-      margin: 0 auto 35px;
-      color: #95a2ac;
-      font-size: 16px;
     }
 
     .trailer-wrap {
-      width: 100%;
-      max-width: 400px;
-      margin: auto;
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 18px;
+      background: #101010;
+      border: 1px solid #292929;
+      border-radius: 10px;
     }
 
     .trailer-wrap video {
-      display: block;
       width: 100%;
-      height: auto;
-      aspect-ratio: 9 / 16;
-
+      max-height: 76vh;
+      object-fit: contain;
       background: #000;
-
-      border: 1px solid #36434d;
-
-      box-shadow:
-        0 24px 60px rgba(0,0,0,0.8);
+      border-radius: 6px;
     }
 
-    .trailer-caption {
-      margin-top: 18px;
+    /* BOOKS */
 
-      color: #697985;
-
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 10px;
-    }
-
-    /* READING ORDER */
-
-    .series-grid {
+    .book-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 52px 30px;
-      margin-top: 50px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 34px;
     }
 
     .book-card {
-      text-align: center;
-    }
-
-    .cover {
-      width: 100%;
-      max-width: 280px;
-      margin: auto auto 22px;
-    }
-
-    .cover img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-
-      border: 1px solid #32404a;
-
-      box-shadow:
-        0 18px 40px rgba(0,0,0,0.7);
-
-      transition: 0.25s ease;
-    }
-
-    .cover img:hover {
-      transform: translateY(-6px);
-    }
-
-    .volume {
-      margin-bottom: 6px;
-
-      color: #6f8291;
-
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 10px;
-    }
-
-    .book-card h3 {
-      margin-bottom: 10px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-    }
-
-    .book-card p {
-      max-width: 320px;
-      margin: auto;
-
-      color: #909da7;
-      font-size: 14px;
-    }
-
-    .book-action {
-      margin-top: 20px;
-    }
-
-    /* ABOUT */
-
-    .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-      margin-top: 40px;
+      grid-template-columns: 250px 1fr;
+      background: #101010;
+      border: 1px solid #262626;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .about-copy p {
-      margin-bottom: 18px;
-      color: #9ca8b1;
-      font-size: 16px;
+    .book-cover-wrap {
+      background: #050505;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
     }
 
-    .themes {
-      padding: 30px;
-      background: #080b0e;
-      border: 1px solid #26313a;
+    .book-cover {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
 
-    .themes-title {
-      margin-bottom: 20px;
+    .book-info {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+    }
 
-      color: #7890a1;
-
+    .book-label {
+      margin-bottom: 7px;
       text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-size: 11px;
+      letter-spacing: 0.15em;
+      font-size: 0.72rem;
+      color: #888;
     }
 
-    .theme {
-      padding: 13px 0;
-      color: #c7d0d7;
-      border-bottom: 1px solid #202a31;
+    .book-info h3 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.6rem;
+      line-height: 1.2;
     }
 
-    .theme:last-child {
-      border-bottom: none;
+    .book-info p {
+      margin-top: 0;
+      margin-bottom: 18px;
+      color: #c3c3c3;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      border: 1px solid #666;
+      background: transparent;
+      color: #f2f2f2;
+      font-size: 0.88rem;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: #efefef;
+      color: #090909;
+      border-color: #efefef;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
     }
 
     /* HARDCOVER GALLERY */
@@ -383,183 +318,140 @@
     .hardcover-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-      align-items: start;
+      gap: 20px;
     }
 
-    .hardcover-card {
+    .hardcover-item {
       text-align: center;
     }
 
-    .hardcover-cover {
+    .hardcover-item img {
       width: 100%;
-      max-width: 220px;
-      margin: auto auto 18px;
+      border-radius: 6px;
+      background: #050505;
     }
 
-    .hardcover-cover img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-
-      border: 1px solid #303b43;
-
-      box-shadow:
-        0 16px 34px rgba(0,0,0,0.65);
-    }
-
-    .edition-label {
-      margin-bottom: 5px;
-
-      color: #687987;
-
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 9px;
-    }
-
-    .hardcover-card h3 {
+    .hardcover-item h3 {
+      margin: 12px 0 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 19px;
+      font-size: 1rem;
+      font-weight: normal;
     }
-
-    .hardcover-note {
-      max-width: 780px;
-      margin-top: 34px;
-
-      color: #87949e;
-      font-size: 14px;
-    }
-
-    /* COLLECTOR */
-
-    .collector {
-      text-align: center;
-    }
-
-    .collector p {
-      max-width: 720px;
-      margin: 0 auto 28px;
-
-      color: #9ba7b0;
-      font-size: 16px;
-    }
-
-    /* FOOTER */
 
     footer {
-      padding: 46px 20px;
-
-      color: #66727a;
-
+      border-top: 1px solid #252525;
+      padding: 30px 20px;
       text-align: center;
-      font-size: 13px;
-      letter-spacing: 1px;
-
-      border-top: 1px solid #20282e;
+      color: #777;
+      font-size: 0.85rem;
+      background: #050505;
     }
 
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-
-      .menu-button {
-        display: block;
+    @media (max-width: 1100px) {
+      .book-grid {
+        grid-template-columns: 1fr;
       }
 
-      .nav-links {
-        display: none;
-
-        position: absolute;
-        top: 66px;
-        left: 0;
-
-        width: 100%;
-
-        flex-direction: column;
-        gap: 0;
-
-        background: #050505;
-
-        border-bottom: 1px solid #333;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        width: 100%;
-        padding: 17px 24px;
-        border-top: 1px solid #222;
-      }
-
-      .series-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .book-card {
+        grid-template-columns: 280px 1fr;
       }
 
       .hardcover-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
     }
 
-    @media (max-width: 600px) {
-
-      .brand {
-        font-size: 13px;
+    @media (max-width: 900px) {
+      .page-masthead-inner {
+        grid-template-columns: 220px 1fr;
+        gap: 30px;
       }
 
-      .hero {
-        padding: 52px 22px 60px;
+      .masthead-logo img {
+        width: 210px;
       }
 
-      section {
-        padding: 60px 22px;
-      }
-
-      .trailer-wrap {
-        max-width: 360px;
-      }
-
-      .series-grid {
+      .series-intro {
         grid-template-columns: 1fr;
-        gap: 58px;
+      }
+
+      .series-intro img {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-button {
+        display: block;
+      }
+
+      .nav-inner {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0 5px;
+        gap: 14px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .page-masthead-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+        padding: 24px 20px 26px;
+      }
+
+      .masthead-logo {
+        justify-content: center;
+      }
+
+      .masthead-logo img {
+        width: 210px;
+      }
+
+      .masthead-copy p {
+        margin: 0 auto;
       }
 
       .book-card {
-        max-width: 330px;
-        margin: auto;
+        grid-template-columns: 1fr;
       }
 
-      .cover {
-        max-width: 300px;
+      .book-cover {
+        max-width: 360px;
+        margin: 0 auto;
       }
 
       .hardcover-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px 18px;
       }
-
     }
 
+    @media (max-width: 500px) {
+      .hardcover-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hardcover-item img {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- NAVIGATION -->
-
-  <nav class="navbar">
+  <header class="navbar">
 
     <div class="nav-inner">
 
@@ -569,98 +461,111 @@
 
       <button
         class="menu-button"
+        type="button"
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
       >
         ☰
       </button>
 
-      <div class="nav-links" id="navLinks">
-
+      <nav class="nav-links" id="navLinks">
         <a href="/">Home</a>
         <a href="/books/">Books</a>
-
-        <a href="/snowblind/" class="active">
-          Snowblind
-        </a>
-
+        <a href="/snowblind/" class="active">Snowblind</a>
         <a href="/coming-soon/">Coming Soon</a>
-        <a href="/authors/">Authors</a>
+        <a href="/authors/">Meet the Authors</a>
         <a href="/amazing-arya/">Amazing Arya</a>
         <a href="/readers/">Readers</a>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-
-  <!-- HERO -->
-
-  <header class="hero">
-
-    <div class="hero-inner">
-
-      <div class="eyebrow">
-        Eric Erter
-      </div>
-
-      <h1>
-        The Snowblind Series
-      </h1>
-
-      <p>
-        Six volumes. One evolving story. What begins as a fight
-        for survival in the mountains grows into a conflict over
-        identity, belief, humanity and what comes next.
-      </p>
-
-      <div class="series-image">
-
-        <img
-          src="../ec1e2223-5aea-4fb8-8018-610af82b28a4.png"
-          alt="The complete Snowblind Series collector trade paperback editions"
-        >
-
-      </div>
-
-      <div class="hero-action">
-
-        <a
-          class="button"
-          href="https://www.amazon.com/dp/B0GVZR2H19"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Start With Snowblind
-        </a>
-
-      </div>
+      </nav>
 
     </div>
 
   </header>
 
 
-  <!-- TRAILER -->
+  <!-- WHITE MASTHEAD -->
 
-  <section class="trailer-section">
+  <section class="page-masthead">
 
-    <div class="section-inner">
+    <div class="page-masthead-inner">
 
-      <div class="eyebrow">
-        Official Book Trailer
+      <div class="masthead-logo">
+        <img
+          src="../FB_IMG_1776374972363.jpg"
+          alt="Sinister Books"
+        />
       </div>
 
-      <h2>
-        Watch the Trailer
-      </h2>
+      <div class="masthead-copy">
 
-      <p class="trailer-intro">
-        Enter the frozen isolation where the Snowblind story begins.
-      </p>
+        <h1>THE SNOWBLIND SERIES</h1>
 
+        <p>
+          A six-volume saga of survival, loyalty, faith, transformation, and
+          the choices people make when the world they knew no longer exists.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <main>
+
+    <!-- SERIES INTRO -->
+
+    <section>
+
+      <div class="series-intro">
+
+        <img
+          src="../ec1e2223-5aea-4fb8-8018-610af82b28a4.png"
+          alt="The Snowblind Series"
+        />
+
+        <div class="series-copy">
+
+          <h2>Where It Begins</h2>
+
+          <p>
+            What begins as a carefree road trip from Minneapolis to Las Vegas
+            for a bachelor party quickly becomes a fight for survival in the
+            mountains.
+          </p>
+
+          <p>
+            From there, the story grows far beyond the original group,
+            following the consequences of what happened and the people forced
+            to decide what comes next.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <div class="divider"></div>
+
+
+
+    <!-- TRAILER -->
+
+    <section class="trailer-section">
+
+      <div class="section-heading">
+
+        <h2>Watch the Trailer</h2>
+
+        <p>
+          Enter the world of Snowblind.
+        </p>
+
+      </div>
 
       <div class="trailer-wrap">
 
@@ -668,91 +573,81 @@
           controls
           playsinline
           preload="metadata"
-          aria-label="Official Snowblind book trailer"
         >
-
           <source
             src="../Snowblind_web.mp4"
             type="video/mp4"
-          >
+          />
 
-          Your browser does not support HTML5 video.
-
+          Your browser does not support video playback.
         </video>
 
       </div>
 
+    </section>
 
-      <div class="trailer-caption">
-        Snowblind — Official Trailer
+
+
+    <div class="divider"></div>
+
+
+
+    <!-- READING ORDER -->
+
+    <section>
+
+      <div class="section-heading">
+
+        <h2>Reading Order</h2>
+
+        <p>
+          Follow the complete six-volume story from beginning to end.
+        </p>
+
       </div>
 
-    </div>
 
-  </section>
-
-
-  <!-- READING ORDER -->
-
-  <section>
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        Collector Trade Paperback Reading Order
-      </div>
-
-      <h2>
-        The Complete Series
-      </h2>
-
-      <p class="intro">
-        Follow the Snowblind story from its beginning in the
-        mountains through its final evolution. Each title below
-        links directly to its Amazon listing.
-      </p>
-
-
-      <div class="series-grid">
-
+      <div class="book-grid">
 
         <!-- SNOWBLIND -->
 
         <article class="book-card">
 
-          <div class="cover">
+          <div class="book-cover-wrap">
 
             <img
+              class="book-cover"
               src="../Screenshot_20260820_111418_Gallery.jpg"
-              alt="Snowblind collector trade paperback cover"
-            >
+              alt="Snowblind book cover"
+            />
 
           </div>
 
-          <div class="volume">
-            Volume 1
-          </div>
+          <div class="book-info">
 
-          <h3>
-            Snowblind
-          </h3>
+            <div class="book-label">
+              Book One
+            </div>
 
-          <p>
-            A brutal winter survival story becomes something
-            far stranger when the people in the mountains
-            realize they may not be alone.
-          </p>
+            <h3>Snowblind</h3>
 
-          <div class="book-action">
+            <p>
+              A bachelor-party road trip into the mountains becomes a fight to
+              survive something none of them understand.
+            </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0GVZR2H19"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0GVZR2H19"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
@@ -763,39 +658,41 @@
 
         <article class="book-card">
 
-          <div class="cover">
+          <div class="book-cover-wrap">
 
             <img
+              class="book-cover"
               src="../02-isolation-full-wrap-collector-edition.png"
-              alt="Isolation collector trade paperback cover"
-            >
+              alt="Isolation book cover"
+            />
 
           </div>
 
-          <div class="volume">
-            Volume 2
-          </div>
+          <div class="book-info">
 
-          <h3>
-            Isolation
-          </h3>
+            <div class="book-label">
+              Book Two
+            </div>
 
-          <p>
-            Eighteen months later, the questions left behind
-            in the mountains begin pulling the survivors back
-            toward what they escaped.
-          </p>
+            <h3>Isolation</h3>
 
-          <div class="book-action">
+            <p>
+              The survivors leave the mountains behind, but what happened there
+              refuses to remain contained.
+            </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0GWQVNM96"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0GWQVNM96"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
@@ -806,38 +703,41 @@
 
         <article class="book-card">
 
-          <div class="cover">
+          <div class="book-cover-wrap">
 
             <img
+              class="book-cover"
               src="../03-schism-full-wrap-collector-edition.png"
-              alt="Schism collector trade paperback cover"
-            >
+              alt="Schism book cover"
+            />
 
           </div>
 
-          <div class="volume">
-            Volume 3
-          </div>
+          <div class="book-info">
 
-          <h3>
-            Schism
-          </h3>
+            <div class="book-label">
+              Book Three
+            </div>
 
-          <p>
-            The conflict spreads across the country as people,
-            loyalties and ideas begin dividing into opposing paths.
-          </p>
+            <h3>Schism</h3>
 
-          <div class="book-action">
+            <p>
+              The journey continues as alliances fracture and survival becomes
+              inseparable from questions of trust and responsibility.
+            </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0GYRP9768"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0GYRP9768"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
@@ -848,397 +748,227 @@
 
         <article class="book-card">
 
-          <div class="cover">
+          <div class="book-cover-wrap">
 
             <img
+              class="book-cover"
               src="../heresy-photorealistic-modern-truck-cover-v2.png"
-              alt="Heresy collector trade paperback cover"
-            >
+              alt="Heresy book cover"
+            />
 
           </div>
 
-          <div class="volume">
-            Volume 4
-          </div>
+          <div class="book-info">
 
-          <h3>
-            Heresy
-          </h3>
+            <div class="book-label">
+              Book Four
+            </div>
 
-          <p>
-            As the world changes, old assumptions collapse and
-            the line between resistance and belief becomes
-            increasingly difficult to see.
-          </p>
+            <h3>Heresy</h3>
 
-          <div class="book-action">
+            <p>
+              Questions of loyalty, faith, responsibility, and redemption move
+              to the center of the story.
+            </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0H3P17PM2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0H3P17PM2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
         </article>
 
 
-        <!-- ASCENSION PART ONE -->
+        <!-- ASCENSION 1 -->
 
         <article class="book-card">
 
-          <div class="cover">
+          <div class="book-cover-wrap">
 
             <img
+              class="book-cover"
               src="../ascension-part-one-council-arrival-cover-v3.png"
-              alt="Ascension Part One collector trade paperback cover"
-            >
+              alt="Ascension Part One book cover"
+            />
 
           </div>
 
-          <div class="volume">
-            Volume 5.1
-          </div>
+          <div class="book-info">
 
-          <h3>
-            Ascension: Part One
-          </h3>
+            <div class="book-label">
+              Book Five
+            </div>
 
-          <p>
-            The story enters its final evolution as competing
-            visions of humanity converge on the place where
-            everything changed.
-          </p>
+            <h3>Ascension: Part One</h3>
 
-          <div class="book-action">
+            <p>
+              The saga enters its final movement as the survivors face the full
+              consequences of everything that began in the mountains.
+            </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0H3YWLP8Z"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0H3YWLP8Z"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
         </article>
 
 
-        <!-- ASCENSION PART TWO -->
+        <!-- ASCENSION 2 -->
 
         <article class="book-card">
 
-          <div class="cover">
+          <div class="book-cover-wrap">
 
             <img
+              class="book-cover"
               src="../ascension-part-two-town-attack-cover-v1.png"
-              alt="Ascension Part Two collector trade paperback cover"
-            >
+              alt="Ascension Part Two book cover"
+            />
 
           </div>
 
-          <div class="volume">
-            Volume 5.2
-          </div>
+          <div class="book-info">
 
-          <h3>
-            Ascension: Part Two
-          </h3>
+            <div class="book-label">
+              Book Six
+            </div>
 
-          <p>
-            The conflict reaches its conclusion as survival,
-            transformation and the future of humanity collide.
-          </p>
+            <h3>Ascension: Part Two</h3>
 
-          <div class="book-action">
+            <p>
+              The complete Snowblind story reaches its conclusion as every
+              choice, sacrifice, and unresolved question finally comes due.
+            </p>
 
-            <a
-              class="button"
-              href="https://www.amazon.com/dp/B0H3ZN22TJ"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Amazon
-            </a>
+            <div class="button-row">
+
+              <a
+                class="button primary"
+                href="https://www.amazon.com/dp/B0H3ZN22TJ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Amazon
+              </a>
+
+            </div>
 
           </div>
 
         </article>
 
-
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- ABOUT -->
 
-  <section class="alternate">
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        About the Series
-      </div>
-
-      <h2>
-        Survival Was Only the Beginning
-      </h2>
+    <div class="divider"></div>
 
 
-      <div class="about-grid">
 
-        <div class="about-copy">
+    <!-- HARDCOVER GALLERY -->
 
-          <p>
-            The Snowblind Series begins with an intimate survival
-            story: people trapped by weather, geography and fear,
-            forced to depend on one another when the world outside
-            becomes unreachable.
-          </p>
+    <section>
 
-          <p>
-            From there, the story continually widens. What first
-            appears isolated becomes connected. What seems impossible
-            becomes increasingly difficult to dismiss.
-          </p>
+      <div class="section-heading">
 
-          <p>
-            And the question gradually changes from how people
-            survive to what survival may turn them into.
-          </p>
+        <h2>Hardcover Editions</h2>
 
-          <p>
-            Across six volumes, the series moves between horror,
-            suspense, science fiction and character drama while
-            remaining centered on the people caught inside it.
-          </p>
-
-        </div>
-
-
-        <div class="themes">
-
-          <div class="themes-title">
-            At the Heart of Snowblind
-          </div>
-
-          <div class="theme">Survival</div>
-          <div class="theme">Isolation</div>
-          <div class="theme">Identity</div>
-          <div class="theme">Belief</div>
-          <div class="theme">Transformation</div>
-          <div class="theme">What it means to remain human</div>
-
-        </div>
+        <p>
+          Alternate hardcover artwork from across the Snowblind Series.
+        </p>
 
       </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- HARDCOVER EDITIONS -->
-
-  <section>
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        Alternate Editions
-      </div>
-
-      <h2>
-        Hardcover Editions
-      </h2>
-
-      <p class="intro">
-        The Snowblind books have also appeared with a separate
-        hardcover visual identity. These covers offer another
-        interpretation of the places, conflicts and imagery
-        of the series.
-      </p>
 
 
       <div class="hardcover-grid">
 
+        <div class="hardcover-item">
 
-        <!-- SNOWBLIND -->
+          <img
+            src="../IMG_20260409_124820.jpg"
+            alt="Snowblind hardcover"
+          />
 
-        <article class="hardcover-card">
+          <h3>Snowblind</h3>
 
-          <div class="hardcover-cover">
-
-            <img
-              src="../IMG_20260409_124820.jpg"
-              alt="Snowblind hardcover cover"
-            >
-
-          </div>
-
-          <div class="edition-label">
-            Hardcover Artwork
-          </div>
-
-          <h3>
-            Snowblind
-          </h3>
-
-        </article>
+        </div>
 
 
-        <!-- ISOLATION -->
+        <div class="hardcover-item">
 
-        <article class="hardcover-card">
+          <img
+            src="../ChatGPT Image Apr 2, 2026, 07_27_33 PM.png"
+            alt="Isolation hardcover"
+          />
 
-          <div class="hardcover-cover">
+          <h3>Isolation</h3>
 
-            <img
-              src="../ChatGPT%20Image%20Apr%202,%202026,%2007_27_33%20PM.png"
-              alt="Isolation hardcover cover"
-            >
-
-          </div>
-
-          <div class="edition-label">
-            Hardcover Artwork
-          </div>
-
-          <h3>
-            Isolation
-          </h3>
-
-        </article>
+        </div>
 
 
-        <!-- SCHISM -->
+        <div class="hardcover-item">
 
-        <article class="hardcover-card">
+          <img
+            src="../Urban divides in glowing chaos.png"
+            alt="Schism hardcover"
+          />
 
-          <div class="hardcover-cover">
+          <h3>Schism</h3>
 
-            <img
-              src="../Urban%20divides%20in%20glowing%20chaos.png"
-              alt="Schism hardcover cover"
-            >
-
-          </div>
-
-          <div class="edition-label">
-            Hardcover Artwork
-          </div>
-
-          <h3>
-            Schism
-          </h3>
-
-        </article>
+        </div>
 
 
-        <!-- HERESY -->
+        <div class="hardcover-item">
 
-        <article class="hardcover-card">
+          <img
+            src="../ChatGPT Image May 14, 2026, 09_29_16 PM.png"
+            alt="Heresy hardcover"
+          />
 
-          <div class="hardcover-cover">
+          <h3>Heresy</h3>
 
-            <img
-              src="../ChatGPT%20Image%20May%2014,%202026,%2009_29_16%20PM.png"
-              alt="Heresy hardcover cover"
-            >
-
-          </div>
-
-          <div class="edition-label">
-            Hardcover Artwork
-          </div>
-
-          <h3>
-            Heresy
-          </h3>
-
-        </article>
+        </div>
 
 
-        <!-- ASCENSION -->
+        <div class="hardcover-item">
 
-        <article class="hardcover-card">
+          <img
+            src="../ChatGPT Image May 22, 2026, 07_59_53 PM.png"
+            alt="Ascension hardcover"
+          />
 
-          <div class="hardcover-cover">
+          <h3>Ascension</h3>
 
-            <img
-              src="../ChatGPT%20Image%20May%2022,%202026,%2007_59_53%20PM.png"
-              alt="Ascension hardcover cover"
-            >
-
-          </div>
-
-          <div class="edition-label">
-            Hardcover Artwork
-          </div>
-
-          <h3>
-            Ascension
-          </h3>
-
-        </article>
-
+        </div>
 
       </div>
 
+    </section>
 
-      <p class="hardcover-note">
-        Ascension uses a single hardcover visual identity, while
-        the collector trade paperback editions distinguish
-        Part One and Part Two individually.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- COLLECTOR -->
-
-  <section class="collector alternate">
-
-    <div class="section-inner">
-
-      <div class="eyebrow">
-        Collector Trade Paperback Editions
-      </div>
-
-      <h2>
-        Six Volumes. One Collection.
-      </h2>
-
-      <p>
-        The complete Snowblind Series is available in a unified
-        collector trade paperback design, with matching covers,
-        numbered spines and a continuous visual identity across
-        all six volumes.
-      </p>
-
-      <a
-        class="button"
-        href="https://www.amazon.com/dp/B0GVZR2H19"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Begin the Series
-      </a>
-
-    </div>
-
-  </section>
+  </main>
 
 
   <footer>
@@ -1247,19 +977,12 @@
 
 
   <script>
-
     function toggleMenu() {
-
       document
         .getElementById("navLinks")
-        .classList
-        .toggle("open");
-
+        .classList.toggle("show");
     }
-
   </script>
 
-
 </body>
-
 </html>
