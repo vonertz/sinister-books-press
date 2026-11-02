@@ -37,22 +37,24 @@
       display: block;
     }
 
+    /* NAVIGATION */
+
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.96);
+      background: rgba(0, 0, 0, 0.97);
       border-bottom: 1px solid #252525;
     }
 
     .nav-inner {
-      max-width: 1200px;
+      max-width: 1250px;
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 14px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
 
     .brand {
@@ -92,36 +94,67 @@
       cursor: pointer;
     }
 
-    .hero {
-      padding: 82px 20px 66px;
-      text-align: center;
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.92)
-        ),
-        url("../FB_IMG_1776374972363.jpg") center/cover no-repeat;
-      border-bottom: 1px solid #222;
+    /* WHITE MASTHEAD */
+
+    .page-masthead {
+      background: #ffffff;
+      color: #111111;
+      border-bottom: 1px solid #d7d7d7;
     }
 
-    .hero h1 {
-      margin: 0 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.6rem, 7vw, 4.8rem);
-      letter-spacing: 0.04em;
-    }
-
-    .hero p {
-      max-width: 720px;
+    .page-masthead-inner {
+      max-width: 1250px;
       margin: 0 auto;
-      color: #d0d0d0;
-      font-size: 1.05rem;
+      padding: 26px 24px 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 44px;
+      align-items: center;
     }
+
+    .masthead-logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .masthead-logo img {
+      width: 260px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .masthead-copy h1 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 5vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: 0.03em;
+      color: #111;
+    }
+
+    .masthead-copy p {
+      max-width: 760px;
+      margin: 0;
+      color: #444;
+      font-size: clamp(1rem, 1.7vw, 1.15rem);
+      line-height: 1.6;
+    }
+
+    .masthead-rule {
+      height: 1px;
+      background: #cfcfcf;
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    /* MAIN */
 
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 60px 20px 85px;
+      padding: 52px 24px 90px;
     }
 
     .section-heading {
@@ -297,7 +330,16 @@
       background: #050505;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
+      .page-masthead-inner {
+        grid-template-columns: 220px 1fr;
+        gap: 30px;
+      }
+
+      .masthead-logo img {
+        width: 210px;
+      }
+
       .appearance-main {
         grid-template-columns: 1fr;
       }
@@ -334,8 +376,23 @@
         display: flex;
       }
 
-      .hero {
-        padding-top: 64px;
+      .page-masthead-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+        padding: 24px 20px 26px;
+      }
+
+      .masthead-logo {
+        justify-content: center;
+      }
+
+      .masthead-logo img {
+        width: 210px;
+      }
+
+      .masthead-copy p {
+        margin: 0 auto;
       }
 
       .appearance-copy {
@@ -413,14 +470,33 @@
   </header>
 
 
-  <section class="hero">
+  <!-- WHITE MASTHEAD -->
 
-    <h1>Readers</h1>
+  <section class="page-masthead">
 
-    <p>
-      Connect with the authors, ask a question, or inquire about speaking
-      engagements, classroom visits, appearances, and signings.
-    </p>
+    <div class="page-masthead-inner">
+
+      <div class="masthead-logo">
+        <img
+          src="../FB_IMG_1776374972363.jpg"
+          alt="Sinister Books"
+        />
+      </div>
+
+      <div class="masthead-copy">
+
+        <h1>READERS</h1>
+
+        <p>
+          Connect with the authors, ask a question, or inquire about speaking
+          engagements, classroom visits, appearances, and signings.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="masthead-rule"></div>
 
   </section>
 
@@ -536,8 +612,6 @@
       <div class="forms-grid">
 
 
-        <!-- ASK THE AUTHORS -->
-
         <div class="form-card">
 
           <h3>Ask the Authors</h3>
@@ -598,9 +672,6 @@
 
         </div>
 
-
-
-        <!-- APPEARANCES -->
 
         <div class="form-card">
 
