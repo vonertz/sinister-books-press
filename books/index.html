@@ -42,22 +42,24 @@
       display: block;
     }
 
+    /* NAVIGATION */
+
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.96);
+      background: rgba(0, 0, 0, 0.97);
       border-bottom: 1px solid #252525;
     }
 
     .nav-inner {
-      max-width: 1200px;
+      max-width: 1250px;
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 14px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
 
     .brand {
@@ -97,40 +99,62 @@
       cursor: pointer;
     }
 
-    .hero {
-      padding: 80px 20px 62px;
-      text-align: center;
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.52),
-          rgba(0, 0, 0, 0.9)
-        ),
-        url("../FB_IMG_1776374972363.jpg") center/cover no-repeat;
+    /* PAGE HEADER */
+
+    .page-hero {
+      background: #000;
       border-bottom: 1px solid #222;
     }
 
-    .hero h1 {
-      margin: 0 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.6rem, 7vw, 4.8rem);
-      letter-spacing: 0.04em;
+    .page-hero-image {
+      width: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
 
-    .hero p {
-      max-width: 720px;
+    .page-hero-image img {
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      object-fit: contain;
+      object-position: center center;
       margin: 0 auto;
-      color: #d0d0d0;
-      font-size: 1.05rem;
     }
+
+    .page-hero-content {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 34px 24px 44px;
+      text-align: center;
+    }
+
+    .page-hero-content h1 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: 0.03em;
+    }
+
+    .page-hero-content p {
+      max-width: 900px;
+      margin: 0 auto;
+      color: #cfcfcf;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    /* MAIN */
 
     main {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 55px 20px 80px;
+      padding: 60px 24px 90px;
     }
 
     .section-heading {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     .section-heading h2 {
@@ -142,22 +166,24 @@
     .section-heading p {
       margin: 0;
       color: #aaa;
-      max-width: 720px;
+      max-width: 760px;
     }
 
     .divider {
       height: 1px;
       background: #272727;
-      margin: 65px 0;
+      margin: 72px 0;
     }
+
+    /* SNOWBLIND INTRO */
 
     .series-intro {
       display: grid;
-      grid-template-columns: minmax(220px, 320px) 1fr;
-      gap: 36px;
+      grid-template-columns: minmax(280px, 380px) 1fr;
+      gap: 38px;
       align-items: center;
-      margin-bottom: 42px;
-      padding: 28px;
+      margin-bottom: 46px;
+      padding: 30px;
       background: #101010;
       border: 1px solid #252525;
       border-radius: 10px;
@@ -169,15 +195,17 @@
     }
 
     .series-intro h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 12px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 2rem;
     }
 
     .series-intro p {
       color: #c7c7c7;
+      margin-top: 0;
     }
+
+    /* BOOK GRID */
 
     .book-grid {
       display: grid;
@@ -190,32 +218,36 @@
       border: 1px solid #242424;
       border-radius: 10px;
       overflow: hidden;
+      min-height: 100%;
     }
 
     .book-card-inner {
       display: grid;
-      grid-template-columns: 190px 1fr;
+      grid-template-columns: 270px 1fr;
       min-height: 100%;
     }
 
     .book-cover-wrap {
       background: #050505;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .book-cover {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
     }
 
     .book-info {
-      padding: 24px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
     }
 
     .book-label {
-      margin-bottom: 7px;
+      margin-bottom: 8px;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       font-size: 0.72rem;
@@ -223,18 +255,20 @@
     }
 
     .book-info h3 {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.55rem;
+      font-size: 1.7rem;
       line-height: 1.2;
     }
 
     .book-info p {
       margin-top: 0;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       color: #c3c3c3;
-      font-size: 0.96rem;
+      font-size: 0.98rem;
     }
+
+    /* BUTTONS */
 
     .button-row {
       display: flex;
@@ -252,7 +286,7 @@
       background: transparent;
       color: #f2f2f2;
       font-family: inherit;
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       cursor: pointer;
       transition: 0.2s ease;
     }
@@ -267,6 +301,8 @@
       transform: translateY(-1px);
       opacity: 0.9;
     }
+
+    /* TRAILER MODAL */
 
     .trailer-modal {
       display: none;
@@ -328,6 +364,8 @@
       background: #222;
     }
 
+    /* FOOTER */
+
     footer {
       border-top: 1px solid #252525;
       padding: 30px 20px;
@@ -337,20 +375,30 @@
       background: #050505;
     }
 
-    @media (max-width: 900px) {
+    /* TABLET */
+
+    @media (max-width: 1100px) {
       .book-grid {
         grid-template-columns: 1fr;
       }
 
+      .book-card-inner {
+        grid-template-columns: 300px 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
       .series-intro {
         grid-template-columns: 1fr;
       }
 
       .series-intro img {
-        max-width: 360px;
+        max-width: 420px;
         margin: 0 auto;
       }
     }
+
+    /* MOBILE */
 
     @media (max-width: 760px) {
       .menu-button {
@@ -374,25 +422,31 @@
         display: flex;
       }
 
+      .page-hero-image img {
+        max-height: none;
+        width: 100%;
+      }
+
+      .page-hero-content {
+        padding: 28px 20px 38px;
+      }
+
       .book-card-inner {
         grid-template-columns: 1fr;
       }
 
-      .book-cover {
-        height: auto;
-      }
-
       .book-cover-wrap {
-        display: flex;
-        justify-content: center;
+        padding-top: 0;
       }
 
-      .book-cover-wrap img {
-        max-width: 320px;
+      .book-cover {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
       }
 
-      .hero {
-        padding-top: 62px;
+      .book-info {
+        padding: 26px 24px 30px;
       }
 
       .trailer-modal {
@@ -413,10 +467,15 @@
 
 <body>
 
+  <!-- NAV -->
+
   <header class="navbar">
+
     <div class="nav-inner">
 
-      <a class="brand" href="/">SINISTER BOOKS</a>
+      <a class="brand" href="/">
+        SINISTER BOOKS
+      </a>
 
       <button
         class="menu-button"
@@ -428,28 +487,66 @@
       </button>
 
       <nav class="nav-links" id="navLinks">
-        <a href="/">Home</a>
-        <a href="/books/" class="active">Books</a>
-        <a href="/snowblind/">Snowblind</a>
-        <a href="/coming-soon/">Coming Soon</a>
-        <a href="/authors/">Meet the Authors</a>
-        <a href="/amazing-arya/">Amazing Arya</a>
-        <a href="/readers/">Readers</a>
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/books/" class="active">
+          Books
+        </a>
+
+        <a href="/snowblind/">
+          Snowblind
+        </a>
+
+        <a href="/coming-soon/">
+          Coming Soon
+        </a>
+
+        <a href="/authors/">
+          Meet the Authors
+        </a>
+
+        <a href="/amazing-arya/">
+          Amazing Arya
+        </a>
+
+        <a href="/readers/">
+          Readers
+        </a>
+
       </nav>
 
     </div>
+
   </header>
 
 
-  <section class="hero">
+  <!-- FULL LOGO + PAGE TITLE BELOW -->
 
-    <h1>Books</h1>
+  <section class="page-hero">
 
-    <p>
-      Stories of horror, suspense, mystery, memory, family, artificial
-      intelligence, and the strange places people find themselves when the
-      world stops behaving the way it should.
-    </p>
+    <div class="page-hero-image">
+
+      <img
+        src="../FB_IMG_1776374972363.jpg"
+        alt="Sinister Books"
+      />
+
+    </div>
+
+    <div class="page-hero-content">
+
+      <h1>Books</h1>
+
+      <p>
+        Stories of horror, suspense, mystery, memory, family, artificial
+        intelligence, and the strange places people find themselves when the
+        world stops behaving the way it should.
+      </p>
+
+    </div>
 
   </section>
 
@@ -508,6 +605,8 @@
 
       <div class="book-grid">
 
+        <!-- SNOWBLIND -->
+
         <article class="book-card">
           <div class="book-card-inner">
 
@@ -520,6 +619,7 @@
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Snowblind Series · Book One
               </div>
@@ -533,6 +633,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0GVZR2H19"
@@ -548,12 +649,16 @@
                 >
                   Series Page &amp; Trailer
                 </a>
+
               </div>
+
             </div>
 
           </div>
         </article>
 
+
+        <!-- ISOLATION -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -567,6 +672,7 @@
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Snowblind Series · Book Two
               </div>
@@ -580,6 +686,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0GWQVNM96"
@@ -596,12 +703,16 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
         </article>
 
+
+        <!-- SCHISM -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -615,6 +726,7 @@
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Snowblind Series · Book Three
               </div>
@@ -628,6 +740,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0GYRP9768"
@@ -644,12 +757,16 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
         </article>
 
+
+        <!-- HERESY -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -663,6 +780,7 @@
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Snowblind Series · Book Four
               </div>
@@ -676,6 +794,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H3P17PM2"
@@ -692,12 +811,16 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
         </article>
 
+
+        <!-- ASCENSION ONE -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -711,6 +834,7 @@
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Snowblind Series · Book Five
               </div>
@@ -724,6 +848,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H3YWLP8Z"
@@ -740,12 +865,16 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
         </article>
 
+
+        <!-- ASCENSION TWO -->
 
         <article class="book-card">
           <div class="book-card-inner">
@@ -759,6 +888,7 @@
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Snowblind Series · Book Six
               </div>
@@ -772,6 +902,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H3ZN22TJ"
@@ -788,7 +919,9 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
@@ -804,7 +937,7 @@
 
 
 
-    <!-- STANDALONE FICTION -->
+    <!-- STANDALONES -->
 
     <section>
 
@@ -822,20 +955,23 @@
 
       <div class="book-grid">
 
-        <!-- OPERATION: SILVER KITE -->
+        <!-- SILVER KITE -->
 
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
+
               <img
                 class="book-cover"
                 src="../ChatGPT Image Aug 26, 2026, 05_01_45 PM.png"
                 alt="Operation Silver Kite book cover"
               />
+
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Standalone Novel
               </div>
@@ -850,6 +986,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0HGPDGKJM"
@@ -866,27 +1003,32 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
         </article>
 
 
-        <!-- THE TIDES THAT BIND -->
+        <!-- TIDES -->
 
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
+
               <img
                 class="book-cover"
                 src="../ChatGPT Image Jul 14, 2026, 08_31_21 PM.png"
                 alt="The Tides That Bind book cover"
               />
+
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Standalone Novel
               </div>
@@ -900,6 +1042,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0HF3ZMVNY"
@@ -916,7 +1059,9 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
@@ -929,14 +1074,17 @@
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
+
               <img
                 class="book-cover"
                 src="../old-money-print-ad-v2.png"
                 alt="Old Money book cover"
               />
+
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Standalone Novel
               </div>
@@ -949,6 +1097,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H83RJL3N"
@@ -965,7 +1114,9 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
@@ -978,14 +1129,17 @@
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
+
               <img
                 class="book-cover"
                 src="../ChatGPT Image Aug 13, 2026, 08_50_34 AM.png"
                 alt="Goodnight House book cover"
               />
+
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Standalone Novel
               </div>
@@ -999,6 +1153,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0HDTF86LG"
@@ -1015,7 +1170,9 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
@@ -1028,14 +1185,17 @@
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
+
               <img
                 class="book-cover"
                 src="../ChatGPT Image May 21, 2026, 01_18_32 PM.png"
                 alt="Animal Hours book cover"
               />
+
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Standalone Novel
               </div>
@@ -1049,6 +1209,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H52JKMS9"
@@ -1065,27 +1226,32 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
         </article>
 
 
-        <!-- BEFORE THE STREETLIGHTS -->
+        <!-- STREETLIGHTS -->
 
         <article class="book-card">
           <div class="book-card-inner">
 
             <div class="book-cover-wrap">
+
               <img
                 class="book-cover"
                 src="../5be5f4f6-4b3d-4faf-a401-2afe35c4f656.png"
                 alt="Before the Streetlights book cover"
               />
+
             </div>
 
             <div class="book-info">
+
               <div class="book-label">
                 Standalone Novel
               </div>
@@ -1098,6 +1264,7 @@
               </p>
 
               <div class="button-row">
+
                 <a
                   class="button primary"
                   href="https://www.amazon.com/dp/B0H533NYC6"
@@ -1114,7 +1281,9 @@
                 >
                   Watch Trailer
                 </button>
+
               </div>
+
             </div>
 
           </div>
@@ -1126,6 +1295,8 @@
 
   </main>
 
+
+  <!-- TRAILER POPUP -->
 
   <div
     class="trailer-modal"
@@ -1150,7 +1321,9 @@
         ×
       </button>
 
-      <h2 id="trailerTitle">Trailer</h2>
+      <h2 id="trailerTitle">
+        Trailer
+      </h2>
 
       <video
         class="trailer-video"
@@ -1174,7 +1347,9 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      document
+        .getElementById("navLinks")
+        .classList.toggle("show");
     }
 
     function openTrailer(source, title) {
